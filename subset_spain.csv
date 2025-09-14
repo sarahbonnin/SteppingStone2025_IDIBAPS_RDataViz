@@ -1,0 +1,721 @@
+Country,Year,Age_group,Population,Sex
+Spain,1950,65+ years,1200776,Female
+Spain,1950,25-64 years,7000109,Female
+Spain,1950,15-24 years,2717091,Female
+Spain,1950,5-14 years,2343662,Female
+Spain,1950,Under-5s,1300997,Female
+Spain,1951,65+ years,1225920,Female
+Spain,1951,25-64 years,7085855,Female
+Spain,1951,15-24 years,2711307,Female
+Spain,1951,5-14 years,2331588,Female
+Spain,1951,Under-5s,1267092,Female
+Spain,1952,65+ years,1251509,Female
+Spain,1952,25-64 years,7173692,Female
+Spain,1952,15-24 years,2675388,Female
+Spain,1952,5-14 years,2335771,Female
+Spain,1952,Under-5s,1276277,Female
+Spain,1953,65+ years,1281358,Female
+Spain,1953,25-64 years,7261533,Female
+Spain,1953,15-24 years,2608721,Female
+Spain,1953,5-14 years,2388659,Female
+Spain,1953,Under-5s,1277135,Female
+Spain,1954,65+ years,1305909,Female
+Spain,1954,25-64 years,7346515,Female
+Spain,1954,15-24 years,2522729,Female
+Spain,1954,5-14 years,2463913,Female
+Spain,1954,Under-5s,1284063,Female
+Spain,1955,65+ years,1335703,Female
+Spain,1955,25-64 years,7432459,Female
+Spain,1955,15-24 years,2456228,Female
+Spain,1955,5-14 years,2489524,Female
+Spain,1955,Under-5s,1316591,Female
+Spain,1956,65+ years,1360488,Female
+Spain,1956,25-64 years,7513323,Female
+Spain,1956,15-24 years,2407860,Female
+Spain,1956,5-14 years,2505653,Female
+Spain,1956,Under-5s,1350884,Female
+Spain,1957,65+ years,1375474,Female
+Spain,1957,25-64 years,7590680,Female
+Spain,1957,15-24 years,2349876,Female
+Spain,1957,5-14 years,2560349,Female
+Spain,1957,Under-5s,1376961,Female
+Spain,1958,65+ years,1401750,Female
+Spain,1958,25-64 years,7671244,Female
+Spain,1958,15-24 years,2307801,Female
+Spain,1958,5-14 years,2597897,Female
+Spain,1958,Under-5s,1405896,Female
+Spain,1959,65+ years,1433418,Female
+Spain,1959,25-64 years,7737649,Female
+Spain,1959,15-24 years,2296805,Female
+Spain,1959,5-14 years,2616401,Female
+Spain,1959,Under-5s,1437620,Female
+Spain,1960,65+ years,1472008,Female
+Spain,1960,25-64 years,7782497,Female
+Spain,1960,15-24 years,2306467,Female
+Spain,1960,5-14 years,2628899,Female
+Spain,1960,Under-5s,1455547,Female
+Spain,1961,65+ years,1519757,Female
+Spain,1961,25-64 years,7847196,Female
+Spain,1961,15-24 years,2303269,Female
+Spain,1961,5-14 years,2645472,Female
+Spain,1961,Under-5s,1472552,Female
+Spain,1962,65+ years,1561934,Female
+Spain,1962,25-64 years,7924538,Female
+Spain,1962,15-24 years,2300921,Female
+Spain,1962,5-14 years,2672614,Female
+Spain,1962,Under-5s,1495786,Female
+Spain,1963,65+ years,1592408,Female
+Spain,1963,25-64 years,7973553,Female
+Spain,1963,15-24 years,2344363,Female
+Spain,1963,5-14 years,2696444,Female
+Spain,1963,Under-5s,1513923,Female
+Spain,1964,65+ years,1619704,Female
+Spain,1964,25-64 years,8000230,Female
+Spain,1964,15-24 years,2414492,Female
+Spain,1964,5-14 years,2725920,Female
+Spain,1964,Under-5s,1537622,Female
+Spain,1965,65+ years,1669161,Female
+Spain,1965,25-64 years,8032862,Female
+Spain,1965,15-24 years,2443335,Female
+Spain,1965,5-14 years,2769842,Female
+Spain,1965,Under-5s,1562523,Female
+Spain,1966,65+ years,1726211,Female
+Spain,1966,25-64 years,8067777,Female
+Spain,1966,15-24 years,2457003,Female
+Spain,1966,5-14 years,2819207,Female
+Spain,1966,Under-5s,1580017,Female
+Spain,1967,65+ years,1773033,Female
+Spain,1967,25-64 years,8091746,Female
+Spain,1967,15-24 years,2499046,Female
+Spain,1967,5-14 years,2867689,Female
+Spain,1967,Under-5s,1593016,Female
+Spain,1968,65+ years,1823387,Female
+Spain,1968,25-64 years,8128520,Female
+Spain,1968,15-24 years,2529637,Female
+Spain,1968,5-14 years,2913701,Female
+Spain,1968,Under-5s,1599329,Female
+Spain,1969,65+ years,1872164,Female
+Spain,1969,25-64 years,8173944,Female
+Spain,1969,15-24 years,2546728,Female
+Spain,1969,5-14 years,2971555,Female
+Spain,1969,Under-5s,1590257,Female
+Spain,1970,65+ years,1925403,Female
+Spain,1970,25-64 years,8218015,Female
+Spain,1970,15-24 years,2561684,Female
+Spain,1970,5-14 years,3028653,Female
+Spain,1970,Under-5s,1573952,Female
+Spain,1971,65+ years,1978479,Female
+Spain,1971,25-64 years,8268155,Female
+Spain,1971,15-24 years,2585926,Female
+Spain,1971,5-14 years,3073775,Female
+Spain,1971,Under-5s,1568535,Female
+Spain,1972,65+ years,2031579,Female
+Spain,1972,25-64 years,8329510,Female
+Spain,1972,15-24 years,2621312,Female
+Spain,1972,5-14 years,3108756,Female
+Spain,1972,Under-5s,1572062,Female
+Spain,1973,65+ years,2084517,Female
+Spain,1973,25-64 years,8405970,Female
+Spain,1973,15-24 years,2648939,Female
+Spain,1973,5-14 years,3132045,Female
+Spain,1973,Under-5s,1579272,Female
+Spain,1974,65+ years,2129347,Female
+Spain,1974,25-64 years,8488085,Female
+Spain,1974,15-24 years,2691474,Female
+Spain,1974,5-14 years,3149266,Female
+Spain,1974,Under-5s,1594182,Female
+Spain,1975,65+ years,2181348,Female
+Spain,1975,25-64 years,8555212,Female
+Spain,1975,15-24 years,2749384,Female
+Spain,1975,5-14 years,3163069,Female
+Spain,1975,Under-5s,1603748,Female
+Spain,1976,65+ years,2241379,Female
+Spain,1976,25-64 years,8613921,Female
+Spain,1976,15-24 years,2797314,Female
+Spain,1976,5-14 years,3178764,Female
+Spain,1976,Under-5s,1606218,Female
+Spain,1977,65+ years,2300533,Female
+Spain,1977,25-64 years,8678397,Female
+Spain,1977,15-24 years,2840828,Female
+Spain,1977,5-14 years,3198209,Female
+Spain,1977,Under-5s,1602837,Female
+Spain,1978,65+ years,2361477,Female
+Spain,1978,25-64 years,8744203,Female
+Spain,1978,15-24 years,2889699,Female
+Spain,1978,5-14 years,3209712,Female
+Spain,1978,Under-5s,1587890,Female
+Spain,1979,65+ years,2421882,Female
+Spain,1979,25-64 years,8806976,Female
+Spain,1979,15-24 years,2953511,Female
+Spain,1979,5-14 years,3210917,Female
+Spain,1979,Under-5s,1558353,Female
+Spain,1980,65+ years,2484028,Female
+Spain,1980,25-64 years,8871670,Female
+Spain,1980,15-24 years,3018932,Female
+Spain,1980,5-14 years,3209985,Female
+Spain,1980,Under-5s,1516848,Female
+Spain,1981,65+ years,2540711,Female
+Spain,1981,25-64 years,8945483,Female
+Spain,1981,15-24 years,3077032,Female
+Spain,1981,5-14 years,3204579,Female
+Spain,1981,Under-5s,1466494,Female
+Spain,1982,65+ years,2594436,Female
+Spain,1982,25-64 years,9033800,Female
+Spain,1982,15-24 years,3118437,Female
+Spain,1982,5-14 years,3193589,Female
+Spain,1982,Under-5s,1406179,Female
+Spain,1983,65+ years,2647246,Female
+Spain,1983,25-64 years,9132226,Female
+Spain,1983,15-24 years,3138627,Female
+Spain,1983,5-14 years,3183139,Female
+Spain,1983,Under-5s,1340567,Female
+Spain,1984,65+ years,2699432,Female
+Spain,1984,25-64 years,9233256,Female
+Spain,1984,15-24 years,3150048,Female
+Spain,1984,5-14 years,3166423,Female
+Spain,1984,Under-5s,1275452,Female
+Spain,1985,65+ years,2758393,Female
+Spain,1985,25-64 years,9330768,Female
+Spain,1985,15-24 years,3158251,Female
+Spain,1985,5-14 years,3138232,Female
+Spain,1985,Under-5s,1214145,Female
+Spain,1986,65+ years,2824358,Female
+Spain,1986,25-64 years,9418536,Female
+Spain,1986,15-24 years,3167735,Female
+Spain,1986,5-14 years,3093359,Female
+Spain,1986,Under-5s,1160142,Female
+Spain,1987,65+ years,2899613,Female
+Spain,1987,25-64 years,9496090,Female
+Spain,1987,15-24 years,3181636,Female
+Spain,1987,5-14 years,3029975,Female
+Spain,1987,Under-5s,1114269,Female
+Spain,1988,65+ years,2979651,Female
+Spain,1988,25-64 years,9572218,Female
+Spain,1988,15-24 years,3193193,Female
+Spain,1988,5-14 years,2953539,Female
+Spain,1988,Under-5s,1073880,Female
+Spain,1989,65+ years,3059083,Female
+Spain,1989,25-64 years,9653925,Female
+Spain,1989,15-24 years,3199479,Female
+Spain,1989,5-14 years,2865829,Female
+Spain,1989,Under-5s,1036045,Female
+Spain,1990,65+ years,3138627,Female
+Spain,1990,25-64 years,9734308,Female
+Spain,1990,15-24 years,3208312,Female
+Spain,1990,5-14 years,2765223,Female
+Spain,1990,Under-5s,1000286,Female
+Spain,1991,65+ years,3216969,Female
+Spain,1991,25-64 years,9829085,Female
+Spain,1991,15-24 years,3226605,Female
+Spain,1991,5-14 years,2658238,Female
+Spain,1991,Under-5s,976356,Female
+Spain,1992,65+ years,3296035,Female
+Spain,1992,25-64 years,9950202,Female
+Spain,1992,15-24 years,3243504,Female
+Spain,1992,5-14 years,2555517,Female
+Spain,1992,Under-5s,965760,Female
+Spain,1993,65+ years,3377366,Female
+Spain,1993,25-64 years,10075111,Female
+Spain,1993,15-24 years,3253459,Female
+Spain,1993,5-14 years,2455063,Female
+Spain,1993,Under-5s,959456,Female
+Spain,1994,65+ years,3461089,Female
+Spain,1994,25-64 years,10196610,Female
+Spain,1994,15-24 years,3255895,Female
+Spain,1994,5-14 years,2359384,Female
+Spain,1994,Under-5s,949193,Female
+Spain,1995,65+ years,3548824,Female
+Spain,1995,25-64 years,10318184,Female
+Spain,1995,15-24 years,3242021,Female
+Spain,1995,5-14 years,2274822,Female
+Spain,1995,Under-5s,934687,Female
+Spain,1996,65+ years,3635360,Female
+Spain,1996,25-64 years,10443233,Female
+Spain,1996,15-24 years,3210651,Female
+Spain,1996,5-14 years,2201876,Female
+Spain,1996,Under-5s,919823,Female
+Spain,1997,65+ years,3721033,Female
+Spain,1997,25-64 years,10573726,Female
+Spain,1997,15-24 years,3162278,Female
+Spain,1997,5-14 years,2141179,Female
+Spain,1997,Under-5s,905686,Female
+Spain,1998,65+ years,3807787,Female
+Spain,1998,25-64 years,10705441,Female
+Spain,1998,15-24 years,3097269,Female
+Spain,1998,5-14 years,2090648,Female
+Spain,1998,Under-5s,894235,Female
+Spain,1999,65+ years,3885316,Female
+Spain,1999,25-64 years,10847016,Female
+Spain,1999,15-24 years,3015519,Female
+Spain,1999,5-14 years,2044539,Female
+Spain,1999,Under-5s,893306,Female
+Spain,2000,65+ years,3958144,Female
+Spain,2000,25-64 years,10999759,Female
+Spain,2000,15-24 years,2919194,Female
+Spain,2000,5-14 years,2002608,Female
+Spain,2000,Under-5s,905861,Female
+Spain,2001,65+ years,4037640,Female
+Spain,2001,25-64 years,11152800,Female
+Spain,2001,15-24 years,2811232,Female
+Spain,2001,5-14 years,1968001,Female
+Spain,2001,Under-5s,929184,Female
+Spain,2002,65+ years,4109166,Female
+Spain,2002,25-64 years,11381479,Female
+Spain,2002,15-24 years,2728892,Female
+Spain,2002,5-14 years,1957160,Female
+Spain,2002,Under-5s,963096,Female
+Spain,2003,65+ years,4153139,Female
+Spain,2003,25-64 years,11691771,Female
+Spain,2003,15-24 years,2673077,Female
+Spain,2003,5-14 years,1966793,Female
+Spain,2003,Under-5s,1004094,Female
+Spain,2004,65+ years,4173016,Female
+Spain,2004,25-64 years,12013533,Female
+Spain,2004,15-24 years,2616097,Female
+Spain,2004,5-14 years,1977426,Female
+Spain,2004,Under-5s,1043294,Female
+Spain,2005,65+ years,4217385,Female
+Spain,2005,25-64 years,12298936,Female
+Spain,2005,15-24 years,2564096,Female
+Spain,2005,5-14 years,1994510,Female
+Spain,2005,Under-5s,1078140,Female
+Spain,2006,65+ years,4274670,Female
+Spain,2006,25-64 years,12565606,Female
+Spain,2006,15-24 years,2523382,Female
+Spain,2006,5-14 years,2023657,Female
+Spain,2006,Under-5s,1113091,Female
+Spain,2007,65+ years,4317909,Female
+Spain,2007,25-64 years,12857597,Female
+Spain,2007,15-24 years,2503850,Female
+Spain,2007,5-14 years,2060041,Female
+Spain,2007,Under-5s,1149664,Female
+Spain,2008,65+ years,4378758,Female
+Spain,2008,25-64 years,13087285,Female
+Spain,2008,15-24 years,2481290,Female
+Spain,2008,5-14 years,2099217,Female
+Spain,2008,Under-5s,1184214,Female
+Spain,2009,65+ years,4452175,Female
+Spain,2009,25-64 years,13211998,Female
+Spain,2009,15-24 years,2431329,Female
+Spain,2009,5-14 years,2138101,Female
+Spain,2009,Under-5s,1204655,Female
+Spain,2010,65+ years,4530673,Female
+Spain,2010,25-64 years,13274223,Female
+Spain,2010,15-24 years,2371111,Female
+Spain,2010,5-14 years,2175366,Female
+Spain,2010,Under-5s,1209232,Female
+Spain,2011,65+ years,4607572,Female
+Spain,2011,25-64 years,13315500,Female
+Spain,2011,15-24 years,2320463,Female
+Spain,2011,5-14 years,2213977,Female
+Spain,2011,Under-5s,1203746,Female
+Spain,2012,65+ years,4677509,Female
+Spain,2012,25-64 years,13317029,Female
+Spain,2012,15-24 years,2275838,Female
+Spain,2012,5-14 years,2249168,Female
+Spain,2012,Under-5s,1185453,Female
+Spain,2013,65+ years,4757958,Female
+Spain,2013,25-64 years,13243897,Female
+Spain,2013,15-24 years,2229103,Female
+Spain,2013,5-14 years,2283659,Female
+Spain,2013,Under-5s,1148229,Female
+Spain,2014,65+ years,4843668,Female
+Spain,2014,25-64 years,13159821,Female
+Spain,2014,15-24 years,2194100,Female
+Spain,2014,5-14 years,2312948,Female
+Spain,2014,Under-5s,1108717,Female
+Spain,2015,65+ years,4910455,Female
+Spain,2015,25-64 years,13118151,Female
+Spain,2015,15-24 years,2180094,Female
+Spain,2015,5-14 years,2330677,Female
+Spain,2015,Under-5s,1080610,Female
+Spain,2016,65+ years,4971007,Female
+Spain,2016,25-64 years,13104074,Female
+Spain,2016,15-24 years,2181290,Female
+Spain,2016,5-14 years,2345116,Female
+Spain,2016,Under-5s,1055429,Female
+Spain,2017,65+ years,5039874,Female
+Spain,2017,25-64 years,13106279,Female
+Spain,2017,15-24 years,2194887,Female
+Spain,2017,5-14 years,2356184,Female
+Spain,2017,Under-5s,1032496,Female
+Spain,2018,65+ years,5113981,Female
+Spain,2018,25-64 years,13138437,Female
+Spain,2018,15-24 years,2226305,Female
+Spain,2018,5-14 years,2357519,Female
+Spain,2018,Under-5s,1012576,Female
+Spain,2019,65+ years,5195660,Female
+Spain,2019,25-64 years,13209634,Female
+Spain,2019,15-24 years,2277878,Female
+Spain,2019,5-14 years,2355093,Female
+Spain,2019,Under-5s,990164,Female
+Spain,2020,65+ years,5266131,Female
+Spain,2020,25-64 years,13255256,Female
+Spain,2020,15-24 years,2325424,Female
+Spain,2020,5-14 years,2347582,Female
+Spain,2020,Under-5s,956674,Female
+Spain,2021,65+ years,5336631,Female
+Spain,2021,25-64 years,13261607,Female
+Spain,2021,15-24 years,2369647,Female
+Spain,2021,5-14 years,2325314,Female
+Spain,2021,Under-5s,922013,Female
+Spain,1950,65+ years,827374,Male
+Spain,1950,25-64 years,6219706,Male
+Spain,1950,15-24 years,2668549,Male
+Spain,1950,5-14 years,2428945,Male
+Spain,1950,Under-5s,1362494,Male
+Spain,1951,65+ years,842653,Male
+Spain,1951,25-64 years,6314691,Male
+Spain,1951,15-24 years,2668095,Male
+Spain,1951,5-14 years,2430000,Male
+Spain,1951,Under-5s,1329887,Male
+Spain,1952,65+ years,858615,Male
+Spain,1952,25-64 years,6407712,Male
+Spain,1952,15-24 years,2645647,Male
+Spain,1952,5-14 years,2437879,Male
+Spain,1952,Under-5s,1342290,Male
+Spain,1953,65+ years,882157,Male
+Spain,1953,25-64 years,6514739,Male
+Spain,1953,15-24 years,2585815,Male
+Spain,1953,5-14 years,2488428,Male
+Spain,1953,Under-5s,1344992,Male
+Spain,1954,65+ years,904358,Male
+Spain,1954,25-64 years,6620931,Male
+Spain,1954,15-24 years,2503257,Male
+Spain,1954,5-14 years,2562216,Male
+Spain,1954,Under-5s,1348490,Male
+Spain,1955,65+ years,926566,Male
+Spain,1955,25-64 years,6716081,Male
+Spain,1955,15-24 years,2452135,Male
+Spain,1955,5-14 years,2592748,Male
+Spain,1955,Under-5s,1377345,Male
+Spain,1956,65+ years,942485,Male
+Spain,1956,25-64 years,6806491,Male
+Spain,1956,15-24 years,2421923,Male
+Spain,1956,5-14 years,2609262,Male
+Spain,1956,Under-5s,1411413,Male
+Spain,1957,65+ years,952068,Male
+Spain,1957,25-64 years,6890579,Male
+Spain,1957,15-24 years,2381534,Male
+Spain,1957,5-14 years,2663092,Male
+Spain,1957,Under-5s,1436829,Male
+Spain,1958,65+ years,970673,Male
+Spain,1958,25-64 years,6978859,Male
+Spain,1958,15-24 years,2356501,Male
+Spain,1958,5-14 years,2703261,Male
+Spain,1958,Under-5s,1463550,Male
+Spain,1959,65+ years,993731,Male
+Spain,1959,25-64 years,7053747,Male
+Spain,1959,15-24 years,2357102,Male
+Spain,1959,5-14 years,2727886,Male
+Spain,1959,Under-5s,1496151,Male
+Spain,1960,65+ years,1019101,Male
+Spain,1960,25-64 years,7111131,Male
+Spain,1960,15-24 years,2378827,Male
+Spain,1960,5-14 years,2745411,Male
+Spain,1960,Under-5s,1515699,Male
+Spain,1961,65+ years,1051522,Male
+Spain,1961,25-64 years,7187207,Male
+Spain,1961,15-24 years,2388178,Male
+Spain,1961,5-14 years,2761932,Male
+Spain,1961,Under-5s,1534783,Male
+Spain,1962,65+ years,1080105,Male
+Spain,1962,25-64 years,7274807,Male
+Spain,1962,15-24 years,2394769,Male
+Spain,1962,5-14 years,2784020,Male
+Spain,1962,Under-5s,1563135,Male
+Spain,1963,65+ years,1100410,Male
+Spain,1963,25-64 years,7360160,Male
+Spain,1963,15-24 years,2419832,Male
+Spain,1963,5-14 years,2802643,Male
+Spain,1963,Under-5s,1584816,Male
+Spain,1964,65+ years,1121238,Male
+Spain,1964,25-64 years,7419002,Male
+Spain,1964,15-24 years,2469570,Male
+Spain,1964,5-14 years,2830300,Male
+Spain,1964,Under-5s,1609561,Male
+Spain,1965,65+ years,1153328,Male
+Spain,1965,25-64 years,7470535,Male
+Spain,1965,15-24 years,2502012,Male
+Spain,1965,5-14 years,2872195,Male
+Spain,1965,Under-5s,1636224,Male
+Spain,1966,65+ years,1192311,Male
+Spain,1966,25-64 years,7524572,Male
+Spain,1966,15-24 years,2517120,Male
+Spain,1966,5-14 years,2922515,Male
+Spain,1966,Under-5s,1655535,Male
+Spain,1967,65+ years,1229205,Male
+Spain,1967,25-64 years,7553900,Male
+Spain,1967,15-24 years,2562036,Male
+Spain,1967,5-14 years,2975448,Male
+Spain,1967,Under-5s,1669116,Male
+Spain,1968,65+ years,1267246,Male
+Spain,1968,25-64 years,7597277,Male
+Spain,1968,15-24 years,2595456,Male
+Spain,1968,5-14 years,3026966,Male
+Spain,1968,Under-5s,1676066,Male
+Spain,1969,65+ years,1301084,Male
+Spain,1969,25-64 years,7647365,Male
+Spain,1969,15-24 years,2614571,Male
+Spain,1969,5-14 years,3094854,Male
+Spain,1969,Under-5s,1667992,Male
+Spain,1970,65+ years,1338704,Male
+Spain,1970,25-64 years,7694874,Male
+Spain,1970,15-24 years,2634266,Male
+Spain,1970,5-14 years,3163022,Male
+Spain,1970,Under-5s,1654050,Male
+Spain,1971,65+ years,1376210,Male
+Spain,1971,25-64 years,7757640,Male
+Spain,1971,15-24 years,2660262,Male
+Spain,1971,5-14 years,3212652,Male
+Spain,1971,Under-5s,1652001,Male
+Spain,1972,65+ years,1411389,Male
+Spain,1972,25-64 years,7841761,Male
+Spain,1972,15-24 years,2692749,Male
+Spain,1972,5-14 years,3247559,Male
+Spain,1972,Under-5s,1658500,Male
+Spain,1973,65+ years,1449921,Male
+Spain,1973,25-64 years,7937924,Male
+Spain,1973,15-24 years,2720913,Male
+Spain,1973,5-14 years,3271251,Male
+Spain,1973,Under-5s,1667413,Male
+Spain,1974,65+ years,1481288,Male
+Spain,1974,25-64 years,8061567,Male
+Spain,1974,15-24 years,2759979,Male
+Spain,1974,5-14 years,3292589,Male
+Spain,1974,Under-5s,1682118,Male
+Spain,1975,65+ years,1513454,Male
+Spain,1975,25-64 years,8173873,Male
+Spain,1975,15-24 years,2811331,Male
+Spain,1975,5-14 years,3314928,Male
+Spain,1975,Under-5s,1694082,Male
+Spain,1976,65+ years,1550881,Male
+Spain,1976,25-64 years,8251200,Male
+Spain,1976,15-24 years,2860398,Male
+Spain,1976,5-14 years,3338703,Male
+Spain,1976,Under-5s,1700282,Male
+Spain,1977,65+ years,1588432,Male
+Spain,1977,25-64 years,8331852,Male
+Spain,1977,15-24 years,2909084,Male
+Spain,1977,5-14 years,3363463,Male
+Spain,1977,Under-5s,1699450,Male
+Spain,1978,65+ years,1626264,Male
+Spain,1978,25-64 years,8415900,Male
+Spain,1978,15-24 years,2963156,Male
+Spain,1978,5-14 years,3380060,Male
+Spain,1978,Under-5s,1687088,Male
+Spain,1979,65+ years,1663445,Male
+Spain,1979,25-64 years,8495874,Male
+Spain,1979,15-24 years,3032599,Male
+Spain,1979,5-14 years,3388203,Male
+Spain,1979,Under-5s,1657210,Male
+Spain,1980,65+ years,1700929,Male
+Spain,1980,25-64 years,8578854,Male
+Spain,1980,15-24 years,3103590,Male
+Spain,1980,5-14 years,3394332,Male
+Spain,1980,Under-5s,1612506,Male
+Spain,1981,65+ years,1733026,Male
+Spain,1981,25-64 years,8671813,Male
+Spain,1981,15-24 years,3169249,Male
+Spain,1981,5-14 years,3390657,Male
+Spain,1981,Under-5s,1559609,Male
+Spain,1982,65+ years,1761360,Male
+Spain,1982,25-64 years,8778728,Male
+Spain,1982,15-24 years,3218889,Male
+Spain,1982,5-14 years,3378162,Male
+Spain,1982,Under-5s,1498567,Male
+Spain,1983,65+ years,1789479,Male
+Spain,1983,25-64 years,8896329,Male
+Spain,1983,15-24 years,3244189,Male
+Spain,1983,5-14 years,3367221,Male
+Spain,1983,Under-5s,1430743,Male
+Spain,1984,65+ years,1819889,Male
+Spain,1984,25-64 years,9010981,Male
+Spain,1984,15-24 years,3263754,Male
+Spain,1984,5-14 years,3347671,Male
+Spain,1984,Under-5s,1363023,Male
+Spain,1985,65+ years,1859768,Male
+Spain,1985,25-64 years,9114704,Male
+Spain,1985,15-24 years,3283924,Male
+Spain,1985,5-14 years,3314418,Male
+Spain,1985,Under-5s,1299306,Male
+Spain,1986,65+ years,1913608,Male
+Spain,1986,25-64 years,9205559,Male
+Spain,1986,15-24 years,3303309,Male
+Spain,1986,5-14 years,3264179,Male
+Spain,1986,Under-5s,1240032,Male
+Spain,1987,65+ years,1977680,Male
+Spain,1987,25-64 years,9289565,Male
+Spain,1987,15-24 years,3322698,Male
+Spain,1987,5-14 years,3194954,Male
+Spain,1987,Under-5s,1188052,Male
+Spain,1988,65+ years,2043856,Male
+Spain,1988,25-64 years,9374773,Male
+Spain,1988,15-24 years,3336258,Male
+Spain,1988,5-14 years,3111624,Male
+Spain,1988,Under-5s,1142740,Male
+Spain,1989,65+ years,2110045,Male
+Spain,1989,25-64 years,9463163,Male
+Spain,1989,15-24 years,3342734,Male
+Spain,1989,5-14 years,3016772,Male
+Spain,1989,Under-5s,1100245,Male
+Spain,1990,65+ years,2174357,Male
+Spain,1990,25-64 years,9550343,Male
+Spain,1990,15-24 years,3351117,Male
+Spain,1990,5-14 years,2908543,Male
+Spain,1990,Under-5s,1058777,Male
+Spain,1991,65+ years,2238753,Male
+Spain,1991,25-64 years,9653572,Male
+Spain,1991,15-24 years,3370342,Male
+Spain,1991,5-14 years,2794776,Male
+Spain,1991,Under-5s,1032368,Male
+Spain,1992,65+ years,2304632,Male
+Spain,1992,25-64 years,9784858,Male
+Spain,1992,15-24 years,3391405,Male
+Spain,1992,5-14 years,2687357,Male
+Spain,1992,Under-5s,1022977,Male
+Spain,1993,65+ years,2371362,Male
+Spain,1993,25-64 years,9922102,Male
+Spain,1993,15-24 years,3405912,Male
+Spain,1993,5-14 years,2582818,Male
+Spain,1993,Under-5s,1017902,Male
+Spain,1994,65+ years,2440042,Male
+Spain,1994,25-64 years,10058122,Male
+Spain,1994,15-24 years,3410939,Male
+Spain,1994,5-14 years,2484218,Male
+Spain,1994,Under-5s,1008235,Male
+Spain,1995,65+ years,2511920,Male
+Spain,1995,25-64 years,10195492,Male
+Spain,1995,15-24 years,3397909,Male
+Spain,1995,5-14 years,2397232,Male
+Spain,1995,Under-5s,993493,Male
+Spain,1996,65+ years,2584382,Male
+Spain,1996,25-64 years,10335634,Male
+Spain,1996,15-24 years,3366494,Male
+Spain,1996,5-14 years,2322004,Male
+Spain,1996,Under-5s,977025,Male
+Spain,1997,65+ years,2656672,Male
+Spain,1997,25-64 years,10482080,Male
+Spain,1997,15-24 years,3316884,Male
+Spain,1997,5-14 years,2259724,Male
+Spain,1997,Under-5s,960789,Male
+Spain,1998,65+ years,2728820,Male
+Spain,1998,25-64 years,10631788,Male
+Spain,1998,15-24 years,3249665,Male
+Spain,1998,5-14 years,2208171,Male
+Spain,1998,Under-5s,948530,Male
+Spain,1999,65+ years,2792435,Male
+Spain,1999,25-64 years,10790777,Male
+Spain,1999,15-24 years,3165988,Male
+Spain,1999,5-14 years,2160487,Male
+Spain,1999,Under-5s,946850,Male
+Spain,2000,65+ years,2852612,Male
+Spain,2000,25-64 years,10961586,Male
+Spain,2000,15-24 years,3066669,Male
+Spain,2000,5-14 years,2116071,Male
+Spain,2000,Under-5s,959150,Male
+Spain,2001,65+ years,2916942,Male
+Spain,2001,25-64 years,11136062,Male
+Spain,2001,15-24 years,2954142,Male
+Spain,2001,5-14 years,2078836,Male
+Spain,2001,Under-5s,981609,Male
+Spain,2002,65+ years,2974071,Male
+Spain,2002,25-64 years,11411508,Male
+Spain,2002,15-24 years,2869518,Male
+Spain,2002,5-14 years,2066622,Male
+Spain,2002,Under-5s,1016143,Male
+Spain,2003,65+ years,3009702,Male
+Spain,2003,25-64 years,11783111,Male
+Spain,2003,15-24 years,2811138,Male
+Spain,2003,5-14 years,2077267,Male
+Spain,2003,Under-5s,1060178,Male
+Spain,2004,65+ years,3023502,Male
+Spain,2004,25-64 years,12167406,Male
+Spain,2004,15-24 years,2753558,Male
+Spain,2004,5-14 years,2088964,Male
+Spain,2004,Under-5s,1102874,Male
+Spain,2005,65+ years,3062317,Male
+Spain,2005,25-64 years,12519308,Male
+Spain,2005,15-24 years,2702492,Male
+Spain,2005,5-14 years,2107779,Male
+Spain,2005,Under-5s,1140410,Male
+Spain,2006,65+ years,3116964,Male
+Spain,2006,25-64 years,12832134,Male
+Spain,2006,15-24 years,2657191,Male
+Spain,2006,5-14 years,2138134,Male
+Spain,2006,Under-5s,1177992,Male
+Spain,2007,65+ years,3158265,Male
+Spain,2007,25-64 years,13168564,Male
+Spain,2007,15-24 years,2635679,Male
+Spain,2007,5-14 years,2175844,Male
+Spain,2007,Under-5s,1218371,Male
+Spain,2008,65+ years,3216278,Male
+Spain,2008,25-64 years,13431879,Male
+Spain,2008,15-24 years,2612353,Male
+Spain,2008,5-14 years,2218169,Male
+Spain,2008,Under-5s,1257091,Male
+Spain,2009,65+ years,3287311,Male
+Spain,2009,25-64 years,13545572,Male
+Spain,2009,15-24 years,2554976,Male
+Spain,2009,5-14 years,2260272,Male
+Spain,2009,Under-5s,1281380,Male
+Spain,2010,65+ years,3362381,Male
+Spain,2010,25-64 years,13574505,Male
+Spain,2010,15-24 years,2486265,Male
+Spain,2010,5-14 years,2300683,Male
+Spain,2010,Under-5s,1288330,Male
+Spain,2011,65+ years,3434947,Male
+Spain,2011,25-64 years,13576226,Male
+Spain,2011,15-24 years,2429320,Male
+Spain,2011,5-14 years,2343702,Male
+Spain,2011,Under-5s,1283779,Male
+Spain,2012,65+ years,3501033,Male
+Spain,2012,25-64 years,13520931,Male
+Spain,2012,15-24 years,2380361,Male
+Spain,2012,5-14 years,2384516,Male
+Spain,2012,Under-5s,1264241,Male
+Spain,2013,65+ years,3576958,Male
+Spain,2013,25-64 years,13384085,Male
+Spain,2013,15-24 years,2333053,Male
+Spain,2013,5-14 years,2423030,Male
+Spain,2013,Under-5s,1223490,Male
+Spain,2014,65+ years,3656461,Male
+Spain,2014,25-64 years,13252819,Male
+Spain,2014,15-24 years,2299709,Male
+Spain,2014,5-14 years,2456339,Male
+Spain,2014,Under-5s,1179973,Male
+Spain,2015,65+ years,3719561,Male
+Spain,2015,25-64 years,13176616,Male
+Spain,2015,15-24 years,2289232,Male
+Spain,2015,5-14 years,2476778,Male
+Spain,2015,Under-5s,1149165,Male
+Spain,2016,65+ years,3777052,Male
+Spain,2016,25-64 years,13130892,Male
+Spain,2016,15-24 years,2293707,Male
+Spain,2016,5-14 years,2493430,Male
+Spain,2016,Under-5s,1121321,Male
+Spain,2017,65+ years,3842520,Male
+Spain,2017,25-64 years,13099080,Male
+Spain,2017,15-24 years,2309629,Male
+Spain,2017,5-14 years,2507232,Male
+Spain,2017,Under-5s,1095991,Male
+Spain,2018,65+ years,3913244,Male
+Spain,2018,25-64 years,13099213,Male
+Spain,2018,15-24 years,2346469,Male
+Spain,2018,5-14 years,2509953,Male
+Spain,2018,Under-5s,1074341,Male
+Spain,2019,65+ years,3987707,Male
+Spain,2019,25-64 years,13148463,Male
+Spain,2019,15-24 years,2408320,Male
+Spain,2019,5-14 years,2508864,Male
+Spain,2019,Under-5s,1049584,Male
+Spain,2020,65+ years,4051517,Male
+Spain,2020,25-64 years,13181093,Male
+Spain,2020,15-24 years,2466062,Male
+Spain,2020,5-14 years,2501618,Male
+Spain,2020,Under-5s,1012445,Male
+Spain,2021,65+ years,4114637,Male
+Spain,2021,25-64 years,13188799,Male
+Spain,2021,15-24 years,2516675,Male
+Spain,2021,5-14 years,2476653,Male
+Spain,2021,Under-5s,974959,Male

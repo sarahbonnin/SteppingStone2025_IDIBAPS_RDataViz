@@ -1,0 +1,2036 @@
+Country,Continent,Year,Population
+Albania,Europe,2013,245
+Albania,Europe,2014,250
+Albania,Europe,2015,279
+Albania,Europe,2016,298
+Albania,Europe,2017,334
+Albania,Europe,2018,368
+Albania,Europe,2019,411
+Albania,Europe,2020,443
+Albania,Europe,2021,552
+Albania,Europe,2022,751
+Albania,Europe,2023,952
+Andorra,Europe,2013,316
+Andorra,Europe,2014,308
+Andorra,Europe,2015,306
+Andorra,Europe,2016,301
+Andorra,Europe,2017,344
+Andorra,Europe,2018,329
+Andorra,Europe,2019,321
+Andorra,Europe,2020,297
+Andorra,Europe,2021,306
+Andorra,Europe,2022,249
+Andorra,Europe,2023,261
+Bosnia y Herzegovina,Europe,2013,59
+Bosnia y Herzegovina,Europe,2014,61
+Bosnia y Herzegovina,Europe,2015,59
+Bosnia y Herzegovina,Europe,2016,69
+Bosnia y Herzegovina,Europe,2017,65
+Bosnia y Herzegovina,Europe,2018,71
+Bosnia y Herzegovina,Europe,2019,75
+Bosnia y Herzegovina,Europe,2020,62
+Bosnia y Herzegovina,Europe,2021,73
+Bosnia y Herzegovina,Europe,2022,77
+Bosnia y Herzegovina,Europe,2023,80
+Croacia,Europe,2013,164
+Croacia,Europe,2014,190
+Croacia,Europe,2015,202
+Croacia,Europe,2016,239
+Croacia,Europe,2017,312
+Croacia,Europe,2018,341
+Croacia,Europe,2019,403
+Croacia,Europe,2020,437
+Croacia,Europe,2021,486
+Croacia,Europe,2022,549
+Croacia,Europe,2023,575
+Eslovenia,Europe,2013,131
+Eslovenia,Europe,2014,130
+Eslovenia,Europe,2015,134
+Eslovenia,Europe,2016,152
+Eslovenia,Europe,2017,164
+Eslovenia,Europe,2018,182
+Eslovenia,Europe,2019,191
+Eslovenia,Europe,2020,203
+Eslovenia,Europe,2021,228
+Eslovenia,Europe,2022,252
+Eslovenia,Europe,2023,276
+Grecia,Europe,2013,815
+Grecia,Europe,2014,895
+Grecia,Europe,2015,893
+Grecia,Europe,2016,957
+Grecia,Europe,2017,1066
+Grecia,Europe,2018,1089
+Grecia,Europe,2019,1246
+Grecia,Europe,2020,1307
+Grecia,Europe,2021,1389
+Grecia,Europe,2022,1439
+Grecia,Europe,2023,1461
+Italia,Europe,2013,24256
+Italia,Europe,2014,25015
+Italia,Europe,2015,25707
+Italia,Europe,2016,26993
+Italia,Europe,2017,29272
+Italia,Europe,2018,31500
+Italia,Europe,2019,36276
+Italia,Europe,2020,39863
+Italia,Europe,2021,41759
+Italia,Europe,2022,44233
+Italia,Europe,2023,45803
+Macedonia,Europe,2013,61
+Macedonia,Europe,2014,69
+Macedonia,Europe,2015,70
+Macedonia,Europe,2016,73
+Macedonia,Europe,2017,87
+Macedonia,Europe,2018,96
+Macedonia,Europe,2019,97
+Macedonia,Europe,2020,92
+Macedonia,Europe,2021,100
+Macedonia,Europe,2022,92
+Macedonia,Europe,2023,102
+Malta,Europe,2013,29
+Malta,Europe,2014,28
+Malta,Europe,2015,25
+Malta,Europe,2016,27
+Malta,Europe,2017,30
+Malta,Europe,2018,29
+Malta,Europe,2019,38
+Malta,Europe,2020,60
+Malta,Europe,2021,61
+Malta,Europe,2022,72
+Malta,Europe,2023,71
+Montenegro,Europe,2013,27
+Montenegro,Europe,2014,30
+Montenegro,Europe,2015,31
+Montenegro,Europe,2016,32
+Montenegro,Europe,2017,41
+Montenegro,Europe,2018,43
+Montenegro,Europe,2019,39
+Montenegro,Europe,2020,38
+Montenegro,Europe,2021,43
+Montenegro,Europe,2022,46
+Montenegro,Europe,2023,52
+Portugal,Europe,2013,4048
+Portugal,Europe,2014,4071
+Portugal,Europe,2015,4132
+Portugal,Europe,2016,4169
+Portugal,Europe,2017,4537
+Portugal,Europe,2018,4699
+Portugal,Europe,2019,5371
+Portugal,Europe,2020,5672
+Portugal,Europe,2021,5897
+Portugal,Europe,2022,6103
+Portugal,Europe,2023,6000
+San Marino,Europe,2013,0
+San Marino,Europe,2014,0
+San Marino,Europe,2015,0
+San Marino,Europe,2016,0
+San Marino,Europe,2017,1
+San Marino,Europe,2018,1
+San Marino,Europe,2019,1
+San Marino,Europe,2020,1
+San Marino,Europe,2021,1
+San Marino,Europe,2022,2
+San Marino,Europe,2023,2
+Serbia,Europe,2013,422
+Serbia,Europe,2014,406
+Serbia,Europe,2015,424
+Serbia,Europe,2016,411
+Serbia,Europe,2017,434
+Serbia,Europe,2018,462
+Serbia,Europe,2019,475
+Serbia,Europe,2020,474
+Serbia,Europe,2021,508
+Serbia,Europe,2022,532
+Serbia,Europe,2023,591
+Alemania,Europe,2013,6914
+Alemania,Europe,2014,6930
+Alemania,Europe,2015,6870
+Alemania,Europe,2016,6783
+Alemania,Europe,2017,7041
+Alemania,Europe,2018,7075
+Alemania,Europe,2019,7739
+Alemania,Europe,2020,7788
+Alemania,Europe,2021,7886
+Alemania,Europe,2022,8102
+Alemania,Europe,2023,8158
+Austria,Europe,2013,717
+Austria,Europe,2014,731
+Austria,Europe,2015,731
+Austria,Europe,2016,717
+Austria,Europe,2017,754
+Austria,Europe,2018,723
+Austria,Europe,2019,804
+Austria,Europe,2020,819
+Austria,Europe,2021,818
+Austria,Europe,2022,858
+Austria,Europe,2023,870
+Belgica,Europe,2013,1313
+Belgica,Europe,2014,1367
+Belgica,Europe,2015,1409
+Belgica,Europe,2016,1516
+Belgica,Europe,2017,1576
+Belgica,Europe,2018,1629
+Belgica,Europe,2019,1782
+Belgica,Europe,2020,1782
+Belgica,Europe,2021,1815
+Belgica,Europe,2022,1888
+Belgica,Europe,2023,1918
+Francia,Europe,2013,12708
+Francia,Europe,2014,13062
+Francia,Europe,2015,13281
+Francia,Europe,2016,13671
+Francia,Europe,2017,14717
+Francia,Europe,2018,15260
+Francia,Europe,2019,16940
+Francia,Europe,2020,17433
+Francia,Europe,2021,17792
+Francia,Europe,2022,18417
+Francia,Europe,2023,18000
+Liechtenstein,Europe,2013,5
+Liechtenstein,Europe,2014,6
+Liechtenstein,Europe,2015,8
+Liechtenstein,Europe,2016,6
+Liechtenstein,Europe,2017,4
+Liechtenstein,Europe,2018,4
+Liechtenstein,Europe,2019,7
+Liechtenstein,Europe,2020,7
+Liechtenstein,Europe,2021,5
+Liechtenstein,Europe,2022,4
+Liechtenstein,Europe,2023,3
+Luxemburgo,Europe,2013,34
+Luxemburgo,Europe,2014,36
+Luxemburgo,Europe,2015,35
+Luxemburgo,Europe,2016,29
+Luxemburgo,Europe,2017,35
+Luxemburgo,Europe,2018,40
+Luxemburgo,Europe,2019,50
+Luxemburgo,Europe,2020,63
+Luxemburgo,Europe,2021,69
+Luxemburgo,Europe,2022,64
+Luxemburgo,Europe,2023,88
+Monaco,Europe,2013,1
+Monaco,Europe,2014,1
+Monaco,Europe,2015,1
+Monaco,Europe,2016,2
+Monaco,Europe,2017,2
+Monaco,Europe,2018,2
+Monaco,Europe,2019,2
+Monaco,Europe,2020,2
+Monaco,Europe,2021,2
+Monaco,Europe,2022,4
+Monaco,Europe,2023,4
+Paises Bajos,Europe,2013,2344
+Paises Bajos,Europe,2014,2437
+Paises Bajos,Europe,2015,2444
+Paises Bajos,Europe,2016,2613
+Paises Bajos,Europe,2017,2832
+Paises Bajos,Europe,2018,2923
+Paises Bajos,Europe,2019,3200
+Paises Bajos,Europe,2020,3237
+Paises Bajos,Europe,2021,3285
+Paises Bajos,Europe,2022,3338
+Paises Bajos,Europe,2023,3301
+Suiza,Europe,2013,900
+Suiza,Europe,2014,924
+Suiza,Europe,2015,937
+Suiza,Europe,2016,923
+Suiza,Europe,2017,932
+Suiza,Europe,2018,976
+Suiza,Europe,2019,1082
+Suiza,Europe,2020,1026
+Suiza,Europe,2021,1029
+Suiza,Europe,2022,1105
+Suiza,Europe,2023,1164
+Belarus,Europe,2013,292
+Belarus,Europe,2014,318
+Belarus,Europe,2015,361
+Belarus,Europe,2016,405
+Belarus,Europe,2017,472
+Belarus,Europe,2018,488
+Belarus,Europe,2019,527
+Belarus,Europe,2020,554
+Belarus,Europe,2021,544
+Belarus,Europe,2022,555
+Belarus,Europe,2023,673
+Bulgaria,Europe,2013,1979
+Bulgaria,Europe,2014,2023
+Bulgaria,Europe,2015,2013
+Bulgaria,Europe,2016,1946
+Bulgaria,Europe,2017,1991
+Bulgaria,Europe,2018,1965
+Bulgaria,Europe,2019,2044
+Bulgaria,Europe,2020,1972
+Bulgaria,Europe,2021,1949
+Bulgaria,Europe,2022,1972
+Bulgaria,Europe,2023,1847
+Republica Eslovaca,Europe,2013,311
+Republica Eslovaca,Europe,2014,337
+Republica Eslovaca,Europe,2015,335
+Republica Eslovaca,Europe,2016,334
+Republica Eslovaca,Europe,2017,358
+Republica Eslovaca,Europe,2018,370
+Republica Eslovaca,Europe,2019,400
+Republica Eslovaca,Europe,2020,383
+Republica Eslovaca,Europe,2021,407
+Republica Eslovaca,Europe,2022,415
+Republica Eslovaca,Europe,2023,422
+Hungria,Europe,2013,577
+Hungria,Europe,2014,648
+Hungria,Europe,2015,668
+Hungria,Europe,2016,732
+Hungria,Europe,2017,809
+Hungria,Europe,2018,844
+Hungria,Europe,2019,951
+Hungria,Europe,2020,1005
+Hungria,Europe,2021,1036
+Hungria,Europe,2022,1043
+Hungria,Europe,2023,1058
+Moldavia,Europe,2013,503
+Moldavia,Europe,2014,520
+Moldavia,Europe,2015,509
+Moldavia,Europe,2016,512
+Moldavia,Europe,2017,539
+Moldavia,Europe,2018,530
+Moldavia,Europe,2019,544
+Moldavia,Europe,2020,519
+Moldavia,Europe,2021,529
+Moldavia,Europe,2022,498
+Moldavia,Europe,2023,512
+Polonia,Europe,2013,2389
+Polonia,Europe,2014,2438
+Polonia,Europe,2015,2453
+Polonia,Europe,2016,2532
+Polonia,Europe,2017,2700
+Polonia,Europe,2018,2752
+Polonia,Europe,2019,3088
+Polonia,Europe,2020,3280
+Polonia,Europe,2021,3377
+Polonia,Europe,2022,3430
+Polonia,Europe,2023,3393
+Rumania,Europe,2013,6995
+Rumania,Europe,2014,7118
+Rumania,Europe,2015,7062
+Rumania,Europe,2016,7029
+Rumania,Europe,2017,7229
+Rumania,Europe,2018,7050
+Rumania,Europe,2019,7617
+Rumania,Europe,2020,7581
+Rumania,Europe,2021,7505
+Rumania,Europe,2022,7625
+Rumania,Europe,2023,7205
+Rusia,Europe,2013,4594
+Rusia,Europe,2014,5210
+Rusia,Europe,2015,5840
+Rusia,Europe,2016,6239
+Rusia,Europe,2017,7015
+Rusia,Europe,2018,7234
+Rusia,Europe,2019,7596
+Rusia,Europe,2020,7960
+Rusia,Europe,2021,8073
+Rusia,Europe,2022,7675
+Rusia,Europe,2023,9275
+Republica Checa,Europe,2013,518
+Republica Checa,Europe,2014,531
+Republica Checa,Europe,2015,523
+Republica Checa,Europe,2016,507
+Republica Checa,Europe,2017,520
+Republica Checa,Europe,2018,497
+Republica Checa,Europe,2019,524
+Republica Checa,Europe,2020,515
+Republica Checa,Europe,2021,513
+Republica Checa,Europe,2022,497
+Republica Checa,Europe,2023,499
+Ucrania,Europe,2013,3058
+Ucrania,Europe,2014,3061
+Ucrania,Europe,2015,3385
+Ucrania,Europe,2016,3986
+Ucrania,Europe,2017,4541
+Ucrania,Europe,2018,4768
+Ucrania,Europe,2019,5059
+Ucrania,Europe,2020,5312
+Ucrania,Europe,2021,5382
+Ucrania,Europe,2022,5091
+Ucrania,Europe,2023,7962
+Dinamarca,Europe,2013,569
+Dinamarca,Europe,2014,596
+Dinamarca,Europe,2015,590
+Dinamarca,Europe,2016,572
+Dinamarca,Europe,2017,612
+Dinamarca,Europe,2018,615
+Dinamarca,Europe,2019,671
+Dinamarca,Europe,2020,698
+Dinamarca,Europe,2021,697
+Dinamarca,Europe,2022,687
+Dinamarca,Europe,2023,660
+Estonia,Europe,2013,126
+Estonia,Europe,2014,154
+Estonia,Europe,2015,159
+Estonia,Europe,2016,177
+Estonia,Europe,2017,195
+Estonia,Europe,2018,191
+Estonia,Europe,2019,204
+Estonia,Europe,2020,213
+Estonia,Europe,2021,214
+Estonia,Europe,2022,191
+Estonia,Europe,2023,193
+Finlandia,Europe,2013,493
+Finlandia,Europe,2014,499
+Finlandia,Europe,2015,496
+Finlandia,Europe,2016,505
+Finlandia,Europe,2017,514
+Finlandia,Europe,2018,546
+Finlandia,Europe,2019,624
+Finlandia,Europe,2020,620
+Finlandia,Europe,2021,619
+Finlandia,Europe,2022,625
+Finlandia,Europe,2023,578
+Irlanda,Europe,2013,934
+Irlanda,Europe,2014,1006
+Irlanda,Europe,2015,1020
+Irlanda,Europe,2016,1052
+Irlanda,Europe,2017,1099
+Irlanda,Europe,2018,1093
+Irlanda,Europe,2019,1227
+Irlanda,Europe,2020,1322
+Irlanda,Europe,2021,1399
+Irlanda,Europe,2022,1546
+Irlanda,Europe,2023,1670
+Islandia,Europe,2013,124
+Islandia,Europe,2014,112
+Islandia,Europe,2015,120
+Islandia,Europe,2016,114
+Islandia,Europe,2017,128
+Islandia,Europe,2018,114
+Islandia,Europe,2019,113
+Islandia,Europe,2020,91
+Islandia,Europe,2021,94
+Islandia,Europe,2022,103
+Islandia,Europe,2023,118
+Letonia,Europe,2013,224
+Letonia,Europe,2014,245
+Letonia,Europe,2015,239
+Letonia,Europe,2016,290
+Letonia,Europe,2017,300
+Letonia,Europe,2018,288
+Letonia,Europe,2019,316
+Letonia,Europe,2020,337
+Letonia,Europe,2021,351
+Letonia,Europe,2022,353
+Letonia,Europe,2023,357
+Lituania,Europe,2013,328
+Lituania,Europe,2014,343
+Lituania,Europe,2015,378
+Lituania,Europe,2016,391
+Lituania,Europe,2017,431
+Lituania,Europe,2018,474
+Lituania,Europe,2019,563
+Lituania,Europe,2020,572
+Lituania,Europe,2021,601
+Lituania,Europe,2022,620
+Lituania,Europe,2023,570
+Noruega,Europe,2013,339
+Noruega,Europe,2014,367
+Noruega,Europe,2015,420
+Noruega,Europe,2016,421
+Noruega,Europe,2017,407
+Noruega,Europe,2018,363
+Noruega,Europe,2019,422
+Noruega,Europe,2020,437
+Noruega,Europe,2021,425
+Noruega,Europe,2022,445
+Noruega,Europe,2023,424
+Reino Unido,Europe,2013,6272
+Reino Unido,Europe,2014,6658
+Reino Unido,Europe,2015,6758
+Reino Unido,Europe,2016,6980
+Reino Unido,Europe,2017,7345
+Reino Unido,Europe,2018,7609
+Reino Unido,Europe,2019,8517
+Reino Unido,Europe,2020,9025
+Reino Unido,Europe,2021,10086
+Reino Unido,Europe,2022,10146
+Reino Unido,Europe,2023,9310
+Suecia,Europe,2013,2192
+Suecia,Europe,2014,2208
+Suecia,Europe,2015,2041
+Suecia,Europe,2016,1936
+Suecia,Europe,2017,1930
+Suecia,Europe,2018,1769
+Suecia,Europe,2019,2012
+Suecia,Europe,2020,1957
+Suecia,Europe,2021,1948
+Suecia,Europe,2022,1955
+Suecia,Europe,2023,1862
+Angola,Africa,2013,40
+Angola,Africa,2014,41
+Angola,Africa,2015,38
+Angola,Africa,2016,40
+Angola,Africa,2017,39
+Angola,Africa,2018,47
+Angola,Africa,2019,53
+Angola,Africa,2020,58
+Angola,Africa,2021,62
+Angola,Africa,2022,54
+Angola,Africa,2023,66
+Camerun,Africa,2013,246
+Camerun,Africa,2014,258
+Camerun,Africa,2015,256
+Camerun,Africa,2016,246
+Camerun,Africa,2017,255
+Camerun,Africa,2018,233
+Camerun,Africa,2019,265
+Camerun,Africa,2020,291
+Camerun,Africa,2021,347
+Camerun,Africa,2022,385
+Camerun,Africa,2023,323
+Congo,Africa,2013,46
+Congo,Africa,2014,43
+Congo,Africa,2015,48
+Congo,Africa,2016,42
+Congo,Africa,2017,49
+Congo,Africa,2018,44
+Congo,Africa,2019,52
+Congo,Africa,2020,52
+Congo,Africa,2021,57
+Congo,Africa,2022,54
+Congo,Africa,2023,62
+Gabon,Africa,2013,10
+Gabon,Africa,2014,13
+Gabon,Africa,2015,6
+Gabon,Africa,2016,7
+Gabon,Africa,2017,10
+Gabon,Africa,2018,6
+Gabon,Africa,2019,5
+Gabon,Africa,2020,7
+Gabon,Africa,2021,12
+Gabon,Africa,2022,11
+Gabon,Africa,2023,10
+Guinea Ecuatorial,Africa,2013,157
+Guinea Ecuatorial,Africa,2014,154
+Guinea Ecuatorial,Africa,2015,158
+Guinea Ecuatorial,Africa,2016,176
+Guinea Ecuatorial,Africa,2017,244
+Guinea Ecuatorial,Africa,2018,288
+Guinea Ecuatorial,Africa,2019,289
+Guinea Ecuatorial,Africa,2020,301
+Guinea Ecuatorial,Africa,2021,303
+Guinea Ecuatorial,Africa,2022,272
+Guinea Ecuatorial,Africa,2023,282
+Republica Centroafricana,Africa,2013,2
+Republica Centroafricana,Africa,2014,4
+Republica Centroafricana,Africa,2015,3
+Republica Centroafricana,Africa,2016,4
+Republica Centroafricana,Africa,2017,4
+Republica Centroafricana,Africa,2018,3
+Republica Centroafricana,Africa,2019,5
+Republica Centroafricana,Africa,2020,8
+Republica Centroafricana,Africa,2021,9
+Republica Centroafricana,Africa,2022,9
+Republica Centroafricana,Africa,2023,9
+Rep Democratica del Congo,Africa,2013,1
+Rep Democratica del Congo,Africa,2014,1
+Rep Democratica del Congo,Africa,2015,1
+Rep Democratica del Congo,Africa,2016,1
+Rep Democratica del Congo,Africa,2017,1
+Rep Democratica del Congo,Africa,2018,1
+Rep Democratica del Congo,Africa,2019,1
+Rep Democratica del Congo,Africa,2020,2
+Rep Democratica del Congo,Africa,2021,2
+Rep Democratica del Congo,Africa,2022,2
+Rep Democratica del Congo,Africa,2023,2
+Santo Tome y Principe,Africa,2013,6
+Santo Tome y Principe,Africa,2014,7
+Santo Tome y Principe,Africa,2015,6
+Santo Tome y Principe,Africa,2016,6
+Santo Tome y Principe,Africa,2017,6
+Santo Tome y Principe,Africa,2018,7
+Santo Tome y Principe,Africa,2019,6
+Santo Tome y Principe,Africa,2020,7
+Santo Tome y Principe,Africa,2021,7
+Santo Tome y Principe,Africa,2022,7
+Santo Tome y Principe,Africa,2023,8
+Chad,Africa,2013,0
+Chad,Africa,2014,2
+Chad,Africa,2015,2
+Chad,Africa,2016,1
+Chad,Africa,2017,1
+Chad,Africa,2018,4
+Chad,Africa,2019,3
+Chad,Africa,2020,2
+Chad,Africa,2021,1
+Chad,Africa,2022,3
+Chad,Africa,2023,5
+Botswana,Africa,2013,0
+Botswana,Africa,2014,0
+Botswana,Africa,2015,0
+Botswana,Africa,2016,0
+Botswana,Africa,2017,1
+Botswana,Africa,2018,3
+Botswana,Africa,2019,4
+Botswana,Africa,2020,4
+Botswana,Africa,2021,5
+Botswana,Africa,2022,3
+Botswana,Africa,2023,1
+Eswatini,Africa,2013,0
+Eswatini,Africa,2014,0
+Eswatini,Africa,2015,0
+Eswatini,Africa,2016,1
+Eswatini,Africa,2017,1
+Eswatini,Africa,2018,1
+Eswatini,Africa,2019,1
+Eswatini,Africa,2020,2
+Eswatini,Africa,2021,2
+Eswatini,Africa,2022,1
+Eswatini,Africa,2023,1
+Lesoto,Africa,2013,0
+Lesoto,Africa,2014,1
+Lesoto,Africa,2015,1
+Lesoto,Africa,2016,0
+Lesoto,Africa,2017,1
+Lesoto,Africa,2018,0
+Lesoto,Africa,2019,0
+Lesoto,Africa,2020,1
+Lesoto,Africa,2021,1
+Lesoto,Africa,2022,0
+Lesoto,Africa,2023,1
+Namibia,Africa,2013,2
+Namibia,Africa,2014,4
+Namibia,Africa,2015,2
+Namibia,Africa,2016,2
+Namibia,Africa,2017,2
+Namibia,Africa,2018,7
+Namibia,Africa,2019,9
+Namibia,Africa,2020,11
+Namibia,Africa,2021,12
+Namibia,Africa,2022,14
+Namibia,Africa,2023,13
+Sudafrica,Africa,2013,78
+Sudafrica,Africa,2014,105
+Sudafrica,Africa,2015,93
+Sudafrica,Africa,2016,92
+Sudafrica,Africa,2017,125
+Sudafrica,Africa,2018,145
+Sudafrica,Africa,2019,154
+Sudafrica,Africa,2020,171
+Sudafrica,Africa,2021,178
+Sudafrica,Africa,2022,187
+Sudafrica,Africa,2023,205
+Benin,Africa,2013,22
+Benin,Africa,2014,23
+Benin,Africa,2015,17
+Benin,Africa,2016,16
+Benin,Africa,2017,15
+Benin,Africa,2018,20
+Benin,Africa,2019,21
+Benin,Africa,2020,24
+Benin,Africa,2021,24
+Benin,Africa,2022,25
+Benin,Africa,2023,23
+Burkina Faso,Africa,2013,36
+Burkina Faso,Africa,2014,44
+Burkina Faso,Africa,2015,44
+Burkina Faso,Africa,2016,37
+Burkina Faso,Africa,2017,38
+Burkina Faso,Africa,2018,36
+Burkina Faso,Africa,2019,36
+Burkina Faso,Africa,2020,40
+Burkina Faso,Africa,2021,44
+Burkina Faso,Africa,2022,39
+Burkina Faso,Africa,2023,50
+Cabo Verde,Africa,2013,19
+Cabo Verde,Africa,2014,12
+Cabo Verde,Africa,2015,10
+Cabo Verde,Africa,2016,10
+Cabo Verde,Africa,2017,14
+Cabo Verde,Africa,2018,12
+Cabo Verde,Africa,2019,15
+Cabo Verde,Africa,2020,10
+Cabo Verde,Africa,2021,15
+Cabo Verde,Africa,2022,21
+Cabo Verde,Africa,2023,17
+Costa de Marfil,Africa,2013,59
+Costa de Marfil,Africa,2014,52
+Costa de Marfil,Africa,2015,52
+Costa de Marfil,Africa,2016,49
+Costa de Marfil,Africa,2017,59
+Costa de Marfil,Africa,2018,61
+Costa de Marfil,Africa,2019,79
+Costa de Marfil,Africa,2020,88
+Costa de Marfil,Africa,2021,96
+Costa de Marfil,Africa,2022,109
+Costa de Marfil,Africa,2023,112
+Gambia,Africa,2013,189
+Gambia,Africa,2014,205
+Gambia,Africa,2015,200
+Gambia,Africa,2016,197
+Gambia,Africa,2017,206
+Gambia,Africa,2018,209
+Gambia,Africa,2019,225
+Gambia,Africa,2020,258
+Gambia,Africa,2021,277
+Gambia,Africa,2022,279
+Gambia,Africa,2023,359
+Ghana,Africa,2013,563
+Ghana,Africa,2014,545
+Ghana,Africa,2015,514
+Ghana,Africa,2016,462
+Ghana,Africa,2017,463
+Ghana,Africa,2018,444
+Ghana,Africa,2019,445
+Ghana,Africa,2020,478
+Ghana,Africa,2021,511
+Ghana,Africa,2022,513
+Ghana,Africa,2023,480
+Guinea,Africa,2013,581
+Guinea,Africa,2014,535
+Guinea,Africa,2015,542
+Guinea,Africa,2016,567
+Guinea,Africa,2017,506
+Guinea,Africa,2018,426
+Guinea,Africa,2019,436
+Guinea,Africa,2020,423
+Guinea,Africa,2021,425
+Guinea,Africa,2022,367
+Guinea,Africa,2023,367
+Guinea-Bissau,Africa,2013,75
+Guinea-Bissau,Africa,2014,75
+Guinea-Bissau,Africa,2015,73
+Guinea-Bissau,Africa,2016,73
+Guinea-Bissau,Africa,2017,82
+Guinea-Bissau,Africa,2018,83
+Guinea-Bissau,Africa,2019,90
+Guinea-Bissau,Africa,2020,103
+Guinea-Bissau,Africa,2021,113
+Guinea-Bissau,Africa,2022,115
+Guinea-Bissau,Africa,2023,107
+Liberia,Africa,2013,11
+Liberia,Africa,2014,8
+Liberia,Africa,2015,8
+Liberia,Africa,2016,8
+Liberia,Africa,2017,10
+Liberia,Africa,2018,7
+Liberia,Africa,2019,6
+Liberia,Africa,2020,8
+Liberia,Africa,2021,13
+Liberia,Africa,2022,11
+Liberia,Africa,2023,13
+Mali,Africa,2013,143
+Mali,Africa,2014,134
+Mali,Africa,2015,127
+Mali,Africa,2016,150
+Mali,Africa,2017,150
+Mali,Africa,2018,136
+Mali,Africa,2019,147
+Mali,Africa,2020,155
+Mali,Africa,2021,186
+Mali,Africa,2022,258
+Mali,Africa,2023,262
+Mauritania,Africa,2013,85
+Mauritania,Africa,2014,77
+Mauritania,Africa,2015,62
+Mauritania,Africa,2016,68
+Mauritania,Africa,2017,74
+Mauritania,Africa,2018,71
+Mauritania,Africa,2019,58
+Mauritania,Africa,2020,55
+Mauritania,Africa,2021,65
+Mauritania,Africa,2022,60
+Mauritania,Africa,2023,81
+Niger,Africa,2013,18
+Niger,Africa,2014,17
+Niger,Africa,2015,18
+Niger,Africa,2016,18
+Niger,Africa,2017,16
+Niger,Africa,2018,14
+Niger,Africa,2019,13
+Niger,Africa,2020,14
+Niger,Africa,2021,14
+Niger,Africa,2022,19
+Niger,Africa,2023,25
+Nigeria,Africa,2013,832
+Nigeria,Africa,2014,849
+Nigeria,Africa,2015,830
+Nigeria,Africa,2016,831
+Nigeria,Africa,2017,910
+Nigeria,Africa,2018,926
+Nigeria,Africa,2019,966
+Nigeria,Africa,2020,1029
+Nigeria,Africa,2021,1058
+Nigeria,Africa,2022,1037
+Nigeria,Africa,2023,1015
+Senegal,Africa,2013,1067
+Senegal,Africa,2014,1104
+Senegal,Africa,2015,1182
+Senegal,Africa,2016,1163
+Senegal,Africa,2017,1298
+Senegal,Africa,2018,1308
+Senegal,Africa,2019,1496
+Senegal,Africa,2020,1717
+Senegal,Africa,2021,1798
+Senegal,Africa,2022,1825
+Senegal,Africa,2023,1880
+Sierra Leona,Africa,2013,28
+Sierra Leona,Africa,2014,19
+Sierra Leona,Africa,2015,21
+Sierra Leona,Africa,2016,19
+Sierra Leona,Africa,2017,25
+Sierra Leona,Africa,2018,28
+Sierra Leona,Africa,2019,32
+Sierra Leona,Africa,2020,30
+Sierra Leona,Africa,2021,26
+Sierra Leona,Africa,2022,31
+Sierra Leona,Africa,2023,23
+Togo,Africa,2013,20
+Togo,Africa,2014,23
+Togo,Africa,2015,23
+Togo,Africa,2016,17
+Togo,Africa,2017,14
+Togo,Africa,2018,13
+Togo,Africa,2019,15
+Togo,Africa,2020,15
+Togo,Africa,2021,17
+Togo,Africa,2022,19
+Togo,Africa,2023,15
+Burundi,Africa,2013,5
+Burundi,Africa,2014,5
+Burundi,Africa,2015,4
+Burundi,Africa,2016,5
+Burundi,Africa,2017,9
+Burundi,Africa,2018,6
+Burundi,Africa,2019,4
+Burundi,Africa,2020,6
+Burundi,Africa,2021,4
+Burundi,Africa,2022,8
+Burundi,Africa,2023,13
+Comoras,Africa,2013,0
+Comoras,Africa,2014,0
+Comoras,Africa,2015,0
+Comoras,Africa,2016,0
+Comoras,Africa,2017,0
+Comoras,Africa,2018,0
+Comoras,Africa,2019,1
+Comoras,Africa,2020,1
+Comoras,Africa,2021,1
+Comoras,Africa,2022,0
+Comoras,Africa,2023,0
+Djibouti,Africa,2013,0
+Djibouti,Africa,2014,0
+Djibouti,Africa,2015,0
+Djibouti,Africa,2016,1
+Djibouti,Africa,2017,1
+Djibouti,Africa,2018,1
+Djibouti,Africa,2019,1
+Djibouti,Africa,2020,1
+Djibouti,Africa,2021,1
+Djibouti,Africa,2022,2
+Djibouti,Africa,2023,3
+Eritrea,Africa,2013,4
+Eritrea,Africa,2014,3
+Eritrea,Africa,2015,3
+Eritrea,Africa,2016,3
+Eritrea,Africa,2017,3
+Eritrea,Africa,2018,7
+Eritrea,Africa,2019,7
+Eritrea,Africa,2020,4
+Eritrea,Africa,2021,4
+Eritrea,Africa,2022,4
+Eritrea,Africa,2023,2
+Etiopia,Africa,2013,53
+Etiopia,Africa,2014,37
+Etiopia,Africa,2015,39
+Etiopia,Africa,2016,36
+Etiopia,Africa,2017,41
+Etiopia,Africa,2018,38
+Etiopia,Africa,2019,44
+Etiopia,Africa,2020,45
+Etiopia,Africa,2021,55
+Etiopia,Africa,2022,58
+Etiopia,Africa,2023,59
+Kenia,Africa,2013,50
+Kenia,Africa,2014,47
+Kenia,Africa,2015,49
+Kenia,Africa,2016,49
+Kenia,Africa,2017,63
+Kenia,Africa,2018,71
+Kenia,Africa,2019,79
+Kenia,Africa,2020,93
+Kenia,Africa,2021,87
+Kenia,Africa,2022,96
+Kenia,Africa,2023,99
+Madagascar,Africa,2013,7
+Madagascar,Africa,2014,6
+Madagascar,Africa,2015,8
+Madagascar,Africa,2016,10
+Madagascar,Africa,2017,13
+Madagascar,Africa,2018,14
+Madagascar,Africa,2019,16
+Madagascar,Africa,2020,18
+Madagascar,Africa,2021,17
+Madagascar,Africa,2022,15
+Madagascar,Africa,2023,17
+Malawi,Africa,2013,2
+Malawi,Africa,2014,2
+Malawi,Africa,2015,2
+Malawi,Africa,2016,2
+Malawi,Africa,2017,2
+Malawi,Africa,2018,6
+Malawi,Africa,2019,5
+Malawi,Africa,2020,8
+Malawi,Africa,2021,8
+Malawi,Africa,2022,6
+Malawi,Africa,2023,5
+Mauricio,Africa,2013,11
+Mauricio,Africa,2014,7
+Mauricio,Africa,2015,9
+Mauricio,Africa,2016,9
+Mauricio,Africa,2017,9
+Mauricio,Africa,2018,11
+Mauricio,Africa,2019,13
+Mauricio,Africa,2020,13
+Mauricio,Africa,2021,11
+Mauricio,Africa,2022,11
+Mauricio,Africa,2023,12
+Mozambique,Africa,2013,22
+Mozambique,Africa,2014,21
+Mozambique,Africa,2015,20
+Mozambique,Africa,2016,25
+Mozambique,Africa,2017,29
+Mozambique,Africa,2018,32
+Mozambique,Africa,2019,30
+Mozambique,Africa,2020,34
+Mozambique,Africa,2021,38
+Mozambique,Africa,2022,47
+Mozambique,Africa,2023,68
+Ruanda,Africa,2013,3
+Ruanda,Africa,2014,5
+Ruanda,Africa,2015,4
+Ruanda,Africa,2016,5
+Ruanda,Africa,2017,6
+Ruanda,Africa,2018,5
+Ruanda,Africa,2019,7
+Ruanda,Africa,2020,6
+Ruanda,Africa,2021,7
+Ruanda,Africa,2022,10
+Ruanda,Africa,2023,16
+Seychelles,Africa,2013,2
+Seychelles,Africa,2014,2
+Seychelles,Africa,2015,1
+Seychelles,Africa,2016,2
+Seychelles,Africa,2017,3
+Seychelles,Africa,2018,4
+Seychelles,Africa,2019,2
+Seychelles,Africa,2020,3
+Seychelles,Africa,2021,3
+Seychelles,Africa,2022,3
+Seychelles,Africa,2023,3
+Somalia,Africa,2013,7
+Somalia,Africa,2014,8
+Somalia,Africa,2015,9
+Somalia,Africa,2016,9
+Somalia,Africa,2017,18
+Somalia,Africa,2018,15
+Somalia,Africa,2019,17
+Somalia,Africa,2020,22
+Somalia,Africa,2021,24
+Somalia,Africa,2022,27
+Somalia,Africa,2023,30
+Tanzania,Africa,2013,17
+Tanzania,Africa,2014,18
+Tanzania,Africa,2015,23
+Tanzania,Africa,2016,27
+Tanzania,Africa,2017,32
+Tanzania,Africa,2018,40
+Tanzania,Africa,2019,37
+Tanzania,Africa,2020,35
+Tanzania,Africa,2021,35
+Tanzania,Africa,2022,37
+Tanzania,Africa,2023,48
+Uganda,Africa,2013,4
+Uganda,Africa,2014,5
+Uganda,Africa,2015,6
+Uganda,Africa,2016,7
+Uganda,Africa,2017,11
+Uganda,Africa,2018,14
+Uganda,Africa,2019,16
+Uganda,Africa,2020,16
+Uganda,Africa,2021,19
+Uganda,Africa,2022,21
+Uganda,Africa,2023,20
+Zambia,Africa,2013,1
+Zambia,Africa,2014,3
+Zambia,Africa,2015,4
+Zambia,Africa,2016,1
+Zambia,Africa,2017,2
+Zambia,Africa,2018,4
+Zambia,Africa,2019,5
+Zambia,Africa,2020,3
+Zambia,Africa,2021,3
+Zambia,Africa,2022,7
+Zambia,Africa,2023,10
+Zimbabwe,Africa,2013,9
+Zimbabwe,Africa,2014,6
+Zimbabwe,Africa,2015,9
+Zimbabwe,Africa,2016,11
+Zimbabwe,Africa,2017,14
+Zimbabwe,Africa,2018,11
+Zimbabwe,Africa,2019,9
+Zimbabwe,Africa,2020,15
+Zimbabwe,Africa,2021,18
+Zimbabwe,Africa,2022,17
+Zimbabwe,Africa,2023,14
+Argelia,Africa,2013,1728
+Argelia,Africa,2014,1727
+Argelia,Africa,2015,1709
+Argelia,Africa,2016,1695
+Argelia,Africa,2017,1731
+Argelia,Africa,2018,1779
+Argelia,Africa,2019,1955
+Argelia,Africa,2020,2096
+Argelia,Africa,2021,2170
+Argelia,Africa,2022,2080
+Argelia,Africa,2023,2247
+Egipto,Africa,2013,287
+Egipto,Africa,2014,339
+Egipto,Africa,2015,389
+Egipto,Africa,2016,460
+Egipto,Africa,2017,595
+Egipto,Africa,2018,609
+Egipto,Africa,2019,665
+Egipto,Africa,2020,723
+Egipto,Africa,2021,749
+Egipto,Africa,2022,737
+Egipto,Africa,2023,852
+Libia,Africa,2013,26
+Libia,Africa,2014,40
+Libia,Africa,2015,73
+Libia,Africa,2016,108
+Libia,Africa,2017,131
+Libia,Africa,2018,114
+Libia,Africa,2019,120
+Libia,Africa,2020,128
+Libia,Africa,2021,139
+Libia,Africa,2022,112
+Libia,Africa,2023,120
+Marruecos,Africa,2013,13214
+Marruecos,Africa,2014,12824
+Marruecos,Africa,2015,12601
+Marruecos,Africa,2016,12552
+Marruecos,Africa,2017,12827
+Marruecos,Africa,2018,13058
+Marruecos,Africa,2019,14418
+Marruecos,Africa,2020,15659
+Marruecos,Africa,2021,15880
+Marruecos,Africa,2022,15009
+Marruecos,Africa,2023,15661
+Sudan del Sur,Africa,2013,0
+Sudan del Sur,Africa,2014,0
+Sudan del Sur,Africa,2015,0
+Sudan del Sur,Africa,2016,0
+Sudan del Sur,Africa,2017,0
+Sudan del Sur,Africa,2018,0
+Sudan del Sur,Africa,2019,1
+Sudan del Sur,Africa,2020,1
+Sudan del Sur,Africa,2021,1
+Sudan del Sur,Africa,2022,0
+Sudan del Sur,Africa,2023,2
+Sudan,Africa,2013,14
+Sudan,Africa,2014,10
+Sudan,Africa,2015,9
+Sudan,Africa,2016,8
+Sudan,Africa,2017,9
+Sudan,Africa,2018,22
+Sudan,Africa,2019,27
+Sudan,Africa,2020,25
+Sudan,Africa,2021,25
+Sudan,Africa,2022,24
+Sudan,Africa,2023,31
+Tunez,Africa,2013,179
+Tunez,Africa,2014,171
+Tunez,Africa,2015,169
+Tunez,Africa,2016,180
+Tunez,Africa,2017,216
+Tunez,Africa,2018,255
+Tunez,Africa,2019,278
+Tunez,Africa,2020,282
+Tunez,Africa,2021,304
+Tunez,Africa,2022,341
+Tunez,Africa,2023,524
+Belice,America,2013,1
+Belice,America,2014,1
+Belice,America,2015,0
+Belice,America,2016,0
+Belice,America,2017,0
+Belice,America,2018,0
+Belice,America,2019,1
+Belice,America,2020,1
+Belice,America,2021,1
+Belice,America,2022,0
+Belice,America,2023,0
+Costa Rica,America,2013,303
+Costa Rica,America,2014,295
+Costa Rica,America,2015,290
+Costa Rica,America,2016,345
+Costa Rica,America,2017,489
+Costa Rica,America,2018,539
+Costa Rica,America,2019,604
+Costa Rica,America,2020,597
+Costa Rica,America,2021,558
+Costa Rica,America,2022,491
+Costa Rica,America,2023,509
+El Salvador,America,2013,1004
+El Salvador,America,2014,926
+El Salvador,America,2015,989
+El Salvador,America,2016,1097
+El Salvador,America,2017,1331
+El Salvador,America,2018,1566
+El Salvador,America,2019,1886
+El Salvador,America,2020,2236
+El Salvador,America,2021,2311
+El Salvador,America,2022,2280
+El Salvador,America,2023,2520
+Guatemala,America,2013,308
+Guatemala,America,2014,286
+Guatemala,America,2015,279
+Guatemala,America,2016,324
+Guatemala,America,2017,398
+Guatemala,America,2018,405
+Guatemala,America,2019,440
+Guatemala,America,2020,465
+Guatemala,America,2021,465
+Guatemala,America,2022,433
+Guatemala,America,2023,499
+Honduras,America,2013,5451
+Honduras,America,2014,5494
+Honduras,America,2015,5849
+Honduras,America,2016,6726
+Honduras,America,2017,8005
+Honduras,America,2018,9542
+Honduras,America,2019,11744
+Honduras,America,2020,14140
+Honduras,America,2021,15113
+Honduras,America,2022,14507
+Honduras,America,2023,16619
+Mexico,America,2013,4516
+Mexico,America,2014,3982
+Mexico,America,2015,3774
+Mexico,America,2016,3849
+Mexico,America,2017,4376
+Mexico,America,2018,4377
+Mexico,America,2019,4534
+Mexico,America,2020,4664
+Mexico,America,2021,4476
+Mexico,America,2022,4166
+Mexico,America,2023,4555
+Nicaragua,America,2013,553
+Nicaragua,America,2014,566
+Nicaragua,America,2015,579
+Nicaragua,America,2016,647
+Nicaragua,America,2017,732
+Nicaragua,America,2018,801
+Nicaragua,America,2019,949
+Nicaragua,America,2020,1233
+Nicaragua,America,2021,1264
+Nicaragua,America,2022,1173
+Nicaragua,America,2023,1253
+Panama,America,2013,320
+Panama,America,2014,285
+Panama,America,2015,261
+Panama,America,2016,261
+Panama,America,2017,371
+Panama,America,2018,419
+Panama,America,2019,466
+Panama,America,2020,492
+Panama,America,2021,477
+Panama,America,2022,441
+Panama,America,2023,477
+Canada,America,2013,512
+Canada,America,2014,541
+Canada,America,2015,597
+Canada,America,2016,605
+Canada,America,2017,742
+Canada,America,2018,756
+Canada,America,2019,766
+Canada,America,2020,852
+Canada,America,2021,889
+Canada,America,2022,852
+Canada,America,2023,956
+Estados Unidos de America,America,2013,3596
+Estados Unidos de America,America,2014,3511
+Estados Unidos de America,America,2015,3672
+Estados Unidos de America,America,2016,3864
+Estados Unidos de America,America,2017,4768
+Estados Unidos de America,America,2018,5016
+Estados Unidos de America,America,2019,5359
+Estados Unidos de America,America,2020,5795
+Estados Unidos de America,America,2021,5967
+Estados Unidos de America,America,2022,5545
+Estados Unidos de America,America,2023,6188
+Argentina,America,2013,6869
+Argentina,America,2014,6137
+Argentina,America,2015,5602
+Argentina,America,2016,5647
+Argentina,America,2017,6146
+Argentina,America,2018,6701
+Argentina,America,2019,7638
+Argentina,America,2020,9203
+Argentina,America,2021,9801
+Argentina,America,2022,10414
+Argentina,America,2023,12841
+Bolivia,America,2013,13463
+Bolivia,America,2014,11607
+Bolivia,America,2015,9946
+Bolivia,America,2016,9280
+Bolivia,America,2017,9063
+Bolivia,America,2018,8582
+Bolivia,America,2019,8628
+Bolivia,America,2020,8382
+Bolivia,America,2021,7756
+Bolivia,America,2022,6570
+Bolivia,America,2023,6110
+Brasil,America,2013,6271
+Brasil,America,2014,5631
+Brasil,America,2015,5455
+Brasil,America,2016,5676
+Brasil,America,2017,6404
+Brasil,America,2018,6584
+Brasil,America,2019,7376
+Brasil,America,2020,7933
+Brasil,America,2021,8100
+Brasil,America,2022,7015
+Brasil,America,2023,7650
+Colombia,America,2013,11550
+Colombia,America,2014,9215
+Colombia,America,2015,8011
+Colombia,America,2016,7930
+Colombia,America,2017,9059
+Colombia,America,2018,10192
+Colombia,America,2019,12290
+Colombia,America,2020,15215
+Colombia,America,2021,16375
+Colombia,America,2022,16740
+Colombia,America,2023,23188
+Ecuador,America,2013,13688
+Ecuador,America,2014,10849
+Ecuador,America,2015,8647
+Ecuador,America,2016,8108
+Ecuador,America,2017,8059
+Ecuador,America,2018,7751
+Ecuador,America,2019,7814
+Ecuador,America,2020,7631
+Ecuador,America,2021,7327
+Ecuador,America,2022,6606
+Ecuador,America,2023,6577
+Guyana,America,2013,4
+Guyana,America,2014,4
+Guyana,America,2015,2
+Guyana,America,2016,2
+Guyana,America,2017,3
+Guyana,America,2018,2
+Guyana,America,2019,2
+Guyana,America,2020,1
+Guyana,America,2021,1
+Guyana,America,2022,2
+Guyana,America,2023,2
+Paraguay,America,2013,4238
+Paraguay,America,2014,3757
+Paraguay,America,2015,3629
+Paraguay,America,2016,3610
+Paraguay,America,2017,3984
+Paraguay,America,2018,4086
+Paraguay,America,2019,4194
+Paraguay,America,2020,4323
+Paraguay,America,2021,4302
+Paraguay,America,2022,4021
+Paraguay,America,2023,4657
+Peru,America,2013,12506
+Peru,America,2014,10258
+Peru,America,2015,8486
+Peru,America,2016,7955
+Peru,America,2017,8372
+Peru,America,2018,9069
+Peru,America,2019,10558
+Peru,America,2020,12399
+Peru,America,2021,13045
+Peru,America,2022,13105
+Peru,America,2023,17511
+Surinam,America,2013,0
+Surinam,America,2014,0
+Surinam,America,2015,0
+Surinam,America,2016,0
+Surinam,America,2017,1
+Surinam,America,2018,1
+Surinam,America,2019,2
+Surinam,America,2020,2
+Surinam,America,2021,2
+Surinam,America,2022,1
+Surinam,America,2023,1
+Uruguay,America,2013,1990
+Uruguay,America,2014,1705
+Uruguay,America,2015,1498
+Uruguay,America,2016,1443
+Uruguay,America,2017,1474
+Uruguay,America,2018,1536
+Uruguay,America,2019,1589
+Uruguay,America,2020,1664
+Uruguay,America,2021,1657
+Uruguay,America,2022,1516
+Uruguay,America,2023,1571
+Venezuela,America,2013,4213
+Venezuela,America,2014,3928
+Venezuela,America,2015,4344
+Venezuela,America,2016,5028
+Venezuela,America,2017,6277
+Venezuela,America,2018,7936
+Venezuela,America,2019,10185
+Venezuela,America,2020,13073
+Venezuela,America,2021,13829
+Venezuela,America,2022,13472
+Venezuela,America,2023,15964
+Chile,America,2013,4462
+Chile,America,2014,3846
+Chile,America,2015,3426
+Chile,America,2016,3382
+Chile,America,2017,3804
+Chile,America,2018,4007
+Chile,America,2019,4270
+Chile,America,2020,4635
+Chile,America,2021,4618
+Chile,America,2022,4444
+Chile,America,2023,5315
+Antigua y Barbuda,America,2013,2
+Antigua y Barbuda,America,2014,2
+Antigua y Barbuda,America,2015,2
+Antigua y Barbuda,America,2016,0
+Antigua y Barbuda,America,2017,0
+Antigua y Barbuda,America,2018,1
+Antigua y Barbuda,America,2019,1
+Antigua y Barbuda,America,2020,5
+Antigua y Barbuda,America,2021,6
+Antigua y Barbuda,America,2022,7
+Antigua y Barbuda,America,2023,5
+Bahamas,America,2013,3
+Bahamas,America,2014,4
+Bahamas,America,2015,2
+Bahamas,America,2016,1
+Bahamas,America,2017,3
+Bahamas,America,2018,3
+Bahamas,America,2019,4
+Bahamas,America,2020,10
+Bahamas,America,2021,12
+Bahamas,America,2022,10
+Bahamas,America,2023,4
+Barbados,America,2013,2
+Barbados,America,2014,3
+Barbados,America,2015,5
+Barbados,America,2016,5
+Barbados,America,2017,6
+Barbados,America,2018,7
+Barbados,America,2019,7
+Barbados,America,2020,7
+Barbados,America,2021,7
+Barbados,America,2022,5
+Barbados,America,2023,6
+Cuba,America,2013,2323
+Cuba,America,2014,2149
+Cuba,America,2015,2026
+Cuba,America,2016,2034
+Cuba,America,2017,2073
+Cuba,America,2018,2104
+Cuba,America,2019,2205
+Cuba,America,2020,2314
+Cuba,America,2021,2312
+Cuba,America,2022,2190
+Cuba,America,2023,2516
+Dominica,America,2013,12
+Dominica,America,2014,12
+Dominica,America,2015,20
+Dominica,America,2016,19
+Dominica,America,2017,35
+Dominica,America,2018,36
+Dominica,America,2019,45
+Dominica,America,2020,44
+Dominica,America,2021,41
+Dominica,America,2022,36
+Dominica,America,2023,36
+Granada,America,2013,1
+Granada,America,2014,1
+Granada,America,2015,0
+Granada,America,2016,1
+Granada,America,2017,1
+Granada,America,2018,1
+Granada,America,2019,1
+Granada,America,2020,2
+Granada,America,2021,3
+Granada,America,2022,3
+Granada,America,2023,6
+Haiti,America,2013,27
+Haiti,America,2014,22
+Haiti,America,2015,21
+Haiti,America,2016,25
+Haiti,America,2017,30
+Haiti,America,2018,33
+Haiti,America,2019,37
+Haiti,America,2020,38
+Haiti,America,2021,45
+Haiti,America,2022,49
+Haiti,America,2023,52
+Jamaica,America,2013,14
+Jamaica,America,2014,11
+Jamaica,America,2015,8
+Jamaica,America,2016,9
+Jamaica,America,2017,11
+Jamaica,America,2018,10
+Jamaica,America,2019,11
+Jamaica,America,2020,12
+Jamaica,America,2021,11
+Jamaica,America,2022,10
+Jamaica,America,2023,12
+Republica Dominicana,America,2013,7508
+Republica Dominicana,America,2014,6590
+Republica Dominicana,America,2015,6098
+Republica Dominicana,America,2016,5636
+Republica Dominicana,America,2017,5751
+Republica Dominicana,America,2018,5716
+Republica Dominicana,America,2019,5942
+Republica Dominicana,America,2020,5842
+Republica Dominicana,America,2021,5706
+Republica Dominicana,America,2022,5414
+Republica Dominicana,America,2023,5355
+San Cristobal y Nieves,America,2013,2
+San Cristobal y Nieves,America,2014,3
+San Cristobal y Nieves,America,2015,3
+San Cristobal y Nieves,America,2016,4
+San Cristobal y Nieves,America,2017,3
+San Cristobal y Nieves,America,2018,2
+San Cristobal y Nieves,America,2019,2
+San Cristobal y Nieves,America,2020,0
+San Cristobal y Nieves,America,2021,2
+San Cristobal y Nieves,America,2022,2
+San Cristobal y Nieves,America,2023,14
+Santa Lucia,America,2013,1
+Santa Lucia,America,2014,2
+Santa Lucia,America,2015,1
+Santa Lucia,America,2016,1
+Santa Lucia,America,2017,0
+Santa Lucia,America,2018,0
+Santa Lucia,America,2019,0
+Santa Lucia,America,2020,0
+Santa Lucia,America,2021,0
+Santa Lucia,America,2022,0
+Santa Lucia,America,2023,0
+San Vicente y las Granadinas,America,2013,0
+San Vicente y las Granadinas,America,2014,0
+San Vicente y las Granadinas,America,2015,0
+San Vicente y las Granadinas,America,2016,0
+San Vicente y las Granadinas,America,2017,0
+San Vicente y las Granadinas,America,2018,0
+San Vicente y las Granadinas,America,2019,2
+San Vicente y las Granadinas,America,2020,1
+San Vicente y las Granadinas,America,2021,1
+San Vicente y las Granadinas,America,2022,0
+San Vicente y las Granadinas,America,2023,0
+Trinidad y Tobago,America,2013,4
+Trinidad y Tobago,America,2014,4
+Trinidad y Tobago,America,2015,1
+Trinidad y Tobago,America,2016,2
+Trinidad y Tobago,America,2017,6
+Trinidad y Tobago,America,2018,9
+Trinidad y Tobago,America,2019,12
+Trinidad y Tobago,America,2020,12
+Trinidad y Tobago,America,2021,11
+Trinidad y Tobago,America,2022,4
+Trinidad y Tobago,America,2023,7
+Australia,Oceania,2013,272
+Australia,Oceania,2014,281
+Australia,Oceania,2015,296
+Australia,Oceania,2016,324
+Australia,Oceania,2017,395
+Australia,Oceania,2018,381
+Australia,Oceania,2019,420
+Australia,Oceania,2020,489
+Australia,Oceania,2021,508
+Australia,Oceania,2022,434
+Australia,Oceania,2023,464
+Nueva Zelanda,Oceania,2013,84
+Nueva Zelanda,Oceania,2014,98
+Nueva Zelanda,Oceania,2015,89
+Nueva Zelanda,Oceania,2016,88
+Nueva Zelanda,Oceania,2017,110
+Nueva Zelanda,Oceania,2018,107
+Nueva Zelanda,Oceania,2019,115
+Nueva Zelanda,Oceania,2020,122
+Nueva Zelanda,Oceania,2021,123
+Nueva Zelanda,Oceania,2022,87
+Nueva Zelanda,Oceania,2023,91
+Fiji,Oceania,2013,0
+Fiji,Oceania,2014,0
+Fiji,Oceania,2015,0
+Fiji,Oceania,2016,0
+Fiji,Oceania,2017,0
+Fiji,Oceania,2018,0
+Fiji,Oceania,2019,0
+Fiji,Oceania,2020,0
+Fiji,Oceania,2021,0
+Fiji,Oceania,2022,0
+Fiji,Oceania,2023,0
+Islas Salomon,Oceania,2013,0
+Islas Salomon,Oceania,2014,0
+Islas Salomon,Oceania,2015,0
+Islas Salomon,Oceania,2016,0
+Islas Salomon,Oceania,2017,0
+Islas Salomon,Oceania,2018,1
+Islas Salomon,Oceania,2019,1
+Islas Salomon,Oceania,2020,0
+Islas Salomon,Oceania,2021,0
+Islas Salomon,Oceania,2022,1
+Islas Salomon,Oceania,2023,0
+Vanuatu,Oceania,2013,0
+Vanuatu,Oceania,2014,0
+Vanuatu,Oceania,2015,0
+Vanuatu,Oceania,2016,0
+Vanuatu,Oceania,2017,0
+Vanuatu,Oceania,2018,0
+Vanuatu,Oceania,2019,0
+Vanuatu,Oceania,2020,0
+Vanuatu,Oceania,2021,0
+Vanuatu,Oceania,2022,1
+Vanuatu,Oceania,2023,8
+Kiribati,Oceania,2013,0
+Kiribati,Oceania,2014,0
+Kiribati,Oceania,2015,0
+Kiribati,Oceania,2016,0
+Kiribati,Oceania,2017,0
+Kiribati,Oceania,2018,0
+Kiribati,Oceania,2019,0
+Kiribati,Oceania,2020,0
+Kiribati,Oceania,2021,0
+Kiribati,Oceania,2022,4
+Kiribati,Oceania,2023,3
+Tonga,Oceania,2013,0
+Tonga,Oceania,2014,0
+Tonga,Oceania,2015,0
+Tonga,Oceania,2016,0
+Tonga,Oceania,2017,0
+Tonga,Oceania,2018,0
+Tonga,Oceania,2019,0
+Tonga,Oceania,2020,1
+Tonga,Oceania,2021,0
+Tonga,Oceania,2022,0
+Tonga,Oceania,2023,0
+Kazajstan,Asia,2013,155
+Kazajstan,Asia,2014,193
+Kazajstan,Asia,2015,237
+Kazajstan,Asia,2016,304
+Kazajstan,Asia,2017,412
+Kazajstan,Asia,2018,409
+Kazajstan,Asia,2019,453
+Kazajstan,Asia,2020,534
+Kazajstan,Asia,2021,528
+Kazajstan,Asia,2022,508
+Kazajstan,Asia,2023,562
+Kirguistan,Asia,2013,23
+Kirguistan,Asia,2014,26
+Kirguistan,Asia,2015,34
+Kirguistan,Asia,2016,35
+Kirguistan,Asia,2017,41
+Kirguistan,Asia,2018,40
+Kirguistan,Asia,2019,50
+Kirguistan,Asia,2020,75
+Kirguistan,Asia,2021,77
+Kirguistan,Asia,2022,70
+Kirguistan,Asia,2023,78
+Tayikistan,Asia,2013,5
+Tayikistan,Asia,2014,8
+Tayikistan,Asia,2015,9
+Tayikistan,Asia,2016,3
+Tayikistan,Asia,2017,4
+Tayikistan,Asia,2018,4
+Tayikistan,Asia,2019,6
+Tayikistan,Asia,2020,7
+Tayikistan,Asia,2021,9
+Tayikistan,Asia,2022,11
+Tayikistan,Asia,2023,8
+Turkmenistan,Asia,2013,5
+Turkmenistan,Asia,2014,5
+Turkmenistan,Asia,2015,5
+Turkmenistan,Asia,2016,10
+Turkmenistan,Asia,2017,13
+Turkmenistan,Asia,2018,15
+Turkmenistan,Asia,2019,12
+Turkmenistan,Asia,2020,9
+Turkmenistan,Asia,2021,10
+Turkmenistan,Asia,2022,4
+Turkmenistan,Asia,2023,8
+Uzbekistan,Asia,2013,67
+Uzbekistan,Asia,2014,61
+Uzbekistan,Asia,2015,60
+Uzbekistan,Asia,2016,65
+Uzbekistan,Asia,2017,85
+Uzbekistan,Asia,2018,106
+Uzbekistan,Asia,2019,120
+Uzbekistan,Asia,2020,129
+Uzbekistan,Asia,2021,129
+Uzbekistan,Asia,2022,112
+Uzbekistan,Asia,2023,106
+Afganistan,Asia,2013,79
+Afganistan,Asia,2014,64
+Afganistan,Asia,2015,82
+Afganistan,Asia,2016,81
+Afganistan,Asia,2017,87
+Afganistan,Asia,2018,104
+Afganistan,Asia,2019,115
+Afganistan,Asia,2020,119
+Afganistan,Asia,2021,146
+Afganistan,Asia,2022,202
+Afganistan,Asia,2023,277
+Bangladesh,Asia,2013,3448
+Bangladesh,Asia,2014,3447
+Bangladesh,Asia,2015,3439
+Bangladesh,Asia,2016,3662
+Bangladesh,Asia,2017,4059
+Bangladesh,Asia,2018,4525
+Bangladesh,Asia,2019,5388
+Bangladesh,Asia,2020,6142
+Bangladesh,Asia,2021,6421
+Bangladesh,Asia,2022,5719
+Bangladesh,Asia,2023,5582
+Bhutan,Asia,2013,0
+Bhutan,Asia,2014,0
+Bhutan,Asia,2015,0
+Bhutan,Asia,2016,0
+Bhutan,Asia,2017,0
+Bhutan,Asia,2018,0
+Bhutan,Asia,2019,1
+Bhutan,Asia,2020,2
+Bhutan,Asia,2021,2
+Bhutan,Asia,2022,2
+Bhutan,Asia,2023,2
+India,Asia,2013,5093
+India,Asia,2014,5030
+India,Asia,2015,5105
+India,Asia,2016,5327
+India,Asia,2017,5792
+India,Asia,2018,6202
+India,Asia,2019,7163
+India,Asia,2020,8174
+India,Asia,2021,8495
+India,Asia,2022,7695
+India,Asia,2023,8013
+Iran,Asia,2013,420
+Iran,Asia,2014,443
+Iran,Asia,2015,417
+Iran,Asia,2016,451
+Iran,Asia,2017,586
+Iran,Asia,2018,872
+Iran,Asia,2019,965
+Iran,Asia,2020,1097
+Iran,Asia,2021,1262
+Iran,Asia,2022,1184
+Iran,Asia,2023,1387
+Maldivas,Asia,2013,0
+Maldivas,Asia,2014,0
+Maldivas,Asia,2015,3
+Maldivas,Asia,2016,4
+Maldivas,Asia,2017,5
+Maldivas,Asia,2018,4
+Maldivas,Asia,2019,3
+Maldivas,Asia,2020,3
+Maldivas,Asia,2021,3
+Maldivas,Asia,2022,5
+Maldivas,Asia,2023,12
+Nepal,Asia,2013,1090
+Nepal,Asia,2014,1115
+Nepal,Asia,2015,1095
+Nepal,Asia,2016,1096
+Nepal,Asia,2017,1217
+Nepal,Asia,2018,1324
+Nepal,Asia,2019,1514
+Nepal,Asia,2020,1571
+Nepal,Asia,2021,1590
+Nepal,Asia,2022,1486
+Nepal,Asia,2023,1470
+Pakistan,Asia,2013,21637
+Pakistan,Asia,2014,20052
+Pakistan,Asia,2015,19414
+Pakistan,Asia,2016,19192
+Pakistan,Asia,2017,19285
+Pakistan,Asia,2018,1924
+Pakistan,Asia,2019,20643
+Pakistan,Asia,2020,22749
+Pakistan,Asia,2021,23696
+Pakistan,Asia,2022,22550
+Pakistan,Asia,2023,22821
+Sri Lanka,Asia,2013,16
+Sri Lanka,Asia,2014,13
+Sri Lanka,Asia,2015,9
+Sri Lanka,Asia,2016,12
+Sri Lanka,Asia,2017,20
+Sri Lanka,Asia,2018,18
+Sri Lanka,Asia,2019,18
+Sri Lanka,Asia,2020,23
+Sri Lanka,Asia,2021,28
+Sri Lanka,Asia,2022,31
+Sri Lanka,Asia,2023,43
+Arabia Saudi,Asia,2013,61
+Arabia Saudi,Asia,2014,75
+Arabia Saudi,Asia,2015,90
+Arabia Saudi,Asia,2016,101
+Arabia Saudi,Asia,2017,131
+Arabia Saudi,Asia,2018,130
+Arabia Saudi,Asia,2019,125
+Arabia Saudi,Asia,2020,112
+Arabia Saudi,Asia,2021,110
+Arabia Saudi,Asia,2022,113
+Arabia Saudi,Asia,2023,138
+Armenia,Asia,2013,1902
+Armenia,Asia,2014,1894
+Armenia,Asia,2015,1999
+Armenia,Asia,2016,2090
+Armenia,Asia,2017,2209
+Armenia,Asia,2018,2304
+Armenia,Asia,2019,2284
+Armenia,Asia,2020,2248
+Armenia,Asia,2021,2178
+Armenia,Asia,2022,1995
+Armenia,Asia,2023,1975
+Azerbaiyan,Asia,2013,88
+Azerbaiyan,Asia,2014,90
+Azerbaiyan,Asia,2015,111
+Azerbaiyan,Asia,2016,145
+Azerbaiyan,Asia,2017,163
+Azerbaiyan,Asia,2018,159
+Azerbaiyan,Asia,2019,148
+Azerbaiyan,Asia,2020,163
+Azerbaiyan,Asia,2021,174
+Azerbaiyan,Asia,2022,153
+Azerbaiyan,Asia,2023,131
+Bahrein,Asia,2013,0
+Bahrein,Asia,2014,0
+Bahrein,Asia,2015,0
+Bahrein,Asia,2016,1
+Bahrein,Asia,2017,15
+Bahrein,Asia,2018,10
+Bahrein,Asia,2019,8
+Bahrein,Asia,2020,8
+Bahrein,Asia,2021,7
+Bahrein,Asia,2022,5
+Bahrein,Asia,2023,5
+Emiratos Arabes Unidos,Asia,2013,6
+Emiratos Arabes Unidos,Asia,2014,2
+Emiratos Arabes Unidos,Asia,2015,3
+Emiratos Arabes Unidos,Asia,2016,3
+Emiratos Arabes Unidos,Asia,2017,7
+Emiratos Arabes Unidos,Asia,2018,7
+Emiratos Arabes Unidos,Asia,2019,10
+Emiratos Arabes Unidos,Asia,2020,19
+Emiratos Arabes Unidos,Asia,2021,19
+Emiratos Arabes Unidos,Asia,2022,17
+Emiratos Arabes Unidos,Asia,2023,15
+Georgia,Asia,2013,2055
+Georgia,Asia,2014,2096
+Georgia,Asia,2015,2236
+Georgia,Asia,2016,2400
+Georgia,Asia,2017,2702
+Georgia,Asia,2018,3022
+Georgia,Asia,2019,3529
+Georgia,Asia,2020,4006
+Georgia,Asia,2021,4147
+Georgia,Asia,2022,3934
+Georgia,Asia,2023,4492
+Yemen,Asia,2013,1
+Yemen,Asia,2014,2
+Yemen,Asia,2015,4
+Yemen,Asia,2016,6
+Yemen,Asia,2017,6
+Yemen,Asia,2018,5
+Yemen,Asia,2019,14
+Yemen,Asia,2020,13
+Yemen,Asia,2021,13
+Yemen,Asia,2022,15
+Yemen,Asia,2023,17
+Irak,Asia,2013,65
+Irak,Asia,2014,66
+Irak,Asia,2015,85
+Irak,Asia,2016,92
+Irak,Asia,2017,109
+Irak,Asia,2018,127
+Irak,Asia,2019,134
+Irak,Asia,2020,144
+Irak,Asia,2021,144
+Irak,Asia,2022,123
+Irak,Asia,2023,143
+Israel,Asia,2013,434
+Israel,Asia,2014,441
+Israel,Asia,2015,453
+Israel,Asia,2016,486
+Israel,Asia,2017,560
+Israel,Asia,2018,590
+Israel,Asia,2019,625
+Israel,Asia,2020,622
+Israel,Asia,2021,623
+Israel,Asia,2022,583
+Israel,Asia,2023,623
+Jordania,Asia,2013,151
+Jordania,Asia,2014,149
+Jordania,Asia,2015,164
+Jordania,Asia,2016,171
+Jordania,Asia,2017,187
+Jordania,Asia,2018,191
+Jordania,Asia,2019,189
+Jordania,Asia,2020,187
+Jordania,Asia,2021,187
+Jordania,Asia,2022,189
+Jordania,Asia,2023,208
+Kuwait,Asia,2013,19
+Kuwait,Asia,2014,19
+Kuwait,Asia,2015,17
+Kuwait,Asia,2016,16
+Kuwait,Asia,2017,21
+Kuwait,Asia,2018,21
+Kuwait,Asia,2019,34
+Kuwait,Asia,2020,34
+Kuwait,Asia,2021,30
+Kuwait,Asia,2022,32
+Kuwait,Asia,2023,28
+Libano,Asia,2013,253
+Libano,Asia,2014,262
+Libano,Asia,2015,296
+Libano,Asia,2016,321
+Libano,Asia,2017,440
+Libano,Asia,2018,504
+Libano,Asia,2019,605
+Libano,Asia,2020,663
+Libano,Asia,2021,756
+Libano,Asia,2022,781
+Libano,Asia,2023,808
+Oman,Asia,2013,1
+Oman,Asia,2014,3
+Oman,Asia,2015,4
+Oman,Asia,2016,3
+Oman,Asia,2017,11
+Oman,Asia,2018,8
+Oman,Asia,2019,1
+Oman,Asia,2020,2
+Oman,Asia,2021,4
+Oman,Asia,2022,6
+Oman,Asia,2023,18
+Palestina,Asia,2013,0
+Palestina,Asia,2014,0
+Palestina,Asia,2015,0
+Palestina,Asia,2016,35
+Palestina,Asia,2017,56
+Palestina,Asia,2018,80
+Palestina,Asia,2019,98
+Palestina,Asia,2020,105
+Palestina,Asia,2021,697
+Palestina,Asia,2022,115
+Palestina,Asia,2023,126
+Qatar,Asia,2013,0
+Qatar,Asia,2014,0
+Qatar,Asia,2015,1
+Qatar,Asia,2016,4
+Qatar,Asia,2017,13
+Qatar,Asia,2018,13
+Qatar,Asia,2019,13
+Qatar,Asia,2020,11
+Qatar,Asia,2021,110
+Qatar,Asia,2022,9
+Qatar,Asia,2023,11
+Siria,Asia,2013,372
+Siria,Asia,2014,437
+Siria,Asia,2015,520
+Siria,Asia,2016,599
+Siria,Asia,2017,613
+Siria,Asia,2018,681
+Siria,Asia,2019,690
+Siria,Asia,2020,694
+Siria,Asia,2021,14
+Siria,Asia,2022,659
+Siria,Asia,2023,643
+Turquia,Asia,2013,651
+Turquia,Asia,2014,667
+Turquia,Asia,2015,685
+Turquia,Asia,2016,759
+Turquia,Asia,2017,990
+Turquia,Asia,2018,1218
+Turquia,Asia,2019,1364
+Turquia,Asia,2020,143
+Turquia,Asia,2021,1458
+Turquia,Asia,2022,1358
+Turquia,Asia,2023,156
+Chipre,Asia,2013,48
+Chipre,Asia,2014,45
+Chipre,Asia,2015,58
+Chipre,Asia,2016,75
+Chipre,Asia,2017,91
+Chipre,Asia,2018,109
+Chipre,Asia,2019,135
+Chipre,Asia,2020,147
+Chipre,Asia,2021,162
+Chipre,Asia,2022,192
+Chipre,Asia,2023,196
+Corea del Norte,Asia,2013,0
+Corea del Norte,Asia,2014,0
+Corea del Norte,Asia,2015,0
+Corea del Norte,Asia,2016,0
+Corea del Norte,Asia,2017,0
+Corea del Norte,Asia,2018,0
+Corea del Norte,Asia,2019,0
+Corea del Norte,Asia,2020,1
+Corea del Norte,Asia,2021,1
+Corea del Norte,Asia,2022,0
+Corea del Norte,Asia,2023,0
+Corea,Asia,2013,547
+Corea,Asia,2014,570
+Corea,Asia,2015,625
+Corea,Asia,2016,678
+Corea,Asia,2017,814
+Corea,Asia,2018,840
+Corea,Asia,2019,852
+Corea,Asia,2020,902
+Corea,Asia,2021,938
+Corea,Asia,2022,718
+Corea,Asia,2023,714
+Japon,Asia,2013,1521
+Japon,Asia,2014,1588
+Japon,Asia,2015,1618
+Japon,Asia,2016,1657
+Japon,Asia,2017,1794
+Japon,Asia,2018,1723
+Japon,Asia,2019,1732
+Japon,Asia,2020,1721
+Japon,Asia,2021,1750
+Japon,Asia,2022,1536
+Japon,Asia,2023,1536
+Mongolia,Asia,2013,41
+Mongolia,Asia,2014,43
+Mongolia,Asia,2015,44
+Mongolia,Asia,2016,47
+Mongolia,Asia,2017,53
+Mongolia,Asia,2018,58
+Mongolia,Asia,2019,60
+Mongolia,Asia,2020,63
+Mongolia,Asia,2021,62
+Mongolia,Asia,2022,54
+Mongolia,Asia,2023,56
+China,Asia,2013,16128
+China,Asia,2014,16435
+China,Asia,2015,17487
+China,Asia,2016,18448
+China,Asia,2017,19866
+China,Asia,2018,20555
+China,Asia,2019,21658
+China,Asia,2020,22477
+China,Asia,2021,22519
+China,Asia,2022,20952
+China,Asia,2023,20206
+Camboya,Asia,2013,2
+Camboya,Asia,2014,1
+Camboya,Asia,2015,0
+Camboya,Asia,2016,1
+Camboya,Asia,2017,1
+Camboya,Asia,2018,5
+Camboya,Asia,2019,6
+Camboya,Asia,2020,6
+Camboya,Asia,2021,6
+Camboya,Asia,2022,7
+Camboya,Asia,2023,8
+Filipinas,Asia,2013,8724
+Filipinas,Asia,2014,8684
+Filipinas,Asia,2015,8491
+Filipinas,Asia,2016,8682
+Filipinas,Asia,2017,9049
+Filipinas,Asia,2018,9149
+Filipinas,Asia,2019,9439
+Filipinas,Asia,2020,9656
+Filipinas,Asia,2021,9757
+Filipinas,Asia,2022,9386
+Filipinas,Asia,2023,9308
+Indonesia,Asia,2013,72
+Indonesia,Asia,2014,76
+Indonesia,Asia,2015,83
+Indonesia,Asia,2016,88
+Indonesia,Asia,2017,105
+Indonesia,Asia,2018,136
+Indonesia,Asia,2019,147
+Indonesia,Asia,2020,143
+Indonesia,Asia,2021,139
+Indonesia,Asia,2022,165
+Indonesia,Asia,2023,182
+Laos,Asia,2013,3
+Laos,Asia,2014,2
+Laos,Asia,2015,1
+Laos,Asia,2016,1
+Laos,Asia,2017,1
+Laos,Asia,2018,1
+Laos,Asia,2019,2
+Laos,Asia,2020,3
+Laos,Asia,2021,2
+Laos,Asia,2022,1
+Laos,Asia,2023,1
+Malasia,Asia,2013,49
+Malasia,Asia,2014,43
+Malasia,Asia,2015,43
+Malasia,Asia,2016,50
+Malasia,Asia,2017,70
+Malasia,Asia,2018,78
+Malasia,Asia,2019,92
+Malasia,Asia,2020,98
+Malasia,Asia,2021,98
+Malasia,Asia,2022,89
+Malasia,Asia,2023,91
+Myanmar,Asia,2013,3
+Myanmar,Asia,2014,2
+Myanmar,Asia,2015,4
+Myanmar,Asia,2016,3
+Myanmar,Asia,2017,3
+Myanmar,Asia,2018,6
+Myanmar,Asia,2019,7
+Myanmar,Asia,2020,9
+Myanmar,Asia,2021,6
+Myanmar,Asia,2022,12
+Myanmar,Asia,2023,14
+Singapur,Asia,2013,52
+Singapur,Asia,2014,51
+Singapur,Asia,2015,46
+Singapur,Asia,2016,55
+Singapur,Asia,2017,61
+Singapur,Asia,2018,61
+Singapur,Asia,2019,63
+Singapur,Asia,2020,65
+Singapur,Asia,2021,61
+Singapur,Asia,2022,57
+Singapur,Asia,2023,64
+Tailandia,Asia,2013,138
+Tailandia,Asia,2014,143
+Tailandia,Asia,2015,155
+Tailandia,Asia,2016,160
+Tailandia,Asia,2017,185
+Tailandia,Asia,2018,189
+Tailandia,Asia,2019,204
+Tailandia,Asia,2020,214
+Tailandia,Asia,2021,208
+Tailandia,Asia,2022,187
+Tailandia,Asia,2023,218
+Timor Oriental,Asia,2013,0
+Timor Oriental,Asia,2014,0
+Timor Oriental,Asia,2015,1
+Timor Oriental,Asia,2016,1
+Timor Oriental,Asia,2017,2
+Timor Oriental,Asia,2018,2
+Timor Oriental,Asia,2019,2
+Timor Oriental,Asia,2020,0
+Timor Oriental,Asia,2021,0
+Timor Oriental,Asia,2022,0
+Timor Oriental,Asia,2023,0
+Vietnam,Asia,2013,55
+Vietnam,Asia,2014,59
+Vietnam,Asia,2015,62
+Vietnam,Asia,2016,74
+Vietnam,Asia,2017,121
+Vietnam,Asia,2018,177
+Vietnam,Asia,2019,225
+Vietnam,Asia,2020,243
+Vietnam,Asia,2021,255
+Vietnam,Asia,2022,228
+Vietnam,Asia,2023,264

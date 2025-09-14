@@ -1,0 +1,57 @@
+# Paths and directories
+
+## Path and home directory
+
+* The path of a file/directory is its **location/address** in the file system.
+
+* Your home directory is the one that hosts the **user (your) data**: it is similar, although not identical, in all operating systems, for example:
+  - */users/sbonnin* or */home/sbonnin* (Linux)
+  - */Users/sbonnin* or */Home/sbonnin* (macOS)
+  - *C:\\Users\\sbonnin* or *C:\\Home\\sbonnin* (Windows)
+  
+The starting "/" or "\\" is called the **root** directory. Directories branch downwards from the root directory, and can contain both files and subdirectories.
+
+In the examples above, **sbonnin** is a subdirectory of **users** (or Users), and users starts at the root.
+
+Example of a *tree* / organization of directories:
+
+<img src="images/path_tree.png" alt="rstudio logo" width="600"/>
+
+
+
+## Create the workshop directory
+
+We will now create a folder/directory, where we will store what we produce during this course.
+
+Go to the **Files** tab in the bottom-right corner: by default, this will be set to your **Home**.
+
+You can navigate through the *tree* of files and directories by double clicking one folder name, to enter it, and by clicking on the **double dot ".."** to go back.
+
+Choose the folder under which you would like to save the workshop's work.
+
+For example, you can create it right under **Home -> Documents** (or anywhere else that you will remember, as we do not have the same folder structures). 
+
+Click on "Home" and then on "Documents":
+
+<img src="images/path_home_documents.png" alt="rstudio logo" width="300"/>
+
+Create a folder called **"DataViz_R_2024"** by clicking on the **"+Folder"** icon.
+
+<img src="images/path_add_folder_popup.png" alt="add folder pop up" width="500"/>
+
+You should now see a new folder:
+
+<img src="images/path_dataviz.png" alt="rstudio logo" width="350"/>
+
+Click on the newly created "DataViz_R_2024" folder, still under the "Files" tab, so you enter it. 
+
+Click on the **"More file commands button"**: 
+
+<img src="images/path_settings.png" alt="rstudio logo" width="100"/>
+
+Click on **"Set As Working Directory"**:
+
+<img src="images/path_setwd.png" alt="rstudio logo" width="600"/>
+
+The [working directory](https://en.wikipedia.org/wiki/Working_directory) is where R will, by default, find files to read, and that is where it will also save files and figures, if another location/path is not specified.
+

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Part13 Data filtering and wrangling | R for beginners: Introduction to data visualization with R and ggplot2: from data to publication-quality figures</title>
+  <meta name="description" content="Part13 Data filtering and wrangling | R for beginners: Introduction to data visualization with R and ggplot2: from data to publication-quality figures" />
+  <meta name="generator" content="bookdown 0.36 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Part13 Data filtering and wrangling | R for beginners: Introduction to data visualization with R and ggplot2: from data to publication-quality figures" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Part13 Data filtering and wrangling | R for beginners: Introduction to data visualization with R and ggplot2: from data to publication-quality figures" />
+  
+  
+  
+
+<meta name="author" content="Sarah Bonnin" />
+
+
+<meta name="date" content="2024-04-07" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="interactive-plots-with-plotly.html"/>
+<link rel="next" href="the-pipe-operator.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Stepping Stone IDIBAPS Data Vizualization workshop 2024</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a></li>
+<li class="chapter" data-level="2" data-path="setup.html"><a href="setup.html"><i class="fa fa-check"></i><b>2</b> Setup</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="install-r-and-rstudioposit.html"><a href="install-r-and-rstudioposit.html"><i class="fa fa-check"></i><b>2.1</b> Install R and RStudio/Posit</a></li>
+<li class="chapter" data-level="2.2" data-path="install-r-packages.html"><a href="install-r-packages.html"><i class="fa fa-check"></i><b>2.2</b> Install R packages</a></li>
+<li class="chapter" data-level="2.3" data-path="check-setup.html"><a href="check-setup.html"><i class="fa fa-check"></i><b>2.3</b> Check setup</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="r.html"><a href="r.html"><i class="fa fa-check"></i><b>3</b> R</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="what-is-r.html"><a href="what-is-r.html"><i class="fa fa-check"></i><b>3.1</b> What is R ?</a></li>
+<li class="chapter" data-level="3.2" data-path="functions-packages.html"><a href="functions-packages.html"><i class="fa fa-check"></i><b>3.2</b> Functions &amp; packages</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="functions-packages.html"><a href="functions-packages.html#functions"><i class="fa fa-check"></i><b>3.2.1</b> Functions</a></li>
+<li class="chapter" data-level="3.2.2" data-path="functions-packages.html"><a href="functions-packages.html#packages"><i class="fa fa-check"></i><b>3.2.2</b> Packages</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="what-is-rstudio-posit.html"><a href="what-is-rstudio-posit.html"><i class="fa fa-check"></i><b>4</b> What is RStudio (Posit)?</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="rstudio-interface.html"><a href="rstudio-interface.html"><i class="fa fa-check"></i><b>4.1</b> RStudio interface</a></li>
+<li class="chapter" data-level="4.2" data-path="the-r-console.html"><a href="the-r-console.html"><i class="fa fa-check"></i><b>4.2</b> The R console</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>5</b> Paths and directories</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="path-and-home-directory.html"><a href="path-and-home-directory.html"><i class="fa fa-check"></i><b>5.1</b> Path and home directory</a></li>
+<li class="chapter" data-level="5.2" data-path="create-the-workshop-directory.html"><a href="create-the-workshop-directory.html"><i class="fa fa-check"></i><b>5.2</b> Create the workshop directory</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>6</b> R basics</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="arithmetic-operators.html"><a href="arithmetic-operators.html"><i class="fa fa-check"></i><b>6.1</b> Arithmetic operators</a></li>
+<li class="chapter" data-level="6.2" data-path="objects-in-r.html"><a href="objects-in-r.html"><i class="fa fa-check"></i><b>6.2</b> Objects in R</a></li>
+<li class="chapter" data-level="6.3" data-path="assigning-data-to-an-object.html"><a href="assigning-data-to-an-object.html"><i class="fa fa-check"></i><b>6.3</b> Assigning data to an object</a></li>
+<li class="chapter" data-level="6.4" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>6.4</b> Data types</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="import-data-read-files-scripts.html"><a href="import-data-read-files-scripts.html"><i class="fa fa-check"></i><b>7</b> Import data / read files / scripts</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="fetch-workshop-files.html"><a href="fetch-workshop-files.html"><i class="fa fa-check"></i><b>7.1</b> Fetch workshop files</a></li>
+<li class="chapter" data-level="7.2" data-path="import-read-in-data.html"><a href="import-read-in-data.html"><i class="fa fa-check"></i><b>7.2</b> Import / read in data</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="import-read-in-data.html"><a href="import-read-in-data.html#from-csv"><i class="fa fa-check"></i><b>7.2.1</b> from CSV</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="from-excel.html"><a href="from-excel.html"><i class="fa fa-check"></i><b>7.3</b> from Excel</a></li>
+<li class="chapter" data-level="7.4" data-path="scripts.html"><a href="scripts.html"><i class="fa fa-check"></i><b>7.4</b> Scripts</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="ggplot2.html"><a href="ggplot2.html"><i class="fa fa-check"></i><b>8</b> ggplot2</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>8.1</b> Getting started</a></li>
+<li class="chapter" data-level="8.2" data-path="scatter-plot.html"><a href="scatter-plot.html"><i class="fa fa-check"></i><b>8.2</b> Scatter plot</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="scatter-plot.html"><a href="scatter-plot.html#base-plot"><i class="fa fa-check"></i><b>8.2.1</b> Base plot</a></li>
+<li class="chapter" data-level="8.2.2" data-path="scatter-plot.html"><a href="scatter-plot.html#customize-the-points"><i class="fa fa-check"></i><b>8.2.2</b> Customize the points</a></li>
+<li class="chapter" data-level="8.2.3" data-path="scatter-plot.html"><a href="scatter-plot.html#add-more-layers"><i class="fa fa-check"></i><b>8.2.3</b> Add more layers</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="save-your-plot.html"><a href="save-your-plot.html"><i class="fa fa-check"></i><b>8.3</b> Save your plot</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="save-your-plot.html"><a href="save-your-plot.html#from-the-interface"><i class="fa fa-check"></i><b>8.3.1</b> From the interface</a></li>
+<li class="chapter" data-level="8.3.2" data-path="save-your-plot.html"><a href="save-your-plot.html#from-the-console"><i class="fa fa-check"></i><b>8.3.2</b> From the console</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="exercise-1.html"><a href="exercise-1.html"><i class="fa fa-check"></i><b>8.4</b> Exercise 1</a></li>
+<li class="chapter" data-level="8.5" data-path="scatter-plots-more-features.html"><a href="scatter-plots-more-features.html"><i class="fa fa-check"></i><b>8.5</b> Scatter plots: more features</a></li>
+<li class="chapter" data-level="8.6" data-path="barplots.html"><a href="barplots.html"><i class="fa fa-check"></i><b>8.6</b> Barplots</a></li>
+<li class="chapter" data-level="8.7" data-path="exercise-2.html"><a href="exercise-2.html"><i class="fa fa-check"></i><b>8.7</b> Exercise 2</a></li>
+<li class="chapter" data-level="8.8" data-path="barplots-bars-position.html"><a href="barplots-bars-position.html"><i class="fa fa-check"></i><b>8.8</b> Barplots: bars position</a>
+<ul>
+<li class="chapter" data-level="8.8.1" data-path="barplots-bars-position.html"><a href="barplots-bars-position.html#statsidentity-parameter"><i class="fa fa-check"></i><b>8.8.1</b> stats=“identity” parameter</a></li>
+</ul></li>
+<li class="chapter" data-level="8.9" data-path="boxplots.html"><a href="boxplots.html"><i class="fa fa-check"></i><b>8.9</b> Boxplots</a></li>
+<li class="chapter" data-level="8.10" data-path="fine-tuning-text.html"><a href="fine-tuning-text.html"><i class="fa fa-check"></i><b>8.10</b> Fine-tuning text</a></li>
+<li class="chapter" data-level="8.11" data-path="colors.html"><a href="colors.html"><i class="fa fa-check"></i><b>8.11</b> Colors</a></li>
+<li class="chapter" data-level="8.12" data-path="faceting.html"><a href="faceting.html"><i class="fa fa-check"></i><b>8.12</b> Faceting</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="data-filtering-and-wrangling.html"><a href="data-filtering-and-wrangling.html"><i class="fa fa-check"></i><b>9</b> Data filtering and wrangling</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="filter.html"><a href="filter.html"><i class="fa fa-check"></i><b>9.1</b> filter()</a></li>
+<li class="chapter" data-level="9.2" data-path="select.html"><a href="select.html"><i class="fa fa-check"></i><b>9.2</b> select()</a></li>
+<li class="chapter" data-level="9.3" data-path="rename.html"><a href="rename.html"><i class="fa fa-check"></i><b>9.3</b> rename()</a></li>
+<li class="chapter" data-level="9.4" data-path="exercise-3.html"><a href="exercise-3.html"><i class="fa fa-check"></i><b>9.4</b> Exercise 3</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="more-ggplots.html"><a href="more-ggplots.html"><i class="fa fa-check"></i><b>10</b> More ggplots</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="histograms-and-density-plots.html"><a href="histograms-and-density-plots.html"><i class="fa fa-check"></i><b>10.1</b> Histograms and density plots</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="histograms-and-density-plots.html"><a href="histograms-and-density-plots.html#histogram"><i class="fa fa-check"></i><b>10.1.1</b> Histogram</a></li>
+<li class="chapter" data-level="10.1.2" data-path="histograms-and-density-plots.html"><a href="histograms-and-density-plots.html#density-plot"><i class="fa fa-check"></i><b>10.1.2</b> Density plot</a></li>
+<li class="chapter" data-level="10.1.3" data-path="histograms-and-density-plots.html"><a href="histograms-and-density-plots.html#histogram-density"><i class="fa fa-check"></i><b>10.1.3</b> Histogram + density</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="pie-chart.html"><a href="pie-chart.html"><i class="fa fa-check"></i><b>10.2</b> Pie chart</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="more-exercises.html"><a href="more-exercises.html"><i class="fa fa-check"></i><b>11</b> More exercises</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="exercise-5-barplots.html"><a href="exercise-5-barplots.html"><i class="fa fa-check"></i><b>11.1</b> Exercise 5: barplots</a></li>
+<li class="chapter" data-level="11.2" data-path="exercise-6-scatter-plot.html"><a href="exercise-6-scatter-plot.html"><i class="fa fa-check"></i><b>11.2</b> Exercise 6: scatter plot</a></li>
+<li class="chapter" data-level="11.3" data-path="exercise-7-boxplot.html"><a href="exercise-7-boxplot.html"><i class="fa fa-check"></i><b>11.3</b> Exercise 7: boxplot</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="interactive-plots-with-plotly.html"><a href="interactive-plots-with-plotly.html"><i class="fa fa-check"></i><b>12</b> Interactive plots with {plotly}</a></li>
+<li class="chapter" data-level="13" data-path="data-filtering-and-wrangling-1.html"><a href="data-filtering-and-wrangling-1.html"><i class="fa fa-check"></i><b>13</b> Data filtering and wrangling</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="the-pipe-operator.html"><a href="the-pipe-operator.html"><i class="fa fa-check"></i><b>13.1</b> The pipe operator</a></li>
+<li class="chapter" data-level="13.2" data-path="from-wide-to-long-format.html"><a href="from-wide-to-long-format.html"><i class="fa fa-check"></i><b>13.2</b> From wide to long format</a></li>
+<li class="chapter" data-level="13.3" data-path="exercise-4.html"><a href="exercise-4.html"><i class="fa fa-check"></i><b>13.3</b> Exercise 4</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="heatmaps-with-pheatmap.html"><a href="heatmaps-with-pheatmap.html"><i class="fa fa-check"></i><b>14</b> Heatmaps with {pheatmap}</a></li>
+<li class="chapter" data-level="15" data-path="demo-volcano-plot.html"><a href="demo-volcano-plot.html"><i class="fa fa-check"></i><b>15</b> Demo volcano plot</a></li>
+<li class="chapter" data-level="16" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>16</b> Resources</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/sarahbonnin/" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">R for beginners: Introduction to data visualization with R and ggplot2: from data to publication-quality figures</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="data-filtering-and-wrangling-1" class="section level1 hasAnchor" number="13">
+<h1><span class="header-section-number">Part13</span> Data filtering and wrangling<a href="data-filtering-and-wrangling-1.html#data-filtering-and-wrangling-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="interactive-plots-with-plotly.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="the-pipe-operator.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["stepping-stone-idibaps-dataviz-2024.pdf", "stepping-stone-idibaps-dataviz-2024.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

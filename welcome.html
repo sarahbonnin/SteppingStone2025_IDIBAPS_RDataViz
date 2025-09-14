@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>R for beginners: Introduction to data visualization with R and ggplot2: from data to publication-quality figures</title>
+  <meta name="description" content="R for beginners: Introduction to data visualization with R and ggplot2: from data to publication-quality figures" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="R for beginners: Introduction to data visualization with R and ggplot2: from data to publication-quality figures" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="R for beginners: Introduction to data visualization with R and ggplot2: from data to publication-quality figures" />
+  
+  
+  
+
+<meta name="author" content="Sarah Bonnin" />
+
+
+<meta name="date" content="2024-11-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Stepping Stone IDIBAPS Data Vizualization workshop 2024</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path=""><a href="#welcome"><i class="fa fa-check"></i><b>1</b> Welcome</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/sarahbonnin/" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">R for beginners: Introduction to data visualization with R and ggplot2: from data to publication-quality figures</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">R for beginners: Introduction to data visualization with R and ggplot2: from data to publication-quality figures</h1>
+<p class="author"><em>Sarah Bonnin</em></p>
+<p class="date"><em>2024-11-01</em></p>
+</div>
+<div id="welcome" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Part1</span> Welcome<a href="#welcome" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<h3>
+Dates, time &amp; location
+</h3>
+<ul>
+<li>Dates:
+<ul>
+<li>First edition: April 9 &amp; 11, 2024</li>
+<li>Second edition: November 5 &amp; 7, 2024</li>
+</ul></li>
+<li>Time:
+<ul>
+<li>9:30-13:00 <br></li>
+</ul></li>
+<li>Location:
+<ul>
+<li>IDIBAPS</li>
+</ul></li>
+</ul>
+<h3>
+Instructor
+</h3>
+<p><a href="mailto:bonninsarah@gmail.com">Sarah Bonnin</a></p>
+<p>Senior bioinformatics consultant at <a href="https://clarivate.com/">Clarivate</a>.</p>
+<h3>
+Prerequisites
+</h3>
+<p>The workshop is open to anyone with <strong>no (or little) prior programming experience</strong>.</p>
+<p>Attendees must however <strong>feel comfortable enough with their own computer to install programs</strong> (and debug their installation, when needed) and <strong>locate folders and files</strong>.</p>
+<h3>
+Learning objectives
+</h3>
+<p>Attendees will:</p>
+<ul>
+<li>Gain a high-level understanding of data import, manipulation and graphing with R and RStudio.</li>
+<li>Be able to produce and save a variety of publication-quality graphs (among others: boxplots, scatter plots, barplots).</li>
+</ul>
+<h3>
+Learning outcomes
+</h3>
+<ul>
+<li>Identify and use RStudio panels (console, scripts, folders and files panels).</li>
+<li>Locate useful resources to learn more and know where to seek help.</li>
+<li>Import data from files into R.</li>
+<li>Manipulate and prepare (filter, select) data.</li>
+<li>Produce graphs:
+<ul>
+<li>Create a plot from “recipes”.</li>
+<li>Change basic parameters (color, font size, point shape, title, etc.).</li>
+<li>Export high-quality graphs in different formats (pdf, jpeg, png).</li>
+</ul></li>
+</ul>
+<h4>
+What this workshop is <strong>NOT</strong>:
+</h4>
+<ul>
+<li>A programming class.</li>
+<li>A design class.</li>
+</ul>
+<h4>
+What this workshop is:
+</h4>
+<ul>
+<li>An introduction to R and to RStudio software.</li>
+<li>An introduction to data visualization.</li>
+<li>A teaser to - hopefully - make you want to learn how to program in R!</li>
+</ul>
+<h3>
+Tentative agenda
+</h3>
+<p>Day 1 &amp; 2: 9:30-13:00.
+<br>
+~15-20’ break around 11:15-11:30.</p>
+<ul>
+<li>Welcome and set up</li>
+<li>Introduction to R and RStudio (Posit)</li>
+<li>Paths and directories</li>
+<li>R basics</li>
+<li>Data import</li>
+<li>ggplot2:
+<ul>
+<li>Introduction, concept</li>
+<li>Scatter plots</li>
+<li>Barplots</li>
+<li>Boxplots</li>
+<li>Fine-tuning font</li>
+<li>Colors</li>
+<li>Faceting</li>
+</ul></li>
+<li>Data filtering and wrangling:
+<ul>
+<li>select</li>
+<li>filter</li>
+<li>rename</li>
+</ul></li>
+<li>More ggplots</li>
+<li>Exercises</li>
+</ul>
+<p>If time allows, we may see some of the following, according to the interest of the group:</p>
+<ul>
+<li>More advanced data manipulation:
+<ul>
+<li>the pipe operator</li>
+<li>from wide to long format</li>
+</ul></li>
+<li>Interactive plots with {plotly}</li>
+<li>Heatmaps with {pheatmap}</li>
+<li>Demo volcano plots</li>
+</ul>
+<p><img src="images/R_logo.png" alt="R logo" width="150"/> <img src="images/setup_rstudio_icon.png" alt="rstudio logo" width="150"/> <img src="images/R_tidyverse_logo.png" alt="tidyverse logo" width="150"/></p>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": false,
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

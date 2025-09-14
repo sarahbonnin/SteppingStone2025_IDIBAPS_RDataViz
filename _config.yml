@@ -1,0 +1,5 @@
+theme: jekyll-theme-dinky
+title: Stepping Stone 2024 - IDIBAPS - Data Visualization with R and ggplot2
+markdown: kramdown
+kramdown:
+  parse_block_html: true
