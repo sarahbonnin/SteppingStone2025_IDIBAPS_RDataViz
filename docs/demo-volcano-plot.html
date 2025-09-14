@@ -20,10 +20,10 @@
   
   
 
-<meta name="author" content="Sarah Bonnin" />
+<meta name="author" content="Sarah Bonnin, Leone Albinati" />
 
 
-<meta name="date" content="2024-11-04" />
+<meta name="date" content="2025-09-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Stepping Stone IDIBAPS Data Vizualization workshop 2024</a></li>
+<li><a href="./">Stepping Stone IDIBAPS R ggplot2 Data Vizualization workshop 2025</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a></li>
@@ -165,6 +165,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="5.1" data-path="path-and-home-directory.html"><a href="path-and-home-directory.html"><i class="fa fa-check"></i><b>5.1</b> Path and home directory</a></li>
 <li class="chapter" data-level="5.2" data-path="create-the-workshop-directory.html"><a href="create-the-workshop-directory.html"><i class="fa fa-check"></i><b>5.2</b> Create the workshop directory</a></li>
+<li class="chapter" data-level="5.3" data-path="rstudio-projects.html"><a href="rstudio-projects.html"><i class="fa fa-check"></i><b>5.3</b> RStudio “Projects”</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="rstudio-projects.html"><a href="rstudio-projects.html#advantages"><i class="fa fa-check"></i><b>5.3.1</b> Advantages</a></li>
+<li class="chapter" data-level="5.3.2" data-path="rstudio-projects.html"><a href="rstudio-projects.html#project-for-the-course"><i class="fa fa-check"></i><b>5.3.2</b> Project for the course</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>6</b> R basics</a>
 <ul>
@@ -292,13 +297,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb205"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb205-1"><a href="demo-volcano-plot.html#cb205-1" tabindex="-1"></a><span class="co"># The basic scatter plot: x is &quot;log2FoldChange&quot;, y is &quot;pvalue&quot;</span></span>
 <span id="cb205-2"><a href="demo-volcano-plot.html#cb205-2" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>de, <span class="fu">aes</span>(<span class="at">x=</span>log2FoldChange, <span class="at">y=</span>pvalue)) <span class="sc">+</span> </span>
 <span id="cb205-3"><a href="demo-volcano-plot.html#cb205-3" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2024_files/figure-html/unnamed-chunk-192-1.png" width="480" /></p>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-192-1.png" width="480" /></p>
 <p>Doesn’t look quite like a Volcano plot…<br></p>
 <p>In volcano plots, the p-value is converted into a -log10(p-value):</p>
 <div class="sourceCode" id="cb206"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb206-1"><a href="demo-volcano-plot.html#cb206-1" tabindex="-1"></a><span class="co"># Convert directly in the aes()</span></span>
 <span id="cb206-2"><a href="demo-volcano-plot.html#cb206-2" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>de, <span class="fu">aes</span>(<span class="at">x=</span>log2FoldChange, <span class="at">y=</span><span class="sc">-</span><span class="fu">log10</span>(pvalue))) <span class="sc">+</span> </span>
 <span id="cb206-3"><a href="demo-volcano-plot.html#cb206-3" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2024_files/figure-html/unnamed-chunk-193-1.png" width="480" /></p>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-193-1.png" width="480" /></p>
 <p>That’s better!</p>
 <p>Choose a nicer <strong>theme</strong>:</p>
 <div class="sourceCode" id="cb207"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb207-1"><a href="demo-volcano-plot.html#cb207-1" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>de, <span class="fu">aes</span>(<span class="at">x=</span>log2FoldChange, <span class="at">y=</span><span class="sc">-</span><span class="fu">log10</span>(pvalue))) <span class="sc">+</span> </span>
@@ -335,7 +340,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb213-1"><a href="demo-volcano-plot.html#cb213-1" tabindex="-1"></a>p3 <span class="ot">&lt;-</span> p2 <span class="sc">+</span> <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="at">DOWN=</span><span class="st">&quot;blue&quot;</span>, <span class="at">NO=</span><span class="st">&quot;grey50&quot;</span>, <span class="at">UP=</span><span class="st">&quot;red&quot;</span>))</span>
 <span id="cb213-2"><a href="demo-volcano-plot.html#cb213-2" tabindex="-1"></a></span>
 <span id="cb213-3"><a href="demo-volcano-plot.html#cb213-3" tabindex="-1"></a>p3</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2024_files/figure-html/unnamed-chunk-199-1.png" width="480" /></p>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-199-1.png" width="480" /></p>
 <p>Now we will write down the name of genes beside the points… but <strong>only selected genes</strong>.</p>
 <p>Add to <strong>de_fc</strong> the new column “delabel”, that will contain the name of genes differentially expressed (NA will be set, in case they are <strong>NO</strong>).</p>
 <div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb214-1"><a href="demo-volcano-plot.html#cb214-1" tabindex="-1"></a>de_fc <span class="ot">&lt;-</span> <span class="fu">mutate</span>(de_fc, <span class="at">delabel=</span><span class="fu">ifelse</span>(diffexpressed<span class="sc">==</span><span class="st">&quot;NO&quot;</span>, <span class="cn">NA</span>, gene_symbol))</span></code></pre></div>
@@ -343,7 +348,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb215-2"><a href="demo-volcano-plot.html#cb215-2" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
 <span id="cb215-3"><a href="demo-volcano-plot.html#cb215-3" tabindex="-1"></a>    <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
 <span id="cb215-4"><a href="demo-volcano-plot.html#cb215-4" tabindex="-1"></a>    <span class="fu">geom_text</span>()</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2024_files/figure-html/unnamed-chunk-201-1.png" width="480" /></p>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-201-1.png" width="480" /></p>
 <p>Finally, we can organize the labels nicely using the “ggrepel” package and the geom_text_repel() function:</p>
 <div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="demo-volcano-plot.html#cb216-1" tabindex="-1"></a><span class="co"># load library: either &quot;tick it&quot; in the Packages tab, or use the following:</span></span>
 <span id="cb216-2"><a href="demo-volcano-plot.html#cb216-2" tabindex="-1"></a><span class="fu">library</span>(ggrepel)</span>
@@ -357,7 +362,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb216-10"><a href="demo-volcano-plot.html#cb216-10" tabindex="-1"></a>        <span class="fu">geom_hline</span>(<span class="at">yintercept=</span><span class="sc">-</span><span class="fu">log10</span>(<span class="fl">0.05</span>), <span class="at">col=</span><span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
 <span id="cb216-11"><a href="demo-volcano-plot.html#cb216-11" tabindex="-1"></a>        <span class="fu">ggtitle</span>(<span class="at">label=</span><span class="st">&quot;Volcano plot&quot;</span>) <span class="sc">+</span></span>
 <span id="cb216-12"><a href="demo-volcano-plot.html#cb216-12" tabindex="-1"></a>        <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>))</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2024_files/figure-html/unnamed-chunk-202-1.png" width="576" /></p>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-202-1.png" width="576" /></p>
 
 </div>
             </section>
@@ -408,7 +413,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["stepping-stone-idibaps-dataviz-2024.pdf", "stepping-stone-idibaps-dataviz-2024.epub"],
+"download": ["stepping-stone-idibaps-dataviz-2025.pdf", "stepping-stone-idibaps-dataviz-2025.epub"],
 "search": {
 "engine": "fuse",
 "options": null

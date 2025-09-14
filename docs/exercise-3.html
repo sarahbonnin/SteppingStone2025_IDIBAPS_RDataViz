@@ -20,10 +20,10 @@
   
   
 
-<meta name="author" content="Sarah Bonnin" />
+<meta name="author" content="Sarah Bonnin, Leone Albinati" />
 
 
-<meta name="date" content="2024-11-04" />
+<meta name="date" content="2025-09-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Stepping Stone IDIBAPS Data Vizualization workshop 2024</a></li>
+<li><a href="./">Stepping Stone IDIBAPS R ggplot2 Data Vizualization workshop 2025</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a></li>
@@ -165,6 +165,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="5.1" data-path="path-and-home-directory.html"><a href="path-and-home-directory.html"><i class="fa fa-check"></i><b>5.1</b> Path and home directory</a></li>
 <li class="chapter" data-level="5.2" data-path="create-the-workshop-directory.html"><a href="create-the-workshop-directory.html"><i class="fa fa-check"></i><b>5.2</b> Create the workshop directory</a></li>
+<li class="chapter" data-level="5.3" data-path="rstudio-projects.html"><a href="rstudio-projects.html"><i class="fa fa-check"></i><b>5.3</b> RStudio “Projects”</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="rstudio-projects.html"><a href="rstudio-projects.html#advantages"><i class="fa fa-check"></i><b>5.3.1</b> Advantages</a></li>
+<li class="chapter" data-level="5.3.2" data-path="rstudio-projects.html"><a href="rstudio-projects.html#project-for-the-course"><i class="fa fa-check"></i><b>5.3.2</b> Project for the course</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>6</b> R basics</a>
 <ul>
@@ -307,7 +312,7 @@ correction
 </summary>
 <div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="exercise-3.html#cb113-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>diamonds, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>carat, <span class="at">y=</span>price, <span class="at">color=</span>cut)) <span class="sc">+</span></span>
 <span id="cb113-2"><a href="exercise-3.html#cb113-2" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2024_files/figure-html/unnamed-chunk-107-1.png" width="480" /></p>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-107-1.png" width="480" /></p>
 </details>
 <p><br></p>
 <ol start="2" style="list-style-type: decimal">
@@ -320,7 +325,7 @@ correction
 <div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="exercise-3.html#cb114-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>diamonds, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>carat, <span class="at">y=</span>price, <span class="at">color=</span>cut)) <span class="sc">+</span></span>
 <span id="cb114-2"><a href="exercise-3.html#cb114-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb114-3"><a href="exercise-3.html#cb114-3" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>color)</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2024_files/figure-html/unnamed-chunk-108-1.png" width="480" /></p>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-108-1.png" width="480" /></p>
 </details>
 <p><br></p>
 <ol start="3" style="list-style-type: decimal">
@@ -335,7 +340,7 @@ correction
 <span id="cb115-3"><a href="exercise-3.html#cb115-3" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>color) <span class="sc">+</span></span>
 <span id="cb115-4"><a href="exercise-3.html#cb115-4" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">15</span>) <span class="sc">+</span></span>
 <span id="cb115-5"><a href="exercise-3.html#cb115-5" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Diamonds carat, price and cut&quot;</span>)</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2024_files/figure-html/unnamed-chunk-109-1.png" width="480" /></p>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-109-1.png" width="480" /></p>
 </details>
 <p><br></p>
 <ol start="4" style="list-style-type: decimal">
@@ -351,7 +356,7 @@ correction
 <span id="cb116-4"><a href="exercise-3.html#cb116-4" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">15</span>) <span class="sc">+</span></span>
 <span id="cb116-5"><a href="exercise-3.html#cb116-5" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Diamonds carat, price and cut&quot;</span>) <span class="sc">+</span></span>
 <span id="cb116-6"><a href="exercise-3.html#cb116-6" tabindex="-1"></a>  <span class="fu">scale_color_brewer</span>(<span class="at">palette=</span><span class="st">&quot;Dark2&quot;</span>)</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2024_files/figure-html/unnamed-chunk-110-1.png" width="480" /></p>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-110-1.png" width="480" /></p>
 </details>
 <p><br></p>
 <ol start="5" style="list-style-type: decimal">
@@ -372,7 +377,7 @@ correction
 <span id="cb117-5"><a href="exercise-3.html#cb117-5" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Diamonds carat, price and cut&quot;</span>) <span class="sc">+</span></span>
 <span id="cb117-6"><a href="exercise-3.html#cb117-6" tabindex="-1"></a>  <span class="fu">scale_color_brewer</span>(<span class="at">palette=</span><span class="st">&quot;Dark2&quot;</span>) <span class="sc">+</span></span>
 <span id="cb117-7"><a href="exercise-3.html#cb117-7" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle=</span><span class="dv">90</span>), <span class="at">strip.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>))</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2024_files/figure-html/unnamed-chunk-111-1.png" width="960" /></p>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-111-1.png" width="960" /></p>
 </details>
 <p><br></p>
 
@@ -426,7 +431,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["stepping-stone-idibaps-dataviz-2024.pdf", "stepping-stone-idibaps-dataviz-2024.epub"],
+"download": ["stepping-stone-idibaps-dataviz-2025.pdf", "stepping-stone-idibaps-dataviz-2025.epub"],
 "search": {
 "engine": "fuse",
 "options": null

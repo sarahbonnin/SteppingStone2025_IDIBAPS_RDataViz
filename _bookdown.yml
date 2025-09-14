@@ -1,7 +1,7 @@
-title: "R for beginners: Introduction to data visualization with R and ggplot2"
+title: "R for beginners: Introduction to data visualization with R and ggplot2: from data to publication-quality figures"
 author: "Sarah Bonnin"
 date: "`r Sys.Date()`"
-book_filename: "stepping-stone-idibaps-dataviz-2024"
+book_filename: "stepping-stone-idibaps-dataviz-2025"
 language:
   ui:
     chapter_name: "Part"

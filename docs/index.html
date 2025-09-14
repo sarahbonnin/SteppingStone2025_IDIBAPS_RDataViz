@@ -20,10 +20,10 @@
   
   
 
-<meta name="author" content="Sarah Bonnin" />
+<meta name="author" content="Sarah Bonnin, Leone Albinati" />
 
 
-<meta name="date" content="2024-11-04" />
+<meta name="date" content="2025-09-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Stepping Stone IDIBAPS Data Vizualization workshop 2024</a></li>
+<li><a href="./">Stepping Stone IDIBAPS R ggplot2 Data Vizualization workshop 2025</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a></li>
@@ -165,6 +165,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="5.1" data-path="path-and-home-directory.html"><a href="path-and-home-directory.html"><i class="fa fa-check"></i><b>5.1</b> Path and home directory</a></li>
 <li class="chapter" data-level="5.2" data-path="create-the-workshop-directory.html"><a href="create-the-workshop-directory.html"><i class="fa fa-check"></i><b>5.2</b> Create the workshop directory</a></li>
+<li class="chapter" data-level="5.3" data-path="rstudio-projects.html"><a href="rstudio-projects.html"><i class="fa fa-check"></i><b>5.3</b> RStudio “Projects”</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="rstudio-projects.html"><a href="rstudio-projects.html#advantages"><i class="fa fa-check"></i><b>5.3.1</b> Advantages</a></li>
+<li class="chapter" data-level="5.3.2" data-path="rstudio-projects.html"><a href="rstudio-projects.html#project-for-the-course"><i class="fa fa-check"></i><b>5.3.2</b> Project for the course</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>6</b> R basics</a>
 <ul>
@@ -279,8 +284,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="header">
 <h1 class="title">R for beginners: Introduction to data visualization with R and ggplot2: from data to publication-quality figures</h1>
-<p class="author"><em>Sarah Bonnin</em></p>
-<p class="date"><em>2024-11-04</em></p>
+<h2 class="subtitle"><em>IDIBAPS Stepping-stone training program 2025</em></h2>
+<p class="author"><em>Sarah Bonnin, Leone Albinati</em></p>
+<p class="date"><em>2025-09-14</em></p>
 </div>
 <div id="welcome" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">Part1</span> Welcome<a href="index.html#welcome" class="anchor-section" aria-label="Anchor link to header"></a></h1>
@@ -288,25 +294,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 Dates, time &amp; location
 </h3>
 <ul>
-<li>Dates:
-<ul>
-<li>First edition: April 9 &amp; 11, 2024</li>
-<li>Second edition: November 5 &amp; 7, 2024</li>
-</ul></li>
-<li>Time:
-<ul>
-<li>9:30-13:00 <br></li>
-</ul></li>
-<li>Location:
-<ul>
-<li>IDIBAPS</li>
-</ul></li>
+<li>Dates: October 21st and 30th, 2025</li>
+<li>Time: 9:30-13:00</li>
+<li>Location: <a href="https://www.clinicbarcelona.org/en/idibaps">IDIBAPS</a></li>
 </ul>
 <h3>
-Instructor
+Instructors
 </h3>
-<p><a href="mailto:bonninsarah@gmail.com">Sarah Bonnin</a></p>
-<p>Senior bioinformatics consultant at <a href="https://clarivate.com/">Clarivate</a>.</p>
+<p><a href="https://www.linkedin.com/in/sarahbonnin/">Sarah Bonnin</a></p>
+<p>Manager, Discovery &amp; Translational Science consulting at <a href="https://clarivate.com/">Clarivate</a>.</p>
+<p><a href="">Leone Albinati</a></p>
+<p>PhD student at the <a href="https://www.crg.eu/en/programmes-groups/beekman-lab">Beekman lab at CRG</a></p>
 <h3>
 Prerequisites
 </h3>
@@ -388,7 +386,7 @@ Tentative agenda
 <li>Heatmaps with {pheatmap}</li>
 <li>Demo volcano plots</li>
 </ul>
-<p><img src="images/R_logo.png" alt="R logo" width="150"/> <img src="images/setup_rstudio_icon.png" alt="rstudio logo" width="150"/> <img src="images/R_tidyverse_logo.png" alt="tidyverse logo" width="150"/></p>
+<p><img src="images/R_logo.png" alt="R logo" width="150"/> <img src="images/posit_logo.png" alt="posit logo" width="250"/> <img src="images/rstudio_logo.jpeg" alt="rstudio logo" width="150"/> <img src="images/R_tidyverse_logo.png" alt="tidyverse logo" width="150"/></p>
 
 </div>
             </section>
@@ -439,7 +437,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["stepping-stone-idibaps-dataviz-2024.pdf", "stepping-stone-idibaps-dataviz-2024.epub"],
+"download": ["stepping-stone-idibaps-dataviz-2025.pdf", "stepping-stone-idibaps-dataviz-2025.epub"],
 "search": {
 "engine": "fuse",
 "options": null

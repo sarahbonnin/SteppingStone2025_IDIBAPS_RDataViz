@@ -4,7 +4,8 @@
 
 * Available for Windows, Mac OS and LINUX
 
-<img src="images/setup_rstudio_icon.png" alt="rstudio logo" width="300"/>
+<img src="images/posit_logo.png" alt="rstudio logo" width="500"/> <img src="images/rstudio_logo.jpeg" alt="rstudio logo" width="250"/>
+
 
 
 ## RStudio interface

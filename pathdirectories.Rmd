@@ -55,3 +55,45 @@ Click on **"Set As Working Directory"**:
 
 The [working directory](https://en.wikipedia.org/wiki/Working_directory) is where R will, by default, find files to read, and that is where it will also save files and figures, if another location/path is not specified.
 
+## RStudio "Projects"
+
+"[RStudio projects](https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects) are associated with R working directories. You can create an RStudio project:
+
+* __In a brand new directory__
+* In an existing directory where you already have R code and data
+* By cloning a version control (Git or Subversion) repository
+"
+
+### Advantages
+
+* When re-opening a project, all the environment (path, objects) is restored (no data loss)
+* Multiple projects can be created in parallel, keeping objects and environment separated (no project "cross-contamination")
+
+### Project for the course
+
+Let's create an RStudio "Project" for this workshop. This will allow us to stay organized and easily open the project and associated objects.
+
+To create a project:
+
+* Go to File -> New Project...
+
+<img src="images/RStudioProject1.png" alt="rstudio logo" width="400"/>
+
+* Create Project: "New directory"
+
+<img src="images/RStudioProject2.png" alt="rstudio logo" width="550"/>
+
+* Project Type: "New project"
+
+<img src="images/RStudioProject3.png" alt="rstudio logo" width="600"/>
+
+* Create New Project:
+  * Choose directory name (for this course, you can use, for example, **`DataViz_R_2025`**)
+  * Navigate to the directory where you want the R project to be created and stored. Here, we choose **`~/Documents`**:
+
+<img src="images/RStudioProject4.png" alt="rstudio logo" width="600"/>
+
+* A new session has now been started, where the working directory is automatically set to the directory where you chose your project to be stored:
+
+<img src="images/RStudioProject5.png" alt="rstudio logo" width="900"/>
+

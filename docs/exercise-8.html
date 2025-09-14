@@ -20,10 +20,10 @@
   
   
 
-<meta name="author" content="Sarah Bonnin" />
+<meta name="author" content="Sarah Bonnin, Leone Albinati" />
 
 
-<meta name="date" content="2024-11-04" />
+<meta name="date" content="2025-09-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Stepping Stone IDIBAPS Data Vizualization workshop 2024</a></li>
+<li><a href="./">Stepping Stone IDIBAPS R ggplot2 Data Vizualization workshop 2025</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a></li>
@@ -165,6 +165,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="5.1" data-path="path-and-home-directory.html"><a href="path-and-home-directory.html"><i class="fa fa-check"></i><b>5.1</b> Path and home directory</a></li>
 <li class="chapter" data-level="5.2" data-path="create-the-workshop-directory.html"><a href="create-the-workshop-directory.html"><i class="fa fa-check"></i><b>5.2</b> Create the workshop directory</a></li>
+<li class="chapter" data-level="5.3" data-path="rstudio-projects.html"><a href="rstudio-projects.html"><i class="fa fa-check"></i><b>5.3</b> RStudio “Projects”</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="rstudio-projects.html"><a href="rstudio-projects.html#advantages"><i class="fa fa-check"></i><b>5.3.1</b> Advantages</a></li>
+<li class="chapter" data-level="5.3.2" data-path="rstudio-projects.html"><a href="rstudio-projects.html#project-for-the-course"><i class="fa fa-check"></i><b>5.3.2</b> Project for the course</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>6</b> R basics</a>
 <ul>
@@ -333,7 +338,7 @@ correction
 <span id="cb194-3"><a href="exercise-8.html#cb194-3" tabindex="-1"></a></span>
 <span id="cb194-4"><a href="exercise-8.html#cb194-4" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>stats_countries_long_filtered, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>Years, <span class="at">y=</span>Population, <span class="at">fill=</span>Country)) <span class="sc">+</span></span>
 <span id="cb194-5"><a href="exercise-8.html#cb194-5" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="at">position =</span> <span class="st">&quot;dodge&quot;</span>)</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2024_files/figure-html/unnamed-chunk-181-1.png" width="1440" /></p>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-181-1.png" width="1440" /></p>
 </details>
 <ol start="4" style="list-style-type: decimal">
 <li>Customize your plot! Remember what we have done so far… You can, for example:</li>
@@ -354,7 +359,7 @@ One way out of hundreds of ways to show your data!
 <span id="cb195-4"><a href="exercise-8.html#cb195-4" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;American population in Barcelona from 2013 to 2023&quot;</span>) <span class="sc">+</span> </span>
 <span id="cb195-5"><a href="exercise-8.html#cb195-5" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle=</span><span class="dv">90</span>), <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>)) <span class="sc">+</span></span>
 <span id="cb195-6"><a href="exercise-8.html#cb195-6" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Country)</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2024_files/figure-html/unnamed-chunk-182-1.png" width="1440" /></p>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-182-1.png" width="1440" /></p>
 <p>If you have tried to change the color scale, you may have noticed that none are large enough for this data (we need 22 colors). One way to tackle this problem is to combine color palettes (e.g. from RColorBrewer) prior to plotting.</p>
 <div class="sourceCode" id="cb196"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb196-1"><a href="exercise-8.html#cb196-1" tabindex="-1"></a><span class="co"># create a vector of 22 colors from RColorBrewer</span></span>
 <span id="cb196-2"><a href="exercise-8.html#cb196-2" tabindex="-1"></a>my22colors <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">brewer.pal</span>(<span class="at">n=</span><span class="dv">11</span>, <span class="at">name=</span><span class="st">&quot;Paired&quot;</span>), <span class="fu">brewer.pal</span>(<span class="at">n=</span><span class="dv">11</span>, <span class="at">name=</span><span class="st">&quot;Set3&quot;</span>))</span>
@@ -367,7 +372,7 @@ One way out of hundreds of ways to show your data!
 <span id="cb196-9"><a href="exercise-8.html#cb196-9" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;American population in Barcelona from 2013 to 2023&quot;</span>) <span class="sc">+</span> </span>
 <span id="cb196-10"><a href="exercise-8.html#cb196-10" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle=</span><span class="dv">90</span>), <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>)) <span class="sc">+</span></span>
 <span id="cb196-11"><a href="exercise-8.html#cb196-11" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Country)</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2024_files/figure-html/unnamed-chunk-183-1.png" width="1440" /></p>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-183-1.png" width="1440" /></p>
 </details>
 
 </div>
@@ -420,7 +425,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["stepping-stone-idibaps-dataviz-2024.pdf", "stepping-stone-idibaps-dataviz-2024.epub"],
+"download": ["stepping-stone-idibaps-dataviz-2025.pdf", "stepping-stone-idibaps-dataviz-2025.epub"],
 "search": {
 "engine": "fuse",
 "options": null

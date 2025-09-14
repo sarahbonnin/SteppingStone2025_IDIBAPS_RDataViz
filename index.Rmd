@@ -1,5 +1,6 @@
 --- 
 title: "R for beginners: Introduction to data visualization with R and ggplot2: from data to publication-quality figures"
+subtitle: "IDIBAPS Stepping-stone training program 2025"
 author: "Sarah Bonnin, Leone Albinati"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -14,21 +15,13 @@ link-citations: yes
 
 <h3> Dates, time & location </h3>
 
-* Dates:
-
-October 21st and 30th, 2025
-
-* Time:
-
- 9:30-13:00 <br>
-
-* Location:
-
-IDIBAPS
+* Dates: October 21st and 30th, 2025
+* Time:  9:30-13:00
+* Location: [IDIBAPS](https://www.clinicbarcelona.org/en/idibaps)
 
 <h3> Instructors </h3>
  
-[Sarah Bonnin](mailto:bonninsarah@gmail.com) 
+[Sarah Bonnin](https://www.linkedin.com/in/sarahbonnin/) 
 
 Manager, Discovery & Translational Science consulting at [Clarivate](https://clarivate.com/).
 
@@ -102,4 +95,4 @@ Day 1 & 2: 9:30-13:00.
 * Heatmaps with {pheatmap}
 * Demo volcano plots
 
-<img src="images/R_logo.png" alt="R logo" width="150"/> <img src="images/setup_rstudio_icon.png" alt="rstudio logo" width="150"/> <img src="images/R_tidyverse_logo.png" alt="tidyverse logo" width="150"/>
+<img src="images/R_logo.png" alt="R logo" width="150"/> <img src="images/posit_logo.png" alt="posit logo" width="250"/> <img src="images/rstudio_logo.jpeg" alt="rstudio logo" width="150"/> <img src="images/R_tidyverse_logo.png" alt="tidyverse logo" width="150"/>

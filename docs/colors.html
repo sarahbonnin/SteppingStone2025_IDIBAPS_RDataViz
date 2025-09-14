@@ -20,10 +20,10 @@
   
   
 
-<meta name="author" content="Sarah Bonnin" />
+<meta name="author" content="Sarah Bonnin, Leone Albinati" />
 
 
-<meta name="date" content="2024-11-04" />
+<meta name="date" content="2025-09-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Stepping Stone IDIBAPS Data Vizualization workshop 2024</a></li>
+<li><a href="./">Stepping Stone IDIBAPS R ggplot2 Data Vizualization workshop 2025</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a></li>
@@ -165,6 +165,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="5.1" data-path="path-and-home-directory.html"><a href="path-and-home-directory.html"><i class="fa fa-check"></i><b>5.1</b> Path and home directory</a></li>
 <li class="chapter" data-level="5.2" data-path="create-the-workshop-directory.html"><a href="create-the-workshop-directory.html"><i class="fa fa-check"></i><b>5.2</b> Create the workshop directory</a></li>
+<li class="chapter" data-level="5.3" data-path="rstudio-projects.html"><a href="rstudio-projects.html"><i class="fa fa-check"></i><b>5.3</b> RStudio “Projects”</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="rstudio-projects.html"><a href="rstudio-projects.html#advantages"><i class="fa fa-check"></i><b>5.3.1</b> Advantages</a></li>
+<li class="chapter" data-level="5.3.2" data-path="rstudio-projects.html"><a href="rstudio-projects.html#project-for-the-course"><i class="fa fa-check"></i><b>5.3.2</b> Project for the course</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>6</b> R basics</a>
 <ul>
@@ -301,17 +306,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="colors.html#cb94-1" tabindex="-1"></a><span class="fu">rainbow</span>(<span class="dv">5</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;#FF0000&quot; &quot;#CCFF00&quot; &quot;#00FF66&quot; &quot;#0066FF&quot; &quot;#CC00FF&quot;</code></pre>
 <div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="colors.html#cb96-1" tabindex="-1"></a><span class="fu">rainbow</span>(<span class="dv">10</span>)</span></code></pre></div>
-<pre><code>##  [1] &quot;#FF0000&quot; &quot;#FF9900&quot; &quot;#CCFF00&quot; &quot;#33FF00&quot; &quot;#00FF66&quot; &quot;#00FFFF&quot; &quot;#0066FF&quot; &quot;#3300FF&quot; &quot;#CC00FF&quot;
-## [10] &quot;#FF0099&quot;</code></pre>
+<pre><code>##  [1] &quot;#FF0000&quot; &quot;#FF9900&quot; &quot;#CCFF00&quot; &quot;#33FF00&quot; &quot;#00FF66&quot; &quot;#00FFFF&quot; &quot;#0066FF&quot; &quot;#3300FF&quot;
+##  [9] &quot;#CC00FF&quot; &quot;#FF0099&quot;</code></pre>
 <p>We can set them as <strong>values</strong> parameter in the <strong>scale_fill_manual()</strong> or <strong>scale_color_manual()</strong> layers:</p>
 <div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="colors.html#cb98-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>chr, <span class="at">fill=</span>gene_type)) <span class="sc">+</span> </span>
 <span id="cb98-2"><a href="colors.html#cb98-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position=</span><span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span></span>
 <span id="cb98-3"><a href="colors.html#cb98-3" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values=</span><span class="fu">rainbow</span>(<span class="dv">5</span>))</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2024_files/figure-html/unnamed-chunk-94-1.png" width="480" /></p>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-94-1.png" width="480" /></p>
 <div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="colors.html#cb99-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>chr, <span class="at">fill=</span>gene_type)) <span class="sc">+</span> </span>
 <span id="cb99-2"><a href="colors.html#cb99-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position=</span><span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span></span>
 <span id="cb99-3"><a href="colors.html#cb99-3" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values=</span><span class="fu">terrain.colors</span>(<span class="dv">5</span>))</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2024_files/figure-html/unnamed-chunk-94-2.png" width="480" /></p>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-94-2.png" width="480" /></p>
 </div>
 <div id="rcolorbrewer" class="section level3 hasAnchor" number="8.11.3">
 <h3><span class="header-section-number">8.11.3</span> RColorBrewer<a href="colors.html#rcolorbrewer" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -321,7 +326,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>You can check which palettes are <strong>colorblind-friendly</strong> the following way:</p>
 <div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="colors.html#cb100-1" tabindex="-1"></a><span class="fu">library</span>(RColorBrewer)</span>
 <span id="cb100-2"><a href="colors.html#cb100-2" tabindex="-1"></a><span class="fu">display.brewer.all</span>(<span class="at">colorblindFriendly =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2024_files/figure-html/unnamed-chunk-95-1.png" width="480" /></p>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-95-1.png" width="480" /></p>
 <p>We can easily take advantage of the RColorBrewer’s palettes in ggplot2 with :</p>
 <ul>
 <li><strong>scale_color_brewer()</strong> layer (if you mapped variables with <strong>color</strong> in <strong>aes()</strong>)</li>
@@ -330,13 +335,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="colors.html#cb101-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>chr, <span class="at">fill=</span>gene_type)) <span class="sc">+</span> </span>
 <span id="cb101-2"><a href="colors.html#cb101-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position=</span><span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span></span>
 <span id="cb101-3"><a href="colors.html#cb101-3" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>()</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2024_files/figure-html/unnamed-chunk-96-1.png" width="480" /></p>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-96-1.png" width="480" /></p>
 <p>By default, the palette used is “Blues”.</p>
 <p>How does that look using “Dark2” palette?</p>
 <div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="colors.html#cb102-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>chr, <span class="at">fill=</span>gene_type)) <span class="sc">+</span> </span>
 <span id="cb102-2"><a href="colors.html#cb102-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position=</span><span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span></span>
 <span id="cb102-3"><a href="colors.html#cb102-3" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette=</span><span class="st">&quot;Dark2&quot;</span>)</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2024_files/figure-html/unnamed-chunk-97-1.png" width="480" /></p>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-97-1.png" width="480" /></p>
 </div>
 <div id="ggsci" class="section level3 hasAnchor" number="8.11.4">
 <h3><span class="header-section-number">8.11.4</span> ggsci<a href="colors.html#ggsci" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -359,16 +364,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb103-4"><a href="colors.html#cb103-4" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position=</span><span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span></span>
 <span id="cb103-5"><a href="colors.html#cb103-5" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;scale_fill_ngp&quot;</span>, <span class="at">subtitle =</span> <span class="st">&quot;Nature Publishing Group&quot;</span>) <span class="sc">+</span></span>
 <span id="cb103-6"><a href="colors.html#cb103-6" tabindex="-1"></a>  <span class="fu">scale_fill_npg</span>()</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2024_files/figure-html/unnamed-chunk-98-1.png" width="480" /></p>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-98-1.png" width="480" /></p>
 <div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="colors.html#cb104-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>chr, <span class="at">fill=</span>gene_type)) <span class="sc">+</span> </span>
 <span id="cb104-2"><a href="colors.html#cb104-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position=</span><span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span></span>
 <span id="cb104-3"><a href="colors.html#cb104-3" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;scale_fill_aaas&quot;</span>, <span class="at">subtitle =</span> <span class="st">&quot;American Association for the Advancement of Science&quot;</span>) <span class="sc">+</span></span>
 <span id="cb104-4"><a href="colors.html#cb104-4" tabindex="-1"></a>  <span class="fu">scale_fill_aaas</span>()</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2024_files/figure-html/unnamed-chunk-99-1.png" width="480" /></p>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-99-1.png" width="480" /></p>
 <p>Example of a scale for continuous data:</p>
 <div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="colors.html#cb105-1" tabindex="-1"></a> <span class="fu">ggplot</span>(<span class="at">data=</span>geneexp, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1, <span class="at">y=</span>sample2, <span class="at">color=</span>sample1)) <span class="sc">+</span> </span>
 <span id="cb105-2"><a href="colors.html#cb105-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">scale_color_gsea</span>()</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2024_files/figure-html/unnamed-chunk-100-1.png" width="480" /></p>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-100-1.png" width="480" /></p>
 </div>
 </div>
             </section>
@@ -419,7 +424,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["stepping-stone-idibaps-dataviz-2024.pdf", "stepping-stone-idibaps-dataviz-2024.epub"],
+"download": ["stepping-stone-idibaps-dataviz-2025.pdf", "stepping-stone-idibaps-dataviz-2025.epub"],
 "search": {
 "engine": "fuse",
 "options": null
