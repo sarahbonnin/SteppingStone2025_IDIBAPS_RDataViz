@@ -23,7 +23,7 @@
 <meta name="author" content="Sarah Bonnin, Leone Albinati" />
 
 
-<meta name="date" content="2025-09-14" />
+<meta name="date" content="2025-10-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="paths-and-directories.html"/>
-<link rel="next" href="create-the-workshop-directory.html"/>
+<link rel="next" href="rstudio-projects.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -55,8 +55,9 @@
 
 
 <style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -66,7 +67,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -164,11 +165,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>5</b> Paths and directories</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="path-and-home-directory.html"><a href="path-and-home-directory.html"><i class="fa fa-check"></i><b>5.1</b> Path and home directory</a></li>
-<li class="chapter" data-level="5.2" data-path="create-the-workshop-directory.html"><a href="create-the-workshop-directory.html"><i class="fa fa-check"></i><b>5.2</b> Create the workshop directory</a></li>
-<li class="chapter" data-level="5.3" data-path="rstudio-projects.html"><a href="rstudio-projects.html"><i class="fa fa-check"></i><b>5.3</b> RStudio “Projects”</a>
+<li class="chapter" data-level="5.2" data-path="rstudio-projects.html"><a href="rstudio-projects.html"><i class="fa fa-check"></i><b>5.2</b> RStudio “Projects”</a>
 <ul>
-<li class="chapter" data-level="5.3.1" data-path="rstudio-projects.html"><a href="rstudio-projects.html#advantages"><i class="fa fa-check"></i><b>5.3.1</b> Advantages</a></li>
-<li class="chapter" data-level="5.3.2" data-path="rstudio-projects.html"><a href="rstudio-projects.html#project-for-the-course"><i class="fa fa-check"></i><b>5.3.2</b> Project for the course</a></li>
+<li class="chapter" data-level="5.2.1" data-path="rstudio-projects.html"><a href="rstudio-projects.html#advantages"><i class="fa fa-check"></i><b>5.2.1</b> Advantages</a></li>
+<li class="chapter" data-level="5.2.2" data-path="rstudio-projects.html"><a href="rstudio-projects.html#project-for-the-course"><i class="fa fa-check"></i><b>5.2.2</b> Project for the course</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>6</b> R basics</a>
@@ -297,6 +297,40 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>In the examples above, <strong>sbonnin</strong> is a subdirectory of <strong>users</strong> (or Users), and users starts at the root.</p>
 <p>Example of a <em>tree</em> / organization of directories:</p>
 <p><img src="images/path_tree.png" alt="rstudio logo" width="600"/></p>
+<!---
+## Create the workshop directory
+
+We will now create a folder/directory, where we will store what we produce during this course.
+
+Go to the **Files** tab in the bottom-right corner: by default, this will be set to your **Home**.
+
+You can navigate through the *tree* of files and directories by double clicking one folder name, to enter it, and by clicking on the **double dot ".."** to go back.
+
+Choose the folder under which you would like to save the workshop's work.
+
+For example, you can create it right under **Home -> Documents** (or anywhere else that you will remember, as we do not have the same folder structures). 
+
+Click on "Home" and then on "Documents":
+
+<img src="images/path_home_documents.png" alt="rstudio logo" width="300"/>
+
+Create a folder called **"DataViz_R"** by clicking on the **"+Folder"** icon.
+
+<img src="images/RStudio_path_add_folder_popup.png" alt="add folder pop up" width="500"/>
+
+Click on the newly created "DataViz_R" folder under the "Files" tab, so as to enter it. 
+
+Click on the **"More file commands button"**: 
+
+<img src="images/path_settings.png" alt="rstudio logo" width="100"/>
+
+Click on **"Set As Working Directory"**:
+
+<img src="images/path_setwd.png" alt="rstudio logo" width="600"/>
+
+The [working directory](https://en.wikipedia.org/wiki/Working_directory) is where R will, by default, find files to read, and that is where it will also save files and figures, if another location/path is not specified.
+
+-->
 </div>
             </section>
 
@@ -304,7 +338,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 <a href="paths-and-directories.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="create-the-workshop-directory.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="rstudio-projects.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

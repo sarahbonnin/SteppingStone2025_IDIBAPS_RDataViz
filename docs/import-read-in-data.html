@@ -23,7 +23,7 @@
 <meta name="author" content="Sarah Bonnin, Leone Albinati" />
 
 
-<meta name="date" content="2025-09-14" />
+<meta name="date" content="2025-10-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -55,8 +55,9 @@
 
 
 <style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -66,7 +67,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -164,11 +165,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>5</b> Paths and directories</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="path-and-home-directory.html"><a href="path-and-home-directory.html"><i class="fa fa-check"></i><b>5.1</b> Path and home directory</a></li>
-<li class="chapter" data-level="5.2" data-path="create-the-workshop-directory.html"><a href="create-the-workshop-directory.html"><i class="fa fa-check"></i><b>5.2</b> Create the workshop directory</a></li>
-<li class="chapter" data-level="5.3" data-path="rstudio-projects.html"><a href="rstudio-projects.html"><i class="fa fa-check"></i><b>5.3</b> RStudio “Projects”</a>
+<li class="chapter" data-level="5.2" data-path="rstudio-projects.html"><a href="rstudio-projects.html"><i class="fa fa-check"></i><b>5.2</b> RStudio “Projects”</a>
 <ul>
-<li class="chapter" data-level="5.3.1" data-path="rstudio-projects.html"><a href="rstudio-projects.html#advantages"><i class="fa fa-check"></i><b>5.3.1</b> Advantages</a></li>
-<li class="chapter" data-level="5.3.2" data-path="rstudio-projects.html"><a href="rstudio-projects.html#project-for-the-course"><i class="fa fa-check"></i><b>5.3.2</b> Project for the course</a></li>
+<li class="chapter" data-level="5.2.1" data-path="rstudio-projects.html"><a href="rstudio-projects.html#advantages"><i class="fa fa-check"></i><b>5.2.1</b> Advantages</a></li>
+<li class="chapter" data-level="5.2.2" data-path="rstudio-projects.html"><a href="rstudio-projects.html#project-for-the-course"><i class="fa fa-check"></i><b>5.2.2</b> Project for the course</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>6</b> R basics</a>
@@ -292,13 +292,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Using the “absolute path”:</li>
 </ul>
 <div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="import-read-in-data.html#cb12-1" tabindex="-1"></a><span class="co"># absolute path</span></span>
-<span id="cb12-2"><a href="import-read-in-data.html#cb12-2" tabindex="-1"></a>geneexp <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;/users/sbonnin/DataViz_R_2024/DataViz_source_files-main/files/expression_20genes.csv&quot;</span>)</span></code></pre></div>
+<span id="cb12-2"><a href="import-read-in-data.html#cb12-2" tabindex="-1"></a>geneexp <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;/users/sbonnin/DataViz_R/DataViz_source_files-main/files/expression_20genes.csv&quot;</span>)</span></code></pre></div>
 <ul>
 <li>Using the “relative path” (i.e. relative to where the session is currently located), e.g.:</li>
 </ul>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="import-read-in-data.html#cb13-1" tabindex="-1"></a><span class="co"># relative path (this assumes you are in the course folder)</span></span>
 <span id="cb13-2"><a href="import-read-in-data.html#cb13-2" tabindex="-1"></a>geneexp <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;DataViz_source_files-main/files/expression_20genes.csv&quot;</span>)</span></code></pre></div>
-<p>Because your <strong>working directory</strong> is <em>/your_home_directory/</em>DataViz_R_2024/, R can find the <strong>DataViz_source_files-main</strong> without requiring that you specify the whole path (<strong>relative vs absolute path</strong>).</p>
+<p>Because your <strong>working directory</strong> is <em>/your_home_directory/</em>DataViz_R/, R can find the <strong>DataViz_source_files-main</strong> without requiring that you specify the whole path (<strong>relative vs absolute path</strong>).</p>
 <p>The content of file <strong>expression_20genes.csv</strong> is now stored in the object named <strong>geneexp</strong>.</p>
 <p>The function also outputs some information about the data you are importing:</p>
 <p><img src="images/import_readr_console2.png" alt="import zip" width="600"/></p>

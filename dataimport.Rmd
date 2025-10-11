@@ -15,7 +15,7 @@ Click on <img src="images/import_github_code_button.png" alt="import zip" width=
 
 <img src="images/import_github_zip.png" alt="import zip" width="600"/>
 
-* Save the archive in the course folder (**DataViz_R_2024**)
+* Save the archive in the course folder (**DataViz_R**)
 
 * Extract the archive (click right on the archive and you should see some extraction options).
 
@@ -23,11 +23,11 @@ What is extracted from the archive is the **DataViz_source_files-main** folder, 
 
 The **path** to fetch the files is the following (remember that the first piece is *OS/user* dependent):
 
-*/your_home_directory/*DataViz_R_2024/**DataViz_source_files-main/files**
+*/your_home_directory/*DataViz_R/**DataViz_source_files-main/files**
 
 e.g.
 
-/users/sbonnin/DataViz_R_2024/**DataViz_source_files-main/files**
+/users/sbonnin/DataViz_R/**DataViz_source_files-main/files**
 
 ## Import / read in data
 
@@ -41,7 +41,7 @@ There are several ways we can specify the path / location of a file:
 
 ```{r, echo=T, eval=F, message=F, warning=F}
 # absolute path
-geneexp <- read_csv("/users/sbonnin/DataViz_R_2024/DataViz_source_files-main/files/expression_20genes.csv")
+geneexp <- read_csv("/users/sbonnin/DataViz_R/DataViz_source_files-main/files/expression_20genes.csv")
 ```
 
 * Using the "relative path" (i.e. relative to where the session is currently located), e.g.:
@@ -51,7 +51,7 @@ geneexp <- read_csv("/users/sbonnin/DataViz_R_2024/DataViz_source_files-main/fil
 geneexp <- read_csv("DataViz_source_files-main/files/expression_20genes.csv")
 ```
 
-Because your **working directory** is */your_home_directory/*DataViz_R_2024/, R can find the **DataViz_source_files-main** without requiring that you specify the whole path (**relative vs absolute path**).
+Because your **working directory** is */your_home_directory/*DataViz_R/, R can find the **DataViz_source_files-main** without requiring that you specify the whole path (**relative vs absolute path**).
 
 The content of file **expression_20genes.csv** is now stored in the object named **geneexp**.
 

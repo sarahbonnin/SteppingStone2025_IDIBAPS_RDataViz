@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>5.3 RStudio “Projects” | R for beginners: Introduction to data visualization with R and ggplot2: from data to publication-quality figures</title>
-  <meta name="description" content="5.3 RStudio “Projects” | R for beginners: Introduction to data visualization with R and ggplot2: from data to publication-quality figures" />
+  <title>5.2 RStudio “Projects” | R for beginners: Introduction to data visualization with R and ggplot2: from data to publication-quality figures</title>
+  <meta name="description" content="5.2 RStudio “Projects” | R for beginners: Introduction to data visualization with R and ggplot2: from data to publication-quality figures" />
   <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="5.3 RStudio “Projects” | R for beginners: Introduction to data visualization with R and ggplot2: from data to publication-quality figures" />
+  <meta property="og:title" content="5.2 RStudio “Projects” | R for beginners: Introduction to data visualization with R and ggplot2: from data to publication-quality figures" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="5.3 RStudio “Projects” | R for beginners: Introduction to data visualization with R and ggplot2: from data to publication-quality figures" />
+  <meta name="twitter:title" content="5.2 RStudio “Projects” | R for beginners: Introduction to data visualization with R and ggplot2: from data to publication-quality figures" />
   
   
   
@@ -23,14 +23,14 @@
 <meta name="author" content="Sarah Bonnin, Leone Albinati" />
 
 
-<meta name="date" content="2025-09-14" />
+<meta name="date" content="2025-10-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="create-the-workshop-directory.html"/>
+<link rel="prev" href="path-and-home-directory.html"/>
 <link rel="next" href="r-basics.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -55,8 +55,9 @@
 
 
 <style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -66,7 +67,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -164,11 +165,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>5</b> Paths and directories</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="path-and-home-directory.html"><a href="path-and-home-directory.html"><i class="fa fa-check"></i><b>5.1</b> Path and home directory</a></li>
-<li class="chapter" data-level="5.2" data-path="create-the-workshop-directory.html"><a href="create-the-workshop-directory.html"><i class="fa fa-check"></i><b>5.2</b> Create the workshop directory</a></li>
-<li class="chapter" data-level="5.3" data-path="rstudio-projects.html"><a href="rstudio-projects.html"><i class="fa fa-check"></i><b>5.3</b> RStudio “Projects”</a>
+<li class="chapter" data-level="5.2" data-path="rstudio-projects.html"><a href="rstudio-projects.html"><i class="fa fa-check"></i><b>5.2</b> RStudio “Projects”</a>
 <ul>
-<li class="chapter" data-level="5.3.1" data-path="rstudio-projects.html"><a href="rstudio-projects.html#advantages"><i class="fa fa-check"></i><b>5.3.1</b> Advantages</a></li>
-<li class="chapter" data-level="5.3.2" data-path="rstudio-projects.html"><a href="rstudio-projects.html#project-for-the-course"><i class="fa fa-check"></i><b>5.3.2</b> Project for the course</a></li>
+<li class="chapter" data-level="5.2.1" data-path="rstudio-projects.html"><a href="rstudio-projects.html#advantages"><i class="fa fa-check"></i><b>5.2.1</b> Advantages</a></li>
+<li class="chapter" data-level="5.2.2" data-path="rstudio-projects.html"><a href="rstudio-projects.html#project-for-the-course"><i class="fa fa-check"></i><b>5.2.2</b> Project for the course</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>6</b> R basics</a>
@@ -282,8 +282,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="rstudio-projects" class="section level2 hasAnchor" number="5.3">
-<h2><span class="header-section-number">5.3</span> RStudio “Projects”<a href="rstudio-projects.html#rstudio-projects" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="rstudio-projects" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> RStudio “Projects”<a href="rstudio-projects.html#rstudio-projects" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>“<a href="https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects">RStudio projects</a> are associated with R working directories. You can create an RStudio project:</p>
 <ul>
 <li><strong>In a brand new directory</strong></li>
@@ -291,16 +291,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>By cloning a version control (Git or Subversion) repository
 ”</li>
 </ul>
-<div id="advantages" class="section level3 hasAnchor" number="5.3.1">
-<h3><span class="header-section-number">5.3.1</span> Advantages<a href="rstudio-projects.html#advantages" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="advantages" class="section level3 hasAnchor" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> Advantages<a href="rstudio-projects.html#advantages" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li>When re-opening a project, all the environment (path, objects) is restored (no data loss)</li>
 <li>Multiple projects can be created in parallel, keeping objects and environment separated (no project “cross-contamination”)</li>
 </ul>
 </div>
-<div id="project-for-the-course" class="section level3 hasAnchor" number="5.3.2">
-<h3><span class="header-section-number">5.3.2</span> Project for the course<a href="rstudio-projects.html#project-for-the-course" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Let’s create an RStudio “Project” for this workshop. This will allow us to stay organized and easily open the project and associated objects.</p>
+<div id="project-for-the-course" class="section level3 hasAnchor" number="5.2.2">
+<h3><span class="header-section-number">5.2.2</span> Project for the course<a href="rstudio-projects.html#project-for-the-course" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We will create an RStudio “Project” for this workshop. This will allow us to stay organized and easily open the project and associated data.</p>
 <p>To create a project:</p>
 <ul>
 <li>Go to File -&gt; New Project…</li>
@@ -317,8 +317,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Create New Project:
 <ul>
-<li>Choose directory name (for this course, you can use, for example, <strong><code>DataViz_R_2025</code></strong>)</li>
-<li>Navigate to the directory where you want the R project to be created and stored. Here, we choose <strong><code>~/Documents</code></strong>:</li>
+<li>Choose directory name, e.g. <strong><code>DataViz_R</code></strong></li>
+<li>Navigate to the directory where you want the R project to be created and stored. Here, we can choose <strong><code>~/Documents</code></strong>:</li>
 </ul></li>
 </ul>
 <p><img src="images/RStudioProject4.png" alt="rstudio logo" width="600"/></p>
@@ -335,7 +335,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="create-the-workshop-directory.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="path-and-home-directory.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="r-basics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

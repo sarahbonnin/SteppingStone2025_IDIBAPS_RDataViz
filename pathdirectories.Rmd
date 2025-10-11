@@ -18,7 +18,7 @@ Example of a *tree* / organization of directories:
 <img src="images/path_tree.png" alt="rstudio logo" width="600"/>
 
 
-
+<!---
 ## Create the workshop directory
 
 We will now create a folder/directory, where we will store what we produce during this course.
@@ -35,15 +35,11 @@ Click on "Home" and then on "Documents":
 
 <img src="images/path_home_documents.png" alt="rstudio logo" width="300"/>
 
-Create a folder called **"DataViz_R_2024"** by clicking on the **"+Folder"** icon.
+Create a folder called **"DataViz_R"** by clicking on the **"+Folder"** icon.
 
-<img src="images/path_add_folder_popup.png" alt="add folder pop up" width="500"/>
+<img src="images/RStudio_path_add_folder_popup.png" alt="add folder pop up" width="500"/>
 
-You should now see a new folder:
-
-<img src="images/path_dataviz.png" alt="rstudio logo" width="350"/>
-
-Click on the newly created "DataViz_R_2024" folder, still under the "Files" tab, so you enter it. 
+Click on the newly created "DataViz_R" folder under the "Files" tab, so as to enter it. 
 
 Click on the **"More file commands button"**: 
 
@@ -54,6 +50,8 @@ Click on **"Set As Working Directory"**:
 <img src="images/path_setwd.png" alt="rstudio logo" width="600"/>
 
 The [working directory](https://en.wikipedia.org/wiki/Working_directory) is where R will, by default, find files to read, and that is where it will also save files and figures, if another location/path is not specified.
+
+-->
 
 ## RStudio "Projects"
 
@@ -71,7 +69,7 @@ The [working directory](https://en.wikipedia.org/wiki/Working_directory) is wher
 
 ### Project for the course
 
-Let's create an RStudio "Project" for this workshop. This will allow us to stay organized and easily open the project and associated objects.
+We will create an RStudio "Project" for this workshop. This will allow us to stay organized and easily open the project and associated data.
 
 To create a project:
 
@@ -88,8 +86,8 @@ To create a project:
 <img src="images/RStudioProject3.png" alt="rstudio logo" width="600"/>
 
 * Create New Project:
-  * Choose directory name (for this course, you can use, for example, **`DataViz_R_2025`**)
-  * Navigate to the directory where you want the R project to be created and stored. Here, we choose **`~/Documents`**:
+  * Choose directory name, e.g. **`DataViz_R`**
+  * Navigate to the directory where you want the R project to be created and stored. Here, we can choose **`~/Documents`**:
 
 <img src="images/RStudioProject4.png" alt="rstudio logo" width="600"/>
 

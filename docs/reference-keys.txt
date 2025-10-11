@@ -15,7 +15,6 @@ rstudio-interface
 the-r-console
 paths-and-directories
 path-and-home-directory
-create-the-workshop-directory
 rstudio-projects
 advantages
 project-for-the-course
