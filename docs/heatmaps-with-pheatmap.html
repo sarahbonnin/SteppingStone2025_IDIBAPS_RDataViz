@@ -298,15 +298,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="heatmaps-with-pheatmap.html#cb199-1" tabindex="-1"></a><span class="fu">pheatmap</span>(expr_heatmap)</span></code></pre></div>
 <p>Control what is clusters: rows, columns, both, or none:</p>
 <div class="sourceCode" id="cb200"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb200-1"><a href="heatmaps-with-pheatmap.html#cb200-1" tabindex="-1"></a><span class="fu">pheatmap</span>(expr_heatmap, <span class="at">cluster_cols=</span><span class="cn">FALSE</span>, <span class="at">cluster_rows=</span><span class="cn">TRUE</span>)</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-187-1.png" width="576" /></p>
 <p>Show or hide row names:</p>
 <div class="sourceCode" id="cb201"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb201-1"><a href="heatmaps-with-pheatmap.html#cb201-1" tabindex="-1"></a><span class="fu">pheatmap</span>(expr_heatmap, <span class="at">show_rownames =</span> F)</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-188-1.png" width="576" /></p>
 <p>Change the color scale (<strong>rainbow()</strong> and <strong>heat.colors()</strong> are available from the base packages):</p>
 <div class="sourceCode" id="cb202"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb202-1"><a href="heatmaps-with-pheatmap.html#cb202-1" tabindex="-1"></a><span class="fu">pheatmap</span>(expr_heatmap, <span class="at">color =</span> <span class="fu">rainbow</span>(<span class="dv">10</span>), <span class="at">main =</span> <span class="st">&quot;Rainbow colors&quot;</span>)</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-189-1.png" width="576" /></p>
 <div class="sourceCode" id="cb203"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb203-1"><a href="heatmaps-with-pheatmap.html#cb203-1" tabindex="-1"></a><span class="fu">pheatmap</span>(expr_heatmap, <span class="at">color =</span> <span class="fu">heat.colors</span>(<span class="dv">10</span>), <span class="at">main=</span><span class="st">&quot;Heat colors&quot;</span>)</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-190-1.png" width="576" /></p>
 
 </div>
             </section>
@@ -357,7 +353,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["stepping-stone-idibaps-dataviz-2025.pdf", "stepping-stone-idibaps-dataviz-2025.epub"],
+"download": null,
 "search": {
 "engine": "fuse",
 "options": null
