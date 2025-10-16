@@ -4,7 +4,7 @@ In this section, we will cover very basic notions of R programming.
 
 ## Arithmetic operators
 
-R is a programming language with a statistics focus. While it can be used for very complex tasks, it can also be used as a simple **calculator**, as shown previously.
+R is a programming language with a focus on statistics. While it can be used for very complex tasks, it can also be used as a simple **calculator**, as previously demonstrated.
 
 The following arithmetic operators can be used for these tasks:
 
@@ -16,13 +16,13 @@ The following arithmetic operators can be used for these tasks:
 |     *     | multiplication|
 |  ^ or **  | exponential   |
 
-In the R terminal, as you have seen before, you can type the following:
+In the R terminal, you can type the following:
 
 ```{r, eval=FALSE}
 10-2
 ```
 
-And hit **Enter** for R to interpret the command, and give you the output.
+And hit **Enter** for R to interpret the command, and output the result.
 
 Then try the following:
 
@@ -39,7 +39,7 @@ or:
 
 ## Objects in R
 
-So far, we  used the R console interactively, and received the answers from R **in the console.**
+We have thus far used the console interactively receiving instanteneous results from R **in the console.**
 
 Data/output of commands can also be stored in **objects**.
 
@@ -47,7 +47,7 @@ Everything that stores any kind of data in R is an **object**:
 
 <img src="images/R_basics_objects.png" alt="rstudio logo" width="350"/>
 
-When data is stored in objects, it can easily be **reused.**
+When data is stored in objects, it can easily be **manipulated, modified, and reused.**
 
 ## Assigning data to an object
 
@@ -65,7 +65,7 @@ Copy-paste the following in the console, and hit Enter.
 B <- 10
 ```
 
-This time, not there is **no output**. If you now type **B** in the R console, and hit Enter, what happens?
+Note that there is **no output** in the console. If you now type **B** in the R console, and hit Enter, what happens?
 
 * Reassigning: modifying the content of an object:
 
@@ -90,7 +90,7 @@ What values do A and B store now?
 
 **How to name an object?**
 
-Naming an object in R is quite flexible.
+Naming an object in R is flexible, if you follow a few base rules.
 
 You can use:
 
@@ -105,14 +105,14 @@ What you CANNOT use:
 
 ## Data types
 
-There are several data types in R: 
+Several data types exist in R: 
 
 * numeric (numbers)
 * character (strings)
 * logical / boolean (TRUE / FALSE)
 * factor (categories)
 
-For this introduction, we will mainly see and use numeric (numbers) and character (strings) data types.
+For this introductory course, we will mainly see and manipulate numeric (numbers) and character (strings) data types.
 
 A character or string of characters must be assigned with simple or double **quotes ("")**, for example:
 

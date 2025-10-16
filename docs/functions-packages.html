@@ -23,7 +23,7 @@
 <meta name="author" content="Sarah Bonnin, Leone Albinati" />
 
 
-<meta name="date" content="2025-10-11" />
+<meta name="date" content="2025-10-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -289,21 +289,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>A function in R is a piece of code that takes an <strong>input</strong> (user data, <strong>parameters</strong>), processes some <strong>calculation</strong>, and <strong>outputs</strong> data.</p>
 <p>For example: the <strong>mean()</strong> function would take a vector / series of numbers as an input, calculate and output their average.</p>
 <p>Functions can take <strong>arguments/parameters</strong>. In the example above, the main argument to mean() would be a series of numbers given by the user.</p>
-<p>In R code, you can recognize functions because of the parenthesis (“round brackets”) following their name.</p>
+<p>In R code, you can identify functions with the parenthesis (“round brackets”) following their name.</p>
 </div>
 <div id="packages" class="section level3 hasAnchor" number="3.2.2">
 <h3><span class="header-section-number">3.2.2</span> Packages<a href="functions-packages.html#packages" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="what-are-packages" class="section level4 hasAnchor" number="3.2.2.1">
 <h4><span class="header-section-number">3.2.2.1</span> What are packages?<a href="functions-packages.html#what-are-packages" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>A package in R stores, in standardized format, a set of functions, data and documentation.</p>
-<p>They are developed and shared by the community, and vary in size and complexity.</p>
+<p>A package in R stores, in a standardized format, a set of functions, data and documentation.</p>
+<p>They are developed and shared by the community of R users and developpers, and vary in size and complexity.</p>
 <p>Packages are stored in a <strong>library</strong>.</p>
-<p><img src="images/R_packages_logos.png" alt="rstudio logo" width="500"/></p>
+<p><img src="images/R_packages_logos.png" alt="rstudio logo" width="600"/></p>
 <p><a href="https://www.mitchelloharawild.com/blog/2018-07-10-hexwall_files/figure-html/final-1.png">source</a></p>
-<p>Packages are usually found in public <strong>repositories</strong> such as:</p>
+<p>Packages are mostly available in public <strong>repositories</strong> or open-source platforms such as:</p>
 <ul>
 <li>CRAN (general repository for any type of data analysis).</li>
 <li>Bioconductor (initially specialized in high throughput data analysis / bioinformatics)</li>
+<li>GitHub</li>
 </ul>
 <p>Anyone can create a package and stored it locally; creating packages is a great way to <strong>share code</strong>.</p>
 <p>The previous function, <strong>mean()</strong>, is part of the <strong>{base}</strong> package that is available by default.</p>
@@ -318,6 +319,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Easier to understand / more intuitive vocabulary: better for beginners.</li>
 <li>More “modern” style of coding.</li>
 <li>Uniform in style and logic across data manipulation and visualization.</li>
+<li>Very (and increasingly) popular</li>
 </ul>
 <p>In this course, we will use in particular, and in that order:</p>
 <ul>

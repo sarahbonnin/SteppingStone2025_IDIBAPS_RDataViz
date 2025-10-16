@@ -4,14 +4,16 @@
 
 * The path of a file/directory is its **location/address** in the file system.
 
-* Your home directory is the one that hosts the **user (your) data**: it is similar, although not identical, in all operating systems, for example:
+* The home directory is the personal directory assigned to the **user (you)**: path and name to the home directory are similar, although not identical, in all operating systems, for example:
   - */users/sbonnin* or */home/sbonnin* (Linux)
   - */Users/sbonnin* or */Home/sbonnin* (macOS)
   - *C:\\Users\\sbonnin* or *C:\\Home\\sbonnin* (Windows)
   
-The starting "/" or "\\" is called the **root** directory. Directories branch downwards from the root directory, and can contain both files and subdirectories.
+The initial "/" or "\\" is called the **root**, which is the **top-directory** of the hierarchical file system.
 
-In the examples above, **sbonnin** is a subdirectory of **users** (or Users), and users starts at the root.
+Directories branch from the root directory, and can contain both files and sub-directories.
+
+In the examples above, **sbonnin** is sub-directory of **users** (or Users), which in turns is a sub-directory of the root.
 
 Example of a *tree* / organization of directories:
 

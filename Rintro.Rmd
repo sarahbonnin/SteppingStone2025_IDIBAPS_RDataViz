@@ -30,30 +30,30 @@ For example: the **mean()** function would take a vector / series of numbers as 
 
 Functions can take **arguments/parameters**. In the example above, the main argument to mean() would be a series of numbers given by the user.
 
-In R code, you can recognize functions because of the parenthesis ("round brackets") following their name.
+In R code, you can identify functions with the parenthesis ("round brackets") following their name.
 
 
 ### Packages
 
 #### What are packages?
 
-A package in R stores, in standardized format, a set of functions, data and documentation.
+A package in R stores, in a standardized format, a set of functions, data and documentation.
 
-They are developed and shared by the community, and vary in size and complexity.
+They are developed and shared by the community of R users and developpers, and vary in size and complexity.
 
 Packages are stored in a **library**.
 
-<img src="images/R_packages_logos.png" alt="rstudio logo" width="500"/>
+<img src="images/R_packages_logos.png" alt="rstudio logo" width="600"/>
 
 [source](https://www.mitchelloharawild.com/blog/2018-07-10-hexwall_files/figure-html/final-1.png)
 
-Packages are usually found in public **repositories** such as:
+Packages are mostly available in public **repositories** or open-source platforms such as:
 
 - CRAN (general repository for any type of data analysis).
 - Bioconductor (initially specialized in high throughput data analysis / bioinformatics)
+- GitHub
 
 Anyone can create a package and stored it locally; creating packages is a great way to **share code**.
-
 
 The previous function, **mean()**, is part of the **{base}** package that is available by default.
 
@@ -70,6 +70,7 @@ The previous function, **mean()**, is part of the **{base}** package that is ava
 * Easier to understand / more intuitive vocabulary: better for beginners.
 * More "modern" style of coding.
 * Uniform in style and logic across data manipulation and visualization.
+* Very (and increasingly) popular
 
 In this course, we will use in particular, and in that order:
 

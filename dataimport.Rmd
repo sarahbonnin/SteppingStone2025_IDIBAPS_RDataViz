@@ -1,12 +1,12 @@
 # Import data / read files / scripts
 
-We will learn how to **import the content of a file** in R using the **{readr}** package (part of the **{tidyverse}** we previously installed).
+In this section, we will learn how to **import the content of a file** in R using the **{readr}** package (part of the **{tidyverse}**).
 
 ## Fetch workshop files
 
-First, let's copy locally a few files that were prepared for this workshop.
+Let's copy locally a few files prepared for this workshop.
 
-* Go to: https://github.com/sarahbonnin/DataViz_source_files
+* Go to: <a href="https://github.com/sarahbonnin/DataViz_source_files" target="_blank">https://github.com/sarahbonnin/DataViz_source_files</a>
 
 * Download the ZIP archive, as follows:
 
