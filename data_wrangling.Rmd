@@ -1,14 +1,14 @@
 # Data filtering and wrangling
 
-We will now see a few functions to filter, select and re-organize a data object.
+In this section, we will learn to use a few functions to filter, select and re-organize a data object.
 
 ## filter()
 
-**filter()** will filter **rows**.
+**filter()** will filter (keep or remove) **rows**.
 
-If we take the **geneexp** objet as an example, we can filter only down-regulated genes using the **filter()** function of **{dplyr}**.
+We can start from **geneexp** object, and filter only down-regulated genes using the **filter()** function of **{dplyr}**.
 
-In case you need to import the data again:
+If you need to import the data again, run the following command:
 
 ```{r, eval=FALSE}
 geneexp <- read_csv("DataViz_source_files-main/files/expression_20genes.csv")
@@ -42,7 +42,7 @@ For example, we may want to extract only rows that have either **Up** OR **Down*
 filter(geneexp, DE=="Down" | DE=="Up")
 ```
 
-Here, we introduce another operator, **|**, which mean **OR**, so rows will be kept if there is either **Down** OR **Up** in **DE** column.
+Here, we introduce another operator, **|**, that means **OR**: rows are kept if values are either **Down** OR **Up** in **DE** column.
 
 A good practice is to assign the filtered output to a new object, for example:
 
@@ -52,12 +52,18 @@ geneexp_filt <- filter(geneexp, DE=="Down" | DE=="Up")
 
 ## select()
 
-**select()** will select **columns** from a data frame.
+**select()** will select (keep or remove) **columns** from a data frame.
 
 Select only columns **Gene** and **DE** from **geneexp**:
 
 ```{r}
 select(geneexp, Gene, DE)
+```
+
+Remove column **DE**:
+
+```{r}
+select(geneexp, -DE)
 ```
 
 Again, a good practice is to save that subset into a new object:
@@ -68,7 +74,7 @@ geneexp_selected <- select(geneexp, Gene, DE)
 
 ## rename()
 
-You can easily rename a column using the **rename()** function.
+You can rename a column using the **rename()** function.
 
 For example, we can rename column **Gene** to **Symbol**, the following way:
 

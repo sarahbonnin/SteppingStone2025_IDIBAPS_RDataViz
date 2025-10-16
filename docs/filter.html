@@ -183,7 +183,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.1" data-path="fetch-workshop-files.html"><a href="fetch-workshop-files.html"><i class="fa fa-check"></i><b>7.1</b> Fetch workshop files</a></li>
 <li class="chapter" data-level="7.2" data-path="import-read-in-data.html"><a href="import-read-in-data.html"><i class="fa fa-check"></i><b>7.2</b> Import / read in data</a>
 <ul>
-<li class="chapter" data-level="7.2.1" data-path="import-read-in-data.html"><a href="import-read-in-data.html#from-csv"><i class="fa fa-check"></i><b>7.2.1</b> from CSV</a></li>
+<li class="chapter" data-level="7.2.1" data-path="import-read-in-data.html"><a href="import-read-in-data.html#load-package-into-environment"><i class="fa fa-check"></i><b>7.2.1</b> Load package into environment</a></li>
+<li class="chapter" data-level="7.2.2" data-path="import-read-in-data.html"><a href="import-read-in-data.html#from-csv"><i class="fa fa-check"></i><b>7.2.2</b> from CSV</a></li>
 </ul></li>
 <li class="chapter" data-level="7.3" data-path="from-excel.html"><a href="from-excel.html"><i class="fa fa-check"></i><b>7.3</b> from Excel</a></li>
 <li class="chapter" data-level="7.4" data-path="scripts.html"><a href="scripts.html"><i class="fa fa-check"></i><b>7.4</b> Scripts</a></li>
@@ -209,6 +210,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.5.2" data-path="scatter-plots-more-features.html"><a href="scatter-plots-more-features.html#color-and-shape-mapping"><i class="fa fa-check"></i><b>8.5.2</b> Color and shape mapping</a></li>
 <li class="chapter" data-level="8.5.3" data-path="scatter-plots-more-features.html"><a href="scatter-plots-more-features.html#additional-ticks"><i class="fa fa-check"></i><b>8.5.3</b> Additional ticks</a></li>
 <li class="chapter" data-level="8.5.4" data-path="scatter-plots-more-features.html"><a href="scatter-plots-more-features.html#density-estimates"><i class="fa fa-check"></i><b>8.5.4</b> Density estimates</a></li>
+<li class="chapter" data-level="8.5.5" data-path="scatter-plots-more-features.html"><a href="scatter-plots-more-features.html#regression-line"><i class="fa fa-check"></i><b>8.5.5</b> Regression line</a></li>
 </ul></li>
 <li class="chapter" data-level="8.6" data-path="barplots.html"><a href="barplots.html"><i class="fa fa-check"></i><b>8.6</b> Barplots</a></li>
 <li class="chapter" data-level="8.7" data-path="exercise-2.html"><a href="exercise-2.html"><i class="fa fa-check"></i><b>8.7</b> Exercise 2</a></li>
@@ -284,11 +286,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="filter" class="section level2 hasAnchor" number="9.1">
 <h2><span class="header-section-number">9.1</span> filter()<a href="filter.html#filter" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><strong>filter()</strong> will filter <strong>rows</strong>.</p>
-<p>If we take the <strong>geneexp</strong> objet as an example, we can filter only down-regulated genes using the <strong>filter()</strong> function of <strong>{dplyr}</strong>.</p>
-<p>In case you need to import the data again:</p>
-<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="filter.html#cb118-1" tabindex="-1"></a>geneexp <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;DataViz_source_files-main/files/expression_20genes.csv&quot;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb119-1"><a href="filter.html#cb119-1" tabindex="-1"></a><span class="fu">filter</span>(geneexp, DE<span class="sc">==</span><span class="st">&quot;Down&quot;</span>)</span></code></pre></div>
+<p><strong>filter()</strong> will filter (keep or remove) <strong>rows</strong>.</p>
+<p>We can start from <strong>geneexp</strong> object, and filter only down-regulated genes using the <strong>filter()</strong> function of <strong>{dplyr}</strong>.</p>
+<p>If you need to import the data again, run the following command:</p>
+<div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb119-1"><a href="filter.html#cb119-1" tabindex="-1"></a>geneexp <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;DataViz_source_files-main/files/expression_20genes.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="filter.html#cb120-1" tabindex="-1"></a><span class="fu">filter</span>(geneexp, DE<span class="sc">==</span><span class="st">&quot;Down&quot;</span>)</span></code></pre></div>
 <pre><code>## # A tibble: 5 × 4
 ##   Gene   DE    sample1 sample2
 ##   &lt;chr&gt;  &lt;chr&gt;   &lt;dbl&gt;   &lt;dbl&gt;
@@ -347,7 +349,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </table>
 <p>We can have several conditions.</p>
 <p>For example, we may want to extract only rows that have either <strong>Up</strong> OR <strong>Down</strong> in <strong>DE</strong>:</p>
-<div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb121-1"><a href="filter.html#cb121-1" tabindex="-1"></a><span class="fu">filter</span>(geneexp, DE<span class="sc">==</span><span class="st">&quot;Down&quot;</span> <span class="sc">|</span> DE<span class="sc">==</span><span class="st">&quot;Up&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="filter.html#cb122-1" tabindex="-1"></a><span class="fu">filter</span>(geneexp, DE<span class="sc">==</span><span class="st">&quot;Down&quot;</span> <span class="sc">|</span> DE<span class="sc">==</span><span class="st">&quot;Up&quot;</span>)</span></code></pre></div>
 <pre><code>## # A tibble: 8 × 4
 ##   Gene   DE    sample1 sample2
 ##   &lt;chr&gt;  &lt;chr&gt;   &lt;dbl&gt;   &lt;dbl&gt;
@@ -359,9 +361,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 6 ADAM17 Down  16.1      10.3 
 ## 7 PTEN   Up     0.0210   11.2 
 ## 8 MAPK2  Up     0.998     9.56</code></pre>
-<p>Here, we introduce another operator, <strong>|</strong>, which mean <strong>OR</strong>, so rows will be kept if there is either <strong>Down</strong> OR <strong>Up</strong> in <strong>DE</strong> column.</p>
+<p>Here, we introduce another operator, <strong>|</strong>, that means <strong>OR</strong>: rows are kept if values are either <strong>Down</strong> OR <strong>Up</strong> in <strong>DE</strong> column.</p>
 <p>A good practice is to assign the filtered output to a new object, for example:</p>
-<div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb123-1"><a href="filter.html#cb123-1" tabindex="-1"></a>geneexp_filt <span class="ot">&lt;-</span> <span class="fu">filter</span>(geneexp, DE<span class="sc">==</span><span class="st">&quot;Down&quot;</span> <span class="sc">|</span> DE<span class="sc">==</span><span class="st">&quot;Up&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="filter.html#cb124-1" tabindex="-1"></a>geneexp_filt <span class="ot">&lt;-</span> <span class="fu">filter</span>(geneexp, DE<span class="sc">==</span><span class="st">&quot;Down&quot;</span> <span class="sc">|</span> DE<span class="sc">==</span><span class="st">&quot;Up&quot;</span>)</span></code></pre></div>
 </div>
             </section>
 

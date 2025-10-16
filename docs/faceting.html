@@ -183,7 +183,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.1" data-path="fetch-workshop-files.html"><a href="fetch-workshop-files.html"><i class="fa fa-check"></i><b>7.1</b> Fetch workshop files</a></li>
 <li class="chapter" data-level="7.2" data-path="import-read-in-data.html"><a href="import-read-in-data.html"><i class="fa fa-check"></i><b>7.2</b> Import / read in data</a>
 <ul>
-<li class="chapter" data-level="7.2.1" data-path="import-read-in-data.html"><a href="import-read-in-data.html#from-csv"><i class="fa fa-check"></i><b>7.2.1</b> from CSV</a></li>
+<li class="chapter" data-level="7.2.1" data-path="import-read-in-data.html"><a href="import-read-in-data.html#load-package-into-environment"><i class="fa fa-check"></i><b>7.2.1</b> Load package into environment</a></li>
+<li class="chapter" data-level="7.2.2" data-path="import-read-in-data.html"><a href="import-read-in-data.html#from-csv"><i class="fa fa-check"></i><b>7.2.2</b> from CSV</a></li>
 </ul></li>
 <li class="chapter" data-level="7.3" data-path="from-excel.html"><a href="from-excel.html"><i class="fa fa-check"></i><b>7.3</b> from Excel</a></li>
 <li class="chapter" data-level="7.4" data-path="scripts.html"><a href="scripts.html"><i class="fa fa-check"></i><b>7.4</b> Scripts</a></li>
@@ -209,6 +210,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.5.2" data-path="scatter-plots-more-features.html"><a href="scatter-plots-more-features.html#color-and-shape-mapping"><i class="fa fa-check"></i><b>8.5.2</b> Color and shape mapping</a></li>
 <li class="chapter" data-level="8.5.3" data-path="scatter-plots-more-features.html"><a href="scatter-plots-more-features.html#additional-ticks"><i class="fa fa-check"></i><b>8.5.3</b> Additional ticks</a></li>
 <li class="chapter" data-level="8.5.4" data-path="scatter-plots-more-features.html"><a href="scatter-plots-more-features.html#density-estimates"><i class="fa fa-check"></i><b>8.5.4</b> Density estimates</a></li>
+<li class="chapter" data-level="8.5.5" data-path="scatter-plots-more-features.html"><a href="scatter-plots-more-features.html#regression-line"><i class="fa fa-check"></i><b>8.5.5</b> Regression line</a></li>
 </ul></li>
 <li class="chapter" data-level="8.6" data-path="barplots.html"><a href="barplots.html"><i class="fa fa-check"></i><b>8.6</b> Barplots</a></li>
 <li class="chapter" data-level="8.7" data-path="exercise-2.html"><a href="exercise-2.html"><i class="fa fa-check"></i><b>8.7</b> Exercise 2</a></li>
@@ -284,31 +286,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="faceting" class="section level2 hasAnchor" number="8.12">
 <h2><span class="header-section-number">8.12</span> Faceting<a href="faceting.html#faceting" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>ggplot2 provides <strong>facet</strong> functions in R, that allow to easily <strong>split the plot</strong>, according to a given variable.</p>
-<p>For example, we can start again from the <strong>gtf</strong> object.</p>
+<p>ggplot2 provides <strong>facet</strong> functions in R, that are used to <strong>split the plot</strong>, according to a given variable.</p>
+<p>Let’s start again from the <strong>gtf</strong> object.</p>
 <p>You can run the following command if you do not have the data loaded in your environment:</p>
-<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="faceting.html#cb106-1" tabindex="-1"></a>gtf <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;DataViz_source_files-main/files/gencode.v44.annotation.csv&quot;</span>)</span></code></pre></div>
-<p>We produced a barplot out of this data. However, there is one variable that we did not consider: <strong>strand</strong>.</p>
+<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="faceting.html#cb107-1" tabindex="-1"></a>gtf <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;DataViz_source_files-main/files/gencode.v44.annotation.csv&quot;</span>)</span></code></pre></div>
+<p>We previously produced a barplot out of this data. However, there is one variable that we did not consider for the visualization: <strong>strand</strong>.</p>
 <p>Using the faceting function <strong>facet_wrap</strong>, one can easily split that barplot into 2 plots: one will represent the <strong>+</strong> strand, one will represent the <strong>-</strong> strand.</p>
-<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="faceting.html#cb107-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>chr, <span class="at">fill=</span>gene_type)) <span class="sc">+</span> </span>
-<span id="cb107-2"><a href="faceting.html#cb107-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position=</span><span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb107-3"><a href="faceting.html#cb107-3" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>strand)</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-102-1.png" width="1440" /></p>
-<p>If you want to organize plots vertically, you can set <strong>dir=“v”</strong>:</p>
 <div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="faceting.html#cb108-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>chr, <span class="at">fill=</span>gene_type)) <span class="sc">+</span> </span>
 <span id="cb108-2"><a href="faceting.html#cb108-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position=</span><span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb108-3"><a href="faceting.html#cb108-3" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>strand, <span class="at">dir=</span><span class="st">&quot;v&quot;</span>)</span></code></pre></div>
+<span id="cb108-3"><a href="faceting.html#cb108-3" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>strand)</span></code></pre></div>
 <p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-103-1.png" width="1440" /></p>
-<p>You can also split/facet the plots using a second variable, for example:</p>
-<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="faceting.html#cb109-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>chr, <span class="at">color=</span>chr)) <span class="sc">+</span> </span>
+<p>If you want to organize plots vertically, you can set <strong>dir=“v”</strong>:</p>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="faceting.html#cb109-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>chr, <span class="at">fill=</span>gene_type)) <span class="sc">+</span> </span>
 <span id="cb109-2"><a href="faceting.html#cb109-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position=</span><span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb109-3"><a href="faceting.html#cb109-3" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(gene_type<span class="sc">~</span>strand)</span></code></pre></div>
+<span id="cb109-3"><a href="faceting.html#cb109-3" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>strand, <span class="at">dir=</span><span class="st">&quot;v&quot;</span>)</span></code></pre></div>
 <p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-104-1.png" width="1440" /></p>
-<p>By default, scales are common in all plots. You may want to change this to “free scales” for more readability: it will set the scales per sub-plot.</p>
+<p>You can also split/facet the plots using a second variable, for example:</p>
 <div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="faceting.html#cb110-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>chr, <span class="at">color=</span>chr)) <span class="sc">+</span> </span>
 <span id="cb110-2"><a href="faceting.html#cb110-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position=</span><span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb110-3"><a href="faceting.html#cb110-3" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(gene_type<span class="sc">~</span>strand, <span class="at">scales =</span> <span class="st">&quot;free&quot;</span>)</span></code></pre></div>
+<span id="cb110-3"><a href="faceting.html#cb110-3" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(gene_type<span class="sc">~</span>strand)</span></code></pre></div>
 <p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-105-1.png" width="1440" /></p>
+<p>By default, scales are common in all plots. You may want to change this to “free scales” for more readability: it will set the scales per sub-plot.</p>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="faceting.html#cb111-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>chr, <span class="at">color=</span>chr)) <span class="sc">+</span> </span>
+<span id="cb111-2"><a href="faceting.html#cb111-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position=</span><span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb111-3"><a href="faceting.html#cb111-3" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(gene_type<span class="sc">~</span>strand, <span class="at">scales =</span> <span class="st">&quot;free&quot;</span>)</span></code></pre></div>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-106-1.png" width="1440" /></p>
 </div>
             </section>
 

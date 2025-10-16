@@ -183,7 +183,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.1" data-path="fetch-workshop-files.html"><a href="fetch-workshop-files.html"><i class="fa fa-check"></i><b>7.1</b> Fetch workshop files</a></li>
 <li class="chapter" data-level="7.2" data-path="import-read-in-data.html"><a href="import-read-in-data.html"><i class="fa fa-check"></i><b>7.2</b> Import / read in data</a>
 <ul>
-<li class="chapter" data-level="7.2.1" data-path="import-read-in-data.html"><a href="import-read-in-data.html#from-csv"><i class="fa fa-check"></i><b>7.2.1</b> from CSV</a></li>
+<li class="chapter" data-level="7.2.1" data-path="import-read-in-data.html"><a href="import-read-in-data.html#load-package-into-environment"><i class="fa fa-check"></i><b>7.2.1</b> Load package into environment</a></li>
+<li class="chapter" data-level="7.2.2" data-path="import-read-in-data.html"><a href="import-read-in-data.html#from-csv"><i class="fa fa-check"></i><b>7.2.2</b> from CSV</a></li>
 </ul></li>
 <li class="chapter" data-level="7.3" data-path="from-excel.html"><a href="from-excel.html"><i class="fa fa-check"></i><b>7.3</b> from Excel</a></li>
 <li class="chapter" data-level="7.4" data-path="scripts.html"><a href="scripts.html"><i class="fa fa-check"></i><b>7.4</b> Scripts</a></li>
@@ -209,6 +210,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.5.2" data-path="scatter-plots-more-features.html"><a href="scatter-plots-more-features.html#color-and-shape-mapping"><i class="fa fa-check"></i><b>8.5.2</b> Color and shape mapping</a></li>
 <li class="chapter" data-level="8.5.3" data-path="scatter-plots-more-features.html"><a href="scatter-plots-more-features.html#additional-ticks"><i class="fa fa-check"></i><b>8.5.3</b> Additional ticks</a></li>
 <li class="chapter" data-level="8.5.4" data-path="scatter-plots-more-features.html"><a href="scatter-plots-more-features.html#density-estimates"><i class="fa fa-check"></i><b>8.5.4</b> Density estimates</a></li>
+<li class="chapter" data-level="8.5.5" data-path="scatter-plots-more-features.html"><a href="scatter-plots-more-features.html#regression-line"><i class="fa fa-check"></i><b>8.5.5</b> Regression line</a></li>
 </ul></li>
 <li class="chapter" data-level="8.6" data-path="barplots.html"><a href="barplots.html"><i class="fa fa-check"></i><b>8.6</b> Barplots</a></li>
 <li class="chapter" data-level="8.7" data-path="exercise-2.html"><a href="exercise-2.html"><i class="fa fa-check"></i><b>8.7</b> Exercise 2</a></li>
@@ -286,7 +288,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">9.4</span> Exercise 4<a href="exercise-4.html#exercise-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We will start from <strong>gtf</strong> object that we already used.</p>
 <p>Read it as follows, if it is no longer in your environment:</p>
-<div class="sourceCode" id="cb129"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb129-1"><a href="exercise-4.html#cb129-1" tabindex="-1"></a>gtf <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;DataViz_source_files-main/files/gencode.v44.annotation.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb132-1"><a href="exercise-4.html#cb132-1" tabindex="-1"></a>gtf <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;DataViz_source_files-main/files/gencode.v44.annotation.csv&quot;</span>)</span></code></pre></div>
 <ol style="list-style-type: decimal">
 <li>Rename column <strong>chr</strong> to <strong>Chromosome</strong>. Assign to a new object.</li>
 </ol>
@@ -294,7 +296,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb130-1"><a href="exercise-4.html#cb130-1" tabindex="-1"></a>gtf2 <span class="ot">&lt;-</span> <span class="fu">rename</span>(gtf, <span class="at">chromosome=</span>chr)</span></code></pre></div>
+<div class="sourceCode" id="cb133"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb133-1"><a href="exercise-4.html#cb133-1" tabindex="-1"></a>gtf2 <span class="ot">&lt;-</span> <span class="fu">rename</span>(gtf, <span class="at">chromosome=</span>chr)</span></code></pre></div>
 </details>
 <p><br>
 2. Keep/filter rows matching <strong>“+”</strong> as strand, and <strong>“chr4”</strong> as chromosome <strong>chr4</strong>. Assign this filtered data to a new object.</p>
@@ -302,7 +304,7 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb131"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb131-1"><a href="exercise-4.html#cb131-1" tabindex="-1"></a>gtf3 <span class="ot">&lt;-</span> <span class="fu">filter</span>(gtf2, strand<span class="sc">==</span><span class="st">&quot;+&quot;</span> <span class="sc">&amp;</span> chromosome<span class="sc">==</span><span class="st">&quot;chr4&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb134"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb134-1"><a href="exercise-4.html#cb134-1" tabindex="-1"></a>gtf3 <span class="ot">&lt;-</span> <span class="fu">filter</span>(gtf2, strand<span class="sc">==</span><span class="st">&quot;+&quot;</span> <span class="sc">&amp;</span> chromosome<span class="sc">==</span><span class="st">&quot;chr4&quot;</span>)</span></code></pre></div>
 </details>
 <p><br></p>
 <ol start="3" style="list-style-type: decimal">
@@ -312,7 +314,7 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb132-1"><a href="exercise-4.html#cb132-1" tabindex="-1"></a>gtf4 <span class="ot">&lt;-</span> <span class="fu">select</span>(gtf3, gene_symbol, gene_type)</span></code></pre></div>
+<div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="exercise-4.html#cb135-1" tabindex="-1"></a>gtf4 <span class="ot">&lt;-</span> <span class="fu">select</span>(gtf3, gene_symbol, gene_type)</span></code></pre></div>
 </details>
 <p><br></p>
 

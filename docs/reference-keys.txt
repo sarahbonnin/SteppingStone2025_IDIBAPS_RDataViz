@@ -26,6 +26,7 @@ data-types
 import-data-read-files-scripts
 fetch-workshop-files
 import-read-in-data
+load-package-into-environment
 from-csv
 from-excel
 scripts
@@ -37,7 +38,6 @@ customize-the-points
 add-more-layers
 ggtitle
 background
-regression-line
 save-your-plot
 from-the-rstudio-interface
 from-the-console
@@ -47,6 +47,7 @@ labels
 color-and-shape-mapping
 additional-ticks
 density-estimates
+regression-line
 barplots
 exercise-2
 barplots-bars-position

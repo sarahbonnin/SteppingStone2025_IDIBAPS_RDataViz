@@ -31,6 +31,18 @@ e.g.
 
 ## Import / read in data
 
+### Load package into environment
+
+From RStudio interface, in the **bottom-right panel** and **Packages** tab, search for the package name and **tick the box**:
+
+<img src="images/load_readr.png" alt="load readr" width="450"/>
+
+From the R console:
+
+```{r, echo=T, eval=F, message=F, warning=F}
+library(readr)
+```
+
 ### from CSV
 
 Let's now import the content of a first file in our environment.
@@ -41,17 +53,17 @@ There are several ways we can specify the path / location of a file:
 
 ```{r, echo=T, eval=F, message=F, warning=F}
 # absolute path
-geneexp <- read_csv("/users/sbonnin/DataViz_R/DataViz_source_files-main/files/expression_20genes.csv")
+geneexp <- read_csv("~/Documents/DataViz_R/DataViz_source_files-main/files/expression_20genes.csv")
 ```
 
-* Using the "relative path" (i.e. relative to where the session is currently located), e.g.:
+* Using the "relative path" (i.e. relative to where the session and R project are currently located), e.g.:
 
 ```{r, echo=T, eval=T, message=F, warning=F}
 # relative path (this assumes you are in the course folder)
 geneexp <- read_csv("DataViz_source_files-main/files/expression_20genes.csv")
 ```
 
-Because your **working directory** is */your_home_directory/*DataViz_R/, R can find the **DataViz_source_files-main** without requiring that you specify the whole path (**relative vs absolute path**).
+Because your **working directory** is **DataViz_R**, R can find the **DataViz_source_files-main** without needing the full path (**relative vs absolute path**).
 
 The content of file **expression_20genes.csv** is now stored in the object named **geneexp**.
 
@@ -68,7 +80,7 @@ Such as that:
 
 Notes:
 
-* You can find the objects that you create in the **Environment** tab in the upper-right panel.
+* Objects you create can be found in the **Environment** tab in the upper-right panel.
 * If you click on an object name in the **Environment** tab, it will open on the upper-left panel. Let's try with **geneexp**:
 
 <img src="images/import_click_env.png" alt="import env" width="800"/>
@@ -87,29 +99,32 @@ library(readxl)
 read_excel("DataViz_source_files-main/files/expression_20genes.xlsx")
 ```
 
-If the Excel file contains multiple sheets, you can specify the name of the sheet using the **sheet=** parameter:
+If your Excel file contains multiple sheets, you can specify the sheet name using the **sheet=** parameter:
 
 ```{r}
 read_excel("DataViz_source_files-main/files/expression_20genes.xlsx",
            sheet="tab1")
 ```
 
+Note: parameters in a function are **comma-separated**
+
 ## Scripts
 
 A **script** is a text file containing a set of **commands** and **comments**.
 
-It can be saved, re-used later or be shared.
+It can be saved, re-used later, and shared.
 
 It is good practice to create a script and save all commands: let's create a script for this course.
 
-Go to File -> New File -> R script
+*Go to File -> New File -> R script*
 
 <img src="images/import_create_script.png" alt="import env" width="700"/>
 
-A new window will open in the upper-left panel. Now save the file in the course folder (you can name it *workshop.R*)
+A new window will open in the upper-left panel.
 
-**Save all commands you will use during the course, and save changes regularly!**
+Save the file in the course folder (you can name it, for example, *workshop.R*)
+
+**Copy commands you will use during the course, and do not forget to save changes regularly!**
 
 **TIP**: you can send a line or selected lines from the script to the console without copy-pasting: press CTRL+ENTER when highlighting the row.
-
 

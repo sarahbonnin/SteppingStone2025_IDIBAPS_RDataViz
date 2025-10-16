@@ -183,7 +183,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.1" data-path="fetch-workshop-files.html"><a href="fetch-workshop-files.html"><i class="fa fa-check"></i><b>7.1</b> Fetch workshop files</a></li>
 <li class="chapter" data-level="7.2" data-path="import-read-in-data.html"><a href="import-read-in-data.html"><i class="fa fa-check"></i><b>7.2</b> Import / read in data</a>
 <ul>
-<li class="chapter" data-level="7.2.1" data-path="import-read-in-data.html"><a href="import-read-in-data.html#from-csv"><i class="fa fa-check"></i><b>7.2.1</b> from CSV</a></li>
+<li class="chapter" data-level="7.2.1" data-path="import-read-in-data.html"><a href="import-read-in-data.html#load-package-into-environment"><i class="fa fa-check"></i><b>7.2.1</b> Load package into environment</a></li>
+<li class="chapter" data-level="7.2.2" data-path="import-read-in-data.html"><a href="import-read-in-data.html#from-csv"><i class="fa fa-check"></i><b>7.2.2</b> from CSV</a></li>
 </ul></li>
 <li class="chapter" data-level="7.3" data-path="from-excel.html"><a href="from-excel.html"><i class="fa fa-check"></i><b>7.3</b> from Excel</a></li>
 <li class="chapter" data-level="7.4" data-path="scripts.html"><a href="scripts.html"><i class="fa fa-check"></i><b>7.4</b> Scripts</a></li>
@@ -209,6 +210,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.5.2" data-path="scatter-plots-more-features.html"><a href="scatter-plots-more-features.html#color-and-shape-mapping"><i class="fa fa-check"></i><b>8.5.2</b> Color and shape mapping</a></li>
 <li class="chapter" data-level="8.5.3" data-path="scatter-plots-more-features.html"><a href="scatter-plots-more-features.html#additional-ticks"><i class="fa fa-check"></i><b>8.5.3</b> Additional ticks</a></li>
 <li class="chapter" data-level="8.5.4" data-path="scatter-plots-more-features.html"><a href="scatter-plots-more-features.html#density-estimates"><i class="fa fa-check"></i><b>8.5.4</b> Density estimates</a></li>
+<li class="chapter" data-level="8.5.5" data-path="scatter-plots-more-features.html"><a href="scatter-plots-more-features.html#regression-line"><i class="fa fa-check"></i><b>8.5.5</b> Regression line</a></li>
 </ul></li>
 <li class="chapter" data-level="8.6" data-path="barplots.html"><a href="barplots.html"><i class="fa fa-check"></i><b>8.6</b> Barplots</a></li>
 <li class="chapter" data-level="8.7" data-path="exercise-2.html"><a href="exercise-2.html"><i class="fa fa-check"></i><b>8.7</b> Exercise 2</a></li>
@@ -291,7 +293,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb162"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb162-1"><a href="exercise-6-scatter-plot.html#cb162-1" tabindex="-1"></a>rnaseq <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;DataViz_source_files-main/files/GSE150029_rnaseq_log2.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb165"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb165-1"><a href="exercise-6-scatter-plot.html#cb165-1" tabindex="-1"></a>rnaseq <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;DataViz_source_files-main/files/GSE150029_rnaseq_log2.csv&quot;</span>)</span></code></pre></div>
 </details>
 <p><br></p>
 <ol start="2" style="list-style-type: decimal">
@@ -301,9 +303,9 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb163"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb163-1"><a href="exercise-6-scatter-plot.html#cb163-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>rnaseq, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>CTRL, <span class="at">y=</span>EZH)) <span class="sc">+</span></span>
-<span id="cb163-2"><a href="exercise-6-scatter-plot.html#cb163-2" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-153-1.png" width="480" /></p>
+<div class="sourceCode" id="cb166"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb166-1"><a href="exercise-6-scatter-plot.html#cb166-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>rnaseq, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>CTRL, <span class="at">y=</span>EZH)) <span class="sc">+</span></span>
+<span id="cb166-2"><a href="exercise-6-scatter-plot.html#cb166-2" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-155-1.png" width="480" /></p>
 </details>
 <p><br>
 3. Color the points according to the <strong>gene_biotype</strong></p>
@@ -311,9 +313,9 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb164"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb164-1"><a href="exercise-6-scatter-plot.html#cb164-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>rnaseq, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>CTRL, <span class="at">y=</span>EZH, <span class="at">color=</span>gene_biotype)) <span class="sc">+</span></span>
-<span id="cb164-2"><a href="exercise-6-scatter-plot.html#cb164-2" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-154-1.png" width="1536" /></p>
+<div class="sourceCode" id="cb167"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb167-1"><a href="exercise-6-scatter-plot.html#cb167-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>rnaseq, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>CTRL, <span class="at">y=</span>EZH, <span class="at">color=</span>gene_biotype)) <span class="sc">+</span></span>
+<span id="cb167-2"><a href="exercise-6-scatter-plot.html#cb167-2" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-156-1.png" width="1536" /></p>
 </details>
 <p><br>
 3. Not very readable! Filter and plot only data corresponding to either lincRNA OR miRNA.</p>
@@ -321,11 +323,11 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb165"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb165-1"><a href="exercise-6-scatter-plot.html#cb165-1" tabindex="-1"></a>rnaseq_linc_mirna_filter1 <span class="ot">&lt;-</span> <span class="fu">filter</span>(rnaseq, (gene_biotype<span class="sc">==</span><span class="st">&quot;lincRNA&quot;</span> <span class="sc">|</span> gene_biotype<span class="sc">==</span><span class="st">&quot;miRNA&quot;</span>))</span>
-<span id="cb165-2"><a href="exercise-6-scatter-plot.html#cb165-2" tabindex="-1"></a></span>
-<span id="cb165-3"><a href="exercise-6-scatter-plot.html#cb165-3" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>rnaseq_linc_mirna_filter1, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>CTRL, <span class="at">y=</span>EZH, <span class="at">color=</span>gene_biotype)) <span class="sc">+</span></span>
-<span id="cb165-4"><a href="exercise-6-scatter-plot.html#cb165-4" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-155-1.png" width="480" /></p>
+<div class="sourceCode" id="cb168"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb168-1"><a href="exercise-6-scatter-plot.html#cb168-1" tabindex="-1"></a>rnaseq_linc_mirna_filter1 <span class="ot">&lt;-</span> <span class="fu">filter</span>(rnaseq, (gene_biotype<span class="sc">==</span><span class="st">&quot;lincRNA&quot;</span> <span class="sc">|</span> gene_biotype<span class="sc">==</span><span class="st">&quot;miRNA&quot;</span>))</span>
+<span id="cb168-2"><a href="exercise-6-scatter-plot.html#cb168-2" tabindex="-1"></a></span>
+<span id="cb168-3"><a href="exercise-6-scatter-plot.html#cb168-3" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>rnaseq_linc_mirna_filter1, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>CTRL, <span class="at">y=</span>EZH, <span class="at">color=</span>gene_biotype)) <span class="sc">+</span></span>
+<span id="cb168-4"><a href="exercise-6-scatter-plot.html#cb168-4" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-157-1.png" width="480" /></p>
 </details>
 <p><br>
 4. Now keep only those lincRNAs and miRNAs that are expressed in CTRL at least 1.5 times more than in EZH.</p>
@@ -333,11 +335,11 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb166"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb166-1"><a href="exercise-6-scatter-plot.html#cb166-1" tabindex="-1"></a>rnaseq_linc_mirna_filter2 <span class="ot">&lt;-</span> <span class="fu">filter</span>(rnaseq, (gene_biotype<span class="sc">==</span><span class="st">&quot;lincRNA&quot;</span> <span class="sc">|</span> gene_biotype<span class="sc">==</span><span class="st">&quot;miRNA&quot;</span>) <span class="sc">&amp;</span> CTRL <span class="sc">&gt;</span> <span class="fl">1.5</span><span class="sc">*</span>EZH)</span>
-<span id="cb166-2"><a href="exercise-6-scatter-plot.html#cb166-2" tabindex="-1"></a></span>
-<span id="cb166-3"><a href="exercise-6-scatter-plot.html#cb166-3" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>rnaseq_linc_mirna_filter2, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>CTRL, <span class="at">y=</span>EZH, <span class="at">color=</span>gene_biotype)) <span class="sc">+</span></span>
-<span id="cb166-4"><a href="exercise-6-scatter-plot.html#cb166-4" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-156-1.png" width="480" /></p>
+<div class="sourceCode" id="cb169"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb169-1"><a href="exercise-6-scatter-plot.html#cb169-1" tabindex="-1"></a>rnaseq_linc_mirna_filter2 <span class="ot">&lt;-</span> <span class="fu">filter</span>(rnaseq, (gene_biotype<span class="sc">==</span><span class="st">&quot;lincRNA&quot;</span> <span class="sc">|</span> gene_biotype<span class="sc">==</span><span class="st">&quot;miRNA&quot;</span>) <span class="sc">&amp;</span> CTRL <span class="sc">&gt;</span> <span class="fl">1.5</span><span class="sc">*</span>EZH)</span>
+<span id="cb169-2"><a href="exercise-6-scatter-plot.html#cb169-2" tabindex="-1"></a></span>
+<span id="cb169-3"><a href="exercise-6-scatter-plot.html#cb169-3" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>rnaseq_linc_mirna_filter2, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>CTRL, <span class="at">y=</span>EZH, <span class="at">color=</span>gene_biotype)) <span class="sc">+</span></span>
+<span id="cb169-4"><a href="exercise-6-scatter-plot.html#cb169-4" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-158-1.png" width="480" /></p>
 </details>
 <ol start="5" style="list-style-type: decimal">
 <li>Add a title to the plot, and make it <strong>bold</strong> (see <strong>theme()</strong> section of the course)</li>
@@ -346,11 +348,11 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb167"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb167-1"><a href="exercise-6-scatter-plot.html#cb167-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>rnaseq_linc_mirna_filter2, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>CTRL, <span class="at">y=</span>EZH, <span class="at">color=</span>gene_biotype)) <span class="sc">+</span></span>
-<span id="cb167-2"><a href="exercise-6-scatter-plot.html#cb167-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb167-3"><a href="exercise-6-scatter-plot.html#cb167-3" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;lincRNA and miRNA&quot;</span>) <span class="sc">+</span></span>
-<span id="cb167-4"><a href="exercise-6-scatter-plot.html#cb167-4" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">&quot;bold&quot;</span>))</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-157-1.png" width="480" /></p>
+<div class="sourceCode" id="cb170"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb170-1"><a href="exercise-6-scatter-plot.html#cb170-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>rnaseq_linc_mirna_filter2, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>CTRL, <span class="at">y=</span>EZH, <span class="at">color=</span>gene_biotype)) <span class="sc">+</span></span>
+<span id="cb170-2"><a href="exercise-6-scatter-plot.html#cb170-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb170-3"><a href="exercise-6-scatter-plot.html#cb170-3" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;lincRNA and miRNA&quot;</span>) <span class="sc">+</span></span>
+<span id="cb170-4"><a href="exercise-6-scatter-plot.html#cb170-4" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">&quot;bold&quot;</span>))</span></code></pre></div>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-159-1.png" width="480" /></p>
 </details>
 <p><br></p>
 <details>
@@ -358,14 +360,14 @@ correction
 NOTE: If you want to label only one (or few) point(s), click here.
 </summary>
 <p>First, filter the data frame:</p>
-<div class="sourceCode" id="cb168"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb168-1"><a href="exercise-6-scatter-plot.html#cb168-1" tabindex="-1"></a>SNHG8 <span class="ot">&lt;-</span> <span class="fu">filter</span>(rnaseq, gene_name<span class="sc">==</span><span class="st">&quot;SNHG8&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb171"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb171-1"><a href="exercise-6-scatter-plot.html#cb171-1" tabindex="-1"></a>SNHG8 <span class="ot">&lt;-</span> <span class="fu">filter</span>(rnaseq, gene_name<span class="sc">==</span><span class="st">&quot;SNHG8&quot;</span>)</span></code></pre></div>
 <p>Then, add it to geom_text:</p>
-<div class="sourceCode" id="cb169"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb169-1"><a href="exercise-6-scatter-plot.html#cb169-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>rnaseq_linc_mirna_filter2, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>CTRL, <span class="at">y=</span>EZH, <span class="at">color=</span>gene_biotype)) <span class="sc">+</span></span>
-<span id="cb169-2"><a href="exercise-6-scatter-plot.html#cb169-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb169-3"><a href="exercise-6-scatter-plot.html#cb169-3" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;lincRNA and miRNA&quot;</span>) <span class="sc">+</span></span>
-<span id="cb169-4"><a href="exercise-6-scatter-plot.html#cb169-4" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">&quot;bold&quot;</span>)) <span class="sc">+</span></span>
-<span id="cb169-5"><a href="exercise-6-scatter-plot.html#cb169-5" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">data=</span>SNHG8, <span class="at">label=</span><span class="st">&quot;SNHG8&quot;</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-159-1.png" width="480" /></p>
+<div class="sourceCode" id="cb172"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb172-1"><a href="exercise-6-scatter-plot.html#cb172-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>rnaseq_linc_mirna_filter2, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>CTRL, <span class="at">y=</span>EZH, <span class="at">color=</span>gene_biotype)) <span class="sc">+</span></span>
+<span id="cb172-2"><a href="exercise-6-scatter-plot.html#cb172-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb172-3"><a href="exercise-6-scatter-plot.html#cb172-3" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;lincRNA and miRNA&quot;</span>) <span class="sc">+</span></span>
+<span id="cb172-4"><a href="exercise-6-scatter-plot.html#cb172-4" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">&quot;bold&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb172-5"><a href="exercise-6-scatter-plot.html#cb172-5" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">data=</span>SNHG8, <span class="at">label=</span><span class="st">&quot;SNHG8&quot;</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-161-1.png" width="480" /></p>
 </details>
 <p><br></p>
 </div>

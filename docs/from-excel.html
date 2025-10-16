@@ -183,7 +183,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.1" data-path="fetch-workshop-files.html"><a href="fetch-workshop-files.html"><i class="fa fa-check"></i><b>7.1</b> Fetch workshop files</a></li>
 <li class="chapter" data-level="7.2" data-path="import-read-in-data.html"><a href="import-read-in-data.html"><i class="fa fa-check"></i><b>7.2</b> Import / read in data</a>
 <ul>
-<li class="chapter" data-level="7.2.1" data-path="import-read-in-data.html"><a href="import-read-in-data.html#from-csv"><i class="fa fa-check"></i><b>7.2.1</b> from CSV</a></li>
+<li class="chapter" data-level="7.2.1" data-path="import-read-in-data.html"><a href="import-read-in-data.html#load-package-into-environment"><i class="fa fa-check"></i><b>7.2.1</b> Load package into environment</a></li>
+<li class="chapter" data-level="7.2.2" data-path="import-read-in-data.html"><a href="import-read-in-data.html#from-csv"><i class="fa fa-check"></i><b>7.2.2</b> from CSV</a></li>
 </ul></li>
 <li class="chapter" data-level="7.3" data-path="from-excel.html"><a href="from-excel.html"><i class="fa fa-check"></i><b>7.3</b> from Excel</a></li>
 <li class="chapter" data-level="7.4" data-path="scripts.html"><a href="scripts.html"><i class="fa fa-check"></i><b>7.4</b> Scripts</a></li>
@@ -209,6 +210,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.5.2" data-path="scatter-plots-more-features.html"><a href="scatter-plots-more-features.html#color-and-shape-mapping"><i class="fa fa-check"></i><b>8.5.2</b> Color and shape mapping</a></li>
 <li class="chapter" data-level="8.5.3" data-path="scatter-plots-more-features.html"><a href="scatter-plots-more-features.html#additional-ticks"><i class="fa fa-check"></i><b>8.5.3</b> Additional ticks</a></li>
 <li class="chapter" data-level="8.5.4" data-path="scatter-plots-more-features.html"><a href="scatter-plots-more-features.html#density-estimates"><i class="fa fa-check"></i><b>8.5.4</b> Density estimates</a></li>
+<li class="chapter" data-level="8.5.5" data-path="scatter-plots-more-features.html"><a href="scatter-plots-more-features.html#regression-line"><i class="fa fa-check"></i><b>8.5.5</b> Regression line</a></li>
 </ul></li>
 <li class="chapter" data-level="8.6" data-path="barplots.html"><a href="barplots.html"><i class="fa fa-check"></i><b>8.6</b> Barplots</a></li>
 <li class="chapter" data-level="8.7" data-path="exercise-2.html"><a href="exercise-2.html"><i class="fa fa-check"></i><b>8.7</b> Exercise 2</a></li>
@@ -287,9 +289,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>{tidyverse} provides the {readxl} package with functions to read in Excel files.</p>
 <p>Although working with text files (.txt, .csv, .tsv etc.) is a better practice, you can import Excel files using the <strong>read_excel()</strong> function.</p>
 <p>First, load the {readxl} package (bottom-right panel -&gt; Packages -&gt; search and tick readxl, or from the console, as shown below).</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="from-excel.html#cb14-1" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb14-2"><a href="from-excel.html#cb14-2" tabindex="-1"></a><span class="co"># Relative path:</span></span>
-<span id="cb14-3"><a href="from-excel.html#cb14-3" tabindex="-1"></a><span class="fu">read_excel</span>(<span class="st">&quot;DataViz_source_files-main/files/expression_20genes.xlsx&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="from-excel.html#cb15-1" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb15-2"><a href="from-excel.html#cb15-2" tabindex="-1"></a><span class="co"># Relative path:</span></span>
+<span id="cb15-3"><a href="from-excel.html#cb15-3" tabindex="-1"></a><span class="fu">read_excel</span>(<span class="st">&quot;DataViz_source_files-main/files/expression_20genes.xlsx&quot;</span>)</span></code></pre></div>
 <pre><code>## # A tibble: 20 × 4
 ##    Gene   DE    sample1 sample2
 ##    &lt;chr&gt;  &lt;chr&gt;   &lt;dbl&gt;   &lt;dbl&gt;
@@ -313,9 +315,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 18 SMRT   No    11.7      16.9 
 ## 19 DVL    No     4.33      6.84
 ## 20 MAPK2  Up     0.998     9.56</code></pre>
-<p>If the Excel file contains multiple sheets, you can specify the name of the sheet using the <strong>sheet=</strong> parameter:</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="from-excel.html#cb16-1" tabindex="-1"></a><span class="fu">read_excel</span>(<span class="st">&quot;DataViz_source_files-main/files/expression_20genes.xlsx&quot;</span>,</span>
-<span id="cb16-2"><a href="from-excel.html#cb16-2" tabindex="-1"></a>           <span class="at">sheet=</span><span class="st">&quot;tab1&quot;</span>)</span></code></pre></div>
+<p>If your Excel file contains multiple sheets, you can specify the sheet name using the <strong>sheet=</strong> parameter:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="from-excel.html#cb17-1" tabindex="-1"></a><span class="fu">read_excel</span>(<span class="st">&quot;DataViz_source_files-main/files/expression_20genes.xlsx&quot;</span>,</span>
+<span id="cb17-2"><a href="from-excel.html#cb17-2" tabindex="-1"></a>           <span class="at">sheet=</span><span class="st">&quot;tab1&quot;</span>)</span></code></pre></div>
 <pre><code>## # A tibble: 20 × 4
 ##    Gene   DE    sample1 sample2
 ##    &lt;chr&gt;  &lt;chr&gt;   &lt;dbl&gt;   &lt;dbl&gt;
@@ -339,6 +341,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 18 SMRT   No    11.7      16.9 
 ## 19 DVL    No     4.33      6.84
 ## 20 MAPK2  Up     0.998     9.56</code></pre>
+<p>Note: parameters in a function are <strong>comma-separated</strong></p>
 </div>
             </section>
 

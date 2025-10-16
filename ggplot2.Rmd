@@ -46,25 +46,23 @@ ggplot(data=dataframe, mapping=aes(x=column1, y=column2)) + geom_point()
 
 This will be our template as we explore different types of graphs.
 
-We can add **more layers and components** to this base structure to customize the plot, as we will see in the next examples.
+We can add **more layers and components** to this base structure to customize the plot: we will see examples throughout this course.
 
 ## Scatter plot
 
 ### Base plot
 
-We can start from the **geneexp** object, that holds the content of file *expression_20genes.csv*: we want to plot **sample1** on the x axis and **sample2** on the y axis.
+We can start from the **geneexp** object, that contains data from *expression_20genes.csv*: we will represent **sample1** on the x axis and **sample2** on the y axis.
 
-The base layer will be the following:
+The base layer is built as follows (Copy-paste this in the console, and hit Enter):
 
 ```{r, eval=T}
 ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2))
 ```
 
-Copy-paste this in the console, and hit Enter. 
+As you can see, nothing is plotted yet, but the base is set.
 
-As you can see, nothing is plotted yet: the base is set.
-
-Adding to the base layer the geometrics called **geom_point()**, we **tell ggplot to produce a scatter/point plot**:
+We then add a geometrics **geom_point()** to the base layer: this **tells ggplot to produce a scatter/point plot**:
 
 ```{r, eval=T}
 # This line is a comment: a comment is not interpreted by R.
@@ -75,7 +73,7 @@ ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) +
 # Note that the new line is NOT necessary after the "+": it is done for clarity / readability.
 ```
 
-Please, copy the code above in your script, and hit Enter!
+Please, copy this code to your script, and execute it!
 
 Your plot should appear in the "Plots" tab in the bottom-right panel.
 
@@ -97,20 +95,18 @@ ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) +
   geom_point(color="red", size=2.5)
 ```
 
-This is a good place to introduce the **help pages** of functions.
+How do you know how a function works?
 
 Functions in **ggplot2** (and **tidyverse** in general) are richly documented.
 
-While documentation can be quite technical it is always good practice to take a look at it.
+While documentation/help pages can be quite technical it is a good practice to take a look at them.
 
 You can access the help page of a function in the **Help** tab in the bottom-right panel. Give it a try with "geom_point":
 
 <img src="images/ggplot_help.png" alt="rstudio help" width="500"/>
 
 
-Back to our customization: let's set different shapes for the points!
-
-This is done by setting the **shape** parameter in **geom_point()**.
+Back to our customization: we can change the point shape by setting the **shape** parameter in **geom_point()**.
 
 Points can become, for example, triangles:
 
@@ -134,7 +130,7 @@ ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) +
 
 ### Add more layers
 
-We can add more layers to the plot, using the same structure (**+ layer_name()**)
+We can add more **layers** to the plot, using the same structure (**+ layer_name()**)
 
 #### ggtitle()
 
@@ -150,12 +146,12 @@ ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) +
 
 #### Background
 
-Not a big fan of the grey background?
+Not a big fan of the default grey background?
 
 
 This is the default "theme", but there are [more options](https://ggplot2.tidyverse.org/reference/ggtheme.html).
 
-For example:
+Examples:
 
 ```{r}
 ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) + 
@@ -185,16 +181,15 @@ ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) +
   theme_void()
 ```
 
-Here is a good page to check the different backgrounds:
+Good webpage to check the different backgrounds:
 https://ggplot2-book.org/themes#sec-theme
 
-Note that you can also change some settings globally as you use a new theme, e.g. 
+You can also change some settings globally as you use a new theme, e.g. 
 
 * *base_size*: by default, 11.
 * *base_family*: the font (uses by default arial or sans). To check the fonts that are available, type *systemfonts::system_fonts()$family*
 * *base_line_size*: by default, base_size/22.
 * *base_rect_size*: by default, base_size/22
-
 
 
 ```{r}
@@ -204,64 +199,6 @@ ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) +
   ggtitle(label="my first ggplot") +
   theme_bw(base_size=18, base_family = "Laksaman", base_line_size = 2, base_rect_size = 4)
 ```
-
-#### Regression line
-
-Add a regression line with **geom_smooth()**. A smoothed line can help highlight the dominant pattern/trend.
-
-```{r}
-ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) + 
-  geom_point(color="red", size=2.5, shape="diamond") +
-  ggtitle(label="my first ggplot") +
-  theme_linedraw() +
-  geom_smooth()
-```
-
-Remove the confidence interval:
-
-```{r}
-ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) + 
-  geom_point(color="red", size=2.5, shape="diamond") +
-  ggtitle(label="my first ggplot") +
-  theme_linedraw() +
-  geom_smooth(se=FALSE)
-```
-
-Different methods can be used to fit the smoothing line:
-
-* "lm": linear model.
-* "glm": generalized linear model.
-* "gam": generalized additive model.
-* "loess": local polynomial regression.
-* A function (more advanced)
-
-By default, the smoothing method is picked based on the size of the largest group across all panels.
-
-```{r}
-ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) + 
-  geom_point(color="red", size=2.5, shape="diamond") +
-  ggtitle(label="my first ggplot") +
-  theme_linedraw() +
-  geom_smooth(se=FALSE, method="lm")
-```
-
-<details>
-<summary>
-*More advanced (as reference, or if someone asks): add correlation coefficient:*
-</summary>
-
-You can add the correlation coefficient between the 2 variables, using another function from the {ggpubr} package:
-
-```{r}
-ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) + 
-  geom_point(color="red", size=2.5, shape="diamond") +
-  ggtitle(label="my first ggplot") +
-  theme_linedraw() +
-  geom_smooth() +
-  ggpubr::stat_cor(method = "pearson", label.x = 3, label.y = 30)
-```
-
-</details>
 
 
 ## Save your plot
@@ -443,6 +380,7 @@ ggsave(filename="myblueplot.jpg", plot=mybluescatterplot,
 ```
 </details>
 
+
 ## Scatter plots: more features
 
 We can customize our scatter plot a bit more.
@@ -604,6 +542,66 @@ ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) +
   geom_density_2d(color="pink", alpha=0.5, linewidth = 2)
 ```
 
+
+### Regression line
+
+Add a regression line with **geom_smooth()**. A smoothed line can help highlight the dominant pattern/trend.
+
+```{r}
+ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) + 
+  geom_point(color="red", size=2.5, shape="diamond") +
+  ggtitle(label="my first ggplot") +
+  theme_linedraw() +
+  geom_smooth()
+```
+
+Remove the confidence interval:
+
+```{r}
+ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) + 
+  geom_point(color="red", size=2.5, shape="diamond") +
+  ggtitle(label="my first ggplot") +
+  theme_linedraw() +
+  geom_smooth(se=FALSE)
+```
+
+Different methods can be used to fit the smoothing line:
+
+* "lm": linear model.
+* "glm": generalized linear model.
+* "gam": generalized additive model.
+* "loess": local polynomial regression.
+* A function (more advanced)
+
+By default, the smoothing method is picked based on the size of the largest group across all panels.
+
+```{r}
+ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) + 
+  geom_point(color="red", size=2.5, shape="diamond") +
+  ggtitle(label="my first ggplot") +
+  theme_linedraw() +
+  geom_smooth(se=FALSE, method="lm")
+```
+
+<details>
+<summary>
+*More advanced (as reference, or if someone asks): add correlation coefficient:*
+</summary>
+
+You can add the correlation coefficient between the 2 variables, using another function from the {ggpubr} package:
+
+```{r}
+ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) + 
+  geom_point(color="red", size=2.5, shape="diamond") +
+  ggtitle(label="my first ggplot") +
+  theme_linedraw() +
+  geom_smooth() +
+  ggpubr::stat_cor(method = "pearson", label.x = 3, label.y = 30)
+```
+
+</details>
+
+
 ## Barplots
 
 A barplot (or barchart) is a graph that represents categorical data with rectangular bars, which heights are proportional to the values they represent.
@@ -628,7 +626,7 @@ This produces a barplots containing 3 bars: **Down**, **No** and **Up**: their h
 
 ## Exercise 2
 
-1. Import file **DataViz_source_files-main/files/gencode.v44.annotation.csv** in an object called **gtf**.
+1. Import **DataViz_source_files-main/files/gencode.v44.annotation.csv** in an object that you will call **gtf**.
 
 <details>
 <summary>
@@ -639,7 +637,7 @@ correction
 gtf <- read_csv("DataViz_source_files-main/files/gencode.v44.annotation.csv")
 ```
 
-This is a small subset of the gencode v44 human gene annotation, created the following way:
+The data in **gtf** represents a small subset of the gencode v44 human gene annotation, created the following way:
 
 * Selection of protein coding genes, long non-coding genes, miRNAs, snRNAs and snoRNAs.
 * Selection of chromosomes 1 to 10 only.
@@ -751,16 +749,17 @@ ggsave(filename="gtfbarplot.png", plot=gtfbars,
 
 ## Barplots: bars position
 
-We can also play with the **position** of the bars. By default, position is **stack**, i.e. categories are stacked on top of each other along the bar.
+We can modify the bars **position**.
+By default, position is **stack**, i.e. categories are stacked on top of each other.
 
-Position **fill** scales data so the top is always 1, i.e. it shows **proportions**, instead of the absolute values:
+Position **fill** scales data so the upper bound is always 1, i.e. **fill** shows **proportions**, instead of absolute values:
 
 ```{r}
 ggplot(data=gtf, mapping=aes(x=chr, fill=gene_type)) + 
   geom_bar(position="fill")
 ```
 
-Position **dodge** represents each category (here, gene types) side-by-side:
+Position **dodge** organizes each category (here, gene types) side-by-side:
 
 ```{r}
 ggplot(data=gtf, mapping=aes(x=chr, fill=gene_type)) + 
@@ -772,7 +771,7 @@ ggplot(data=gtf, mapping=aes(x=chr, fill=gene_type)) +
 *More advanced (as reference, or if someone asks): how to reorder x-axis labels:*
 </summary>
 
-Factors are a data type in R: they are used to represent categorical data. Using factors requires a bit more understanding of R works/thinks, but here is an application using **ordered factors/categories**:
+Factors are a data type in R representing **categorical data**. Using factors requires a bit more understanding of how R works/thinks, but here is a useful application using **ordered factors/categories** to re-order bars in a barplot:
 
 ```{r}
 ggplot(data=gtf, mapping=aes(x=factor(chr, levels=c("chr1", "chr2", "chr3", "chr4", "chr5", "chr6", "chr7", "chr8", "chr9", "chr10"), ordered=TRUE), fill=gene_type)) + 
@@ -791,8 +790,8 @@ geom_bar() provides different options for **stat**:
 * **count** (default): **counts the number of occurrences of each value / category in x**. It does not expect an input in **y**.
 * **identity**: uses the data **as is** (i.e. no transformation is applied) and skips the aggregation. Values used for the bars (categories) are provided by the user in **x**. Height of the bars are provided in **y**.
 
-Let's import data from file: **DataViz_source_files-main/files/stats_continents_barcelona_2013-2023_long.csv** 
-in an object called **statsbcn**.
+Let's import data from: **DataViz_source_files-main/files/stats_continents_barcelona_2013-2023_long.csv** 
+in an object that we will call **statsbcn**.
 
 The data contains the number of foreign residents in Barcelona from 2013 to 2023.
 
@@ -802,11 +801,11 @@ statsbcn <- read_csv("DataViz_source_files-main/files/stats_continents_barcelona
 
 How many rows and how many columns does the data contain?
 
-In the barplots we created so far, R takes categories in the columns specified in **x=** and counts the number of occurrences.
+In the barplots we created until now, R takes categories in the columns specified in **x=** and counts the **number of occurrences** of each category.
 
-If we now set **stat="identity"** in geom_bar(), R uses the sum of the variable specified in **y=**, **grouped by the x variable**.
+If we set **stat="identity"** in geom_bar(), R uses the **sum of the variable** specified in **y=**, **grouped by the x variable**.
 
-In the following example, we are plotting the sum of foreign residents in Barcelona (Population provided in **y**) per year (Year provided in **x**):
+In the following example, we plot the sum of foreign residents in Barcelona (Population provided in **y**) per year (Year provided in **x**):
 
 ```{r}
 ggplot(statsbcn, aes(x=Year, y=Population)) + 
@@ -837,13 +836,12 @@ ggplot(statsbcn, aes(x=Year, y=Population, fill=Continent)) +
   geom_bar(stat="identity", position="dodge")
 ```
 
-We can control the width of bars (hence, the spacing between 2 bars) using the **width** parameter of geom_bar():
+We can control the bars width (hence, the spacing between 2 bars) using the **width** parameter of geom_bar():
 
 ```{r}
 ggplot(statsbcn, aes(x=Year, y=Population, fill=Continent)) + 
   geom_bar(stat="identity", position="dodge", width = 0.8)
 ```
-
 
 
 <details>
@@ -863,13 +861,13 @@ ggplot(statsbcn, aes(x=as.character(Year), y=Population, fill=Continent)) +
 
 ## Boxplots
 
-A boxplot is used to visualize the distribution of data.
+A boxplot aims to show data distribution.
 
 <img src="images/ggplot_boxplot_definition.jpg" alt="import zip" width="600"/>
 
 *[Source](https://i.ytimg.com/vi/BE8CVGJuftI/maxresdefault.jpg)*
 
-We will import data from a file that contains the same information as **geneexp** but in a slightly different format:
+We will import data from a file that contains the same information as **geneexp** but in a slightly different format (that we will explain in more details in a next section):
 
 ```{r, echo=T, eval=T, message=F, warning=F}
 geneexp2 <- read_csv("DataViz_source_files-main/files/expression_20genes_long.csv")
@@ -882,14 +880,14 @@ ggplot(geneexp2, aes(x=sample, y=expression)) +
   geom_boxplot()
 ```
 
-We can split boxes by **DE**, the same way we did for barplots, by mapping **fill** or **color** to the variable:
+We can split boxes by **DE**, the same way as is done for barplots, by mapping **fill** or **color** to the variable:
 
 ```{r}
 ggplot(geneexp2, aes(x=sample, y=expression, fill=DE)) + 
   geom_boxplot()
 ```
 
-If you prefer a violin plot, it is easy:
+It is easy to change the box to a violin plot:
 
 ```{r}
 ggplot(geneexp2, aes(x=sample, y=expression, fill=DE)) + 
@@ -900,9 +898,10 @@ Violin plots also aim to visualize data distribution. While boxplots can only sh
 
 ## Fine-tuning text
 
-Controlling the **font size and style** of the different components of the graph (axis text, title, legend, etc.) is important for the image readability and impact.
+Controlling the **font size and style** of the different components of the graph (axis text, title, legend, etc.) is essential for the understanding and impact of the figure.
 
-Text size and style of ggplot2 graphs can be changed using the **theme()** function. While very powerful, it can take a bit of time to get used to the structure.
+Text size and style in ggplot2 graphs can be modified using the **theme()** function. 
+While very powerful, it can take some time to get used to the structure.
 
 We will illustrate how to make some changes using **theme()** layer on our first scatter plot.
 
@@ -1014,11 +1013,12 @@ To learn more, check:
 
 * [complete guide on how to modify the ggplot2 theme](https://ggplot2tor.com/theme/).
 * [ggplot2 theme elements demonstration (source of above image)](https://henrywang.nl/ggplot2-theme-elements-demonstration/)
+* [ggplot2 styling](https://tidyverse.org/blog/2025/10/ggplot2-styling/)
 
 
 ## Colors
 
-Colors can be set a different way in ggplot2, and in R in general.
+This section shows how to change colors and fetch color scales/palettes in ggplot2 (and more generally, in R).
 
 ### All R colors
 
@@ -1042,7 +1042,7 @@ Base R provides built-in palettes, that can be leveraged in ggplot. For example:
 * **topo.colors()**
 * **cm.colors()**
 
-All of the above are functions that take one parameter **n** i.e. the number of colors needed. The output is a vector of **hex color codes**, for example:
+All of the above are functions that take one parameter **n** that is, the number of colors needed. The output is a vector of **hex color codes**, for example:
 
 ```{r}
 rainbow(5)
@@ -1100,7 +1100,7 @@ ggplot(data=gtf, mapping=aes(x=chr, fill=gene_type)) +
 
 ### ggsci
 
-Package [**{ggsci}**](https://cran.r-project.org/web/packages/ggsci/vignettes/ggsci.html) contains a collection of pre-made color palettes inspired by colors used in scientific journals (and also by Science Fiction movies and series!).
+Package [**{ggsci}**](https://cran.r-project.org/web/packages/ggsci/vignettes/ggsci.html) contains a collection of ***pre-made color palettes inspired by colors used in scientific journals** (and also by Science Fiction movies and series!).
 
 Example of palettes from {ggsci}:
 
@@ -1117,6 +1117,7 @@ Note that some palettes are for continuous variables (e.g. gsea), and some for d
 Example of scales for discrete data:
 
 ```{r}
+# do not forget to load the package!
 library(ggsci)
 
 ggplot(data=gtf, mapping=aes(x=chr, fill=gene_type)) + 
@@ -1142,9 +1143,9 @@ Example of a scale for continuous data:
 
 ## Faceting
 
-ggplot2 provides **facet** functions in R, that allow to easily **split the plot**, according to a given variable.
+ggplot2 provides **facet** functions in R, that are used to **split the plot**, according to a given variable.
 
-For example, we can start again from the **gtf** object.
+Let's start again from the **gtf** object.
 
 You can run the following command if you do not have the data loaded in your environment:
 
@@ -1152,7 +1153,7 @@ You can run the following command if you do not have the data loaded in your env
 gtf <- read_csv("DataViz_source_files-main/files/gencode.v44.annotation.csv")
 ```
 
-We produced a barplot out of this data. However, there is one variable that we did not consider: **strand**.
+We previously produced a barplot out of this data. However, there is one variable that we did not consider for the visualization: **strand**.
 
 Using the faceting function **facet_wrap**, one can easily split that barplot into 2 plots: one will represent the **+** strand, one will represent the **-** strand.
 
@@ -1161,7 +1162,6 @@ ggplot(data=gtf, mapping=aes(x=chr, fill=gene_type)) +
   geom_bar(position="dodge") + 
   facet_wrap(~strand)
 ```
-
 
 
 If you want to organize plots vertically, you can set **dir="v"**:
