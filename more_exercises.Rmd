@@ -1,6 +1,6 @@
 # Exercises to do at home
 
-The following sets of exercises aim to help you practice what was learned so far during the workshop. You can practice at home.
+The objective of the following exercises is to help you practice what was learned so far during the workshop. You can practice at home and reach out if you have any issue.
 <br>
 
 Exercise 5: barplot
@@ -27,7 +27,7 @@ pop_age <- read_csv("DataViz_source_files-main/files/population_age_group_per_se
 
 <br>
 
-2. Create a barplot that shows the number of people per **Year**:
+2. Create a barplot that shows the population count per **Year**:
 
 <details>
 <summary>
@@ -43,7 +43,7 @@ ggplot(data=pop_age, mapping=aes(x=Year, y=Population)) +
 
 <br>
 
-3. Split by Sex (**in the same plot**: do not split into different plots):
+3. Split boxes per Sex (**in the same plot**: do not split into different plots):
 
 
 <details>
@@ -60,7 +60,7 @@ ggplot(data=pop_age, mapping=aes(x=Year, y=Population, fill=Sex)) +
 
 <br>
 
-4. **Filter** the data to keep only "Spain" in "Country":
+4. Keep only data that corresponds to "Spain". You can do this in 2 steps: filter first, then plot.
 
   
 <details>
@@ -79,7 +79,7 @@ ggplot(data=pop_age_spain, mapping=aes(x=Year, y=Population, fill=Sex)) +
 
 <br>
 
-5. Show the bars next to each other.
+5. Display the bars next to each other:
 
 <details>
 <summary>
@@ -134,7 +134,7 @@ ggplot(data=pop_age_spain, mapping=aes(x=Year, y=Population, fill=Sex)) +
 </details>
 
 <br>
-8. Now split the plot by **Age group** using **facet_wrap()**
+8. Create one plot per **Age group** using **facet_wrap()**
 
 <details>
 <summary>
@@ -208,7 +208,7 @@ rnaseq <- read_csv("DataViz_source_files-main/files/GSE150029_rnaseq_log2.csv")
 </details>
 <br>
 
-2. Create a scatter plot that represents sample CTRL on the x axis and sample EZH on the y axis.
+2. Create a scatter plot of sample CTRL (x-axis) versus sample EZH (y-axis).
 
 <details>
 <summary>
@@ -223,7 +223,7 @@ ggplot(data=rnaseq, mapping=aes(x=CTRL, y=EZH)) +
 </details>
 
 <br>
-3. Color the points according to the **gene_biotype**
+3. Map/color the points to the **gene_biotype**
 
 <details>
 <summary>
@@ -238,7 +238,7 @@ ggplot(data=rnaseq, mapping=aes(x=CTRL, y=EZH, color=gene_biotype)) +
 </details>
 
 <br>
-3. Not very readable! Filter and plot only data corresponding to either lincRNA OR miRNA.
+3. Not very readable! Filter and plot only data corresponding to **either lincRNA OR miRNA**.
 
 <details>
 <summary>
@@ -255,7 +255,7 @@ ggplot(data=rnaseq_linc_mirna_filter1, mapping=aes(x=CTRL, y=EZH, color=gene_bio
 </details>
 
 <br>
-4. Now keep only those lincRNAs and miRNAs that are expressed in CTRL at least 1.5 times more than in EZH.
+4. Keep only those lincRNAs and miRNAs expressed in CTRL **at least 1.5 times more than in EZH**.
 
 <details>
 <summary>
@@ -329,7 +329,7 @@ rnaseq2 <- read_csv("DataViz_source_files-main/files/GSE150029_rnaseq_log2_long.
 
 <br>
 
-2. Create a boxplot that will represent the samples on the x axis, and their expression on the y axis.
+2. Create a boxplot with expression/count distribution per sample.
 
 <details>
 <summary>
@@ -345,7 +345,7 @@ ggplot(data=rnaseq2, mapping=aes(x=sample, y=log2_counts)) +
 
 <br>
 
-3. Split the boxes per gene_biotype.
+3. Split the boxes per **gene_biotype**.
 
 <details>
 <summary>

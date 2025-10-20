@@ -287,18 +287,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="histograms-and-density-plots" class="section level2 hasAnchor" number="10.1">
 <h2><span class="header-section-number">10.1</span> Histograms and density plots<a href="histograms-and-density-plots.html#histograms-and-density-plots" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Histograms and density plots are both visualizations of the distribution of quantitative variables.</p>
 <div id="histogram" class="section level3 hasAnchor" number="10.1.1">
 <h3><span class="header-section-number">10.1.1</span> Histogram<a href="histograms-and-density-plots.html#histogram" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>We can use one of our previous objects to create a histogram. You can get it back with:</p>
+<p>We will use a previous object to create a histogram, with <strong>geom_histogram</strong>. You can get it back with:</p>
 <div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb137-1"><a href="histograms-and-density-plots.html#cb137-1" tabindex="-1"></a>rnaseq2 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;DataViz_source_files-main/files/GSE150029_rnaseq_log2_long.csv&quot;</span>)</span></code></pre></div>
 <div class="sourceCode" id="cb138"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb138-1"><a href="histograms-and-density-plots.html#cb138-1" tabindex="-1"></a><span class="fu">ggplot</span>(rnaseq2, <span class="fu">aes</span>(<span class="at">x=</span>log2_counts)) <span class="sc">+</span> </span>
 <span id="cb138-2"><a href="histograms-and-density-plots.html#cb138-2" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()</span></code></pre></div>
 <p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-127-1.png" width="480" /></p>
-<p>We can split the histogram per sample:</p>
+<p>Split the histogram per sample:</p>
 <div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb139-1"><a href="histograms-and-density-plots.html#cb139-1" tabindex="-1"></a><span class="fu">ggplot</span>(rnaseq2, <span class="fu">aes</span>(<span class="at">x=</span>log2_counts, <span class="at">color=</span>sample)) <span class="sc">+</span> </span>
 <span id="cb139-2"><a href="histograms-and-density-plots.html#cb139-2" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() </span></code></pre></div>
 <p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-128-1.png" width="480" /></p>
-<p>Set position to “identity”, so histograms will not be on top of each other:</p>
+<p>Set position to “identity”: histograms will not be “on top of each other” but on a comparative scale:</p>
 <div class="sourceCode" id="cb140"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb140-1"><a href="histograms-and-density-plots.html#cb140-1" tabindex="-1"></a><span class="fu">ggplot</span>(rnaseq2, <span class="fu">aes</span>(<span class="at">x=</span>log2_counts, <span class="at">color=</span>sample)) <span class="sc">+</span> </span>
 <span id="cb140-2"><a href="histograms-and-density-plots.html#cb140-2" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">position=</span><span class="st">&quot;identity&quot;</span>)</span></code></pre></div>
 <p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-129-1.png" width="480" /></p>
@@ -314,7 +315,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="density-plot" class="section level3 hasAnchor" number="10.1.2">
 <h3><span class="header-section-number">10.1.2</span> Density plot<a href="histograms-and-density-plots.html#density-plot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The structure is pretty much the same:</p>
+<p>It is similar to create a density plot, using <strong>geom_density</strong>:</p>
 <div class="sourceCode" id="cb143"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb143-1"><a href="histograms-and-density-plots.html#cb143-1" tabindex="-1"></a><span class="fu">ggplot</span>(rnaseq2, <span class="fu">aes</span>(<span class="at">x=</span>log2_counts, <span class="at">color=</span>sample)) <span class="sc">+</span> </span>
 <span id="cb143-2"><a href="histograms-and-density-plots.html#cb143-2" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">alpha=</span><span class="fl">0.2</span>) <span class="sc">+</span></span>
 <span id="cb143-3"><a href="histograms-and-density-plots.html#cb143-3" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code></pre></div>

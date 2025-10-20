@@ -1227,7 +1227,7 @@ If {ggplot2} is loaded, you can readily use **diamonds**:
 diamonds
 ```
 
-1. Make a scatter plot of **carat** (x-axis) vs **price** (y-axis), with colors mapped to the **cut**.
+1. Create a scatter plot of **carat** (x-axis) vs **price** (y-axis), with colors mapped to the **cut**.
 
 <details>
 <summary>

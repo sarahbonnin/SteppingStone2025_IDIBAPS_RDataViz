@@ -2,9 +2,11 @@
 
 ## Histograms and density plots
 
+Histograms and density plots are both visualizations of the distribution of quantitative variables.
+
 ### Histogram
 
-We can use one of our previous objects to create a histogram. You can get it back with:
+We will use a previous object to create a histogram, with **geom_histogram**. You can get it back with:
 
 ```{r}
 rnaseq2 <- read_csv("DataViz_source_files-main/files/GSE150029_rnaseq_log2_long.csv")
@@ -15,14 +17,14 @@ ggplot(rnaseq2, aes(x=log2_counts)) +
   geom_histogram()
 ```
 
-We can split the histogram per sample:
+Split the histogram per sample:
 
 ```{r}
 ggplot(rnaseq2, aes(x=log2_counts, color=sample)) + 
   geom_histogram() 
 ```
 
-Set position to "identity", so histograms will not be on top of each other:
+Set position to "identity": histograms will not be "on top of each other" but on a comparative scale:
 
 ```{r}
 ggplot(rnaseq2, aes(x=log2_counts, color=sample)) + 
@@ -47,7 +49,8 @@ ggplot(rnaseq2, aes(x=log2_counts, color=sample)) +
 
 ### Density plot
 
-The structure is pretty much the same:
+It is similar to create a density plot, using **geom_density**:
+
 
 ```{r}
 ggplot(rnaseq2, aes(x=log2_counts, color=sample)) + 
@@ -76,6 +79,8 @@ ggplot(rnaseq2, aes(x=log2_counts, color=sample)) +
 
 
 ## Pie chart
+
+Pie charts are used to visualize how much each categories contribute to a whole, with each "slice" representing one category.
 
 We will plot a pie chart representing the number of genes from **gtf** found in each chromosome.
 

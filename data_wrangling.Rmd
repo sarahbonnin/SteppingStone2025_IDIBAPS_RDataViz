@@ -87,15 +87,17 @@ The first argument is the data, then comes the column(s) to rename in the format
 
 ## Exercise 4
 
-We will start from **gtf** object that we already used.
+In this short exercise, you will practice using the functions for data manipulation we just learned.
 
-Read it as follows, if it is no longer in your environment:
+We will start from **gtf**.
+
+If **gtf** it is no longer in your environment, load it with:
 
 ```{r, eval=F}
 gtf <- read_csv("DataViz_source_files-main/files/gencode.v44.annotation.csv")
 ```
 
-1. Rename column **chr** to **Chromosome**. Assign to a new object.
+1. Rename column **chr** as **Chromosome**. Assign to a new object.
 
 <details>
 <summary>
@@ -109,7 +111,7 @@ gtf2 <- rename(gtf, chromosome=chr)
 </details>
 
 <br>
-2. Keep/filter rows matching **"+"** as strand, and **"chr4"** as chromosome **chr4**. Assign this filtered data to a new object.
+2. Keep rows with **"+"** strand on chromosome **"chr4"**. Assign this filtered data to a new object.
 
 <details>
 <summary>
@@ -124,7 +126,7 @@ gtf3 <- filter(gtf2, strand=="+" & chromosome=="chr4")
 
 <br>
 
-3. Select only columns **gene_symbol** and **gene_type**.
+3. Remove columns **strand** and **gene_type**.
 
 <details>
 <summary>
@@ -132,7 +134,7 @@ correction
 </summary>
 
 ```{r}
-gtf4 <- select(gtf3, gene_symbol, gene_type)
+gtf4 <- select(gtf3, -strand, -gene_type)
 ```
 
 </details>

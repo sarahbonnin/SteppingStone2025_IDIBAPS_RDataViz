@@ -287,11 +287,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="exercise-4" class="section level2 hasAnchor" number="9.4">
 <h2><span class="header-section-number">9.4</span> Exercise 4<a href="exercise-4.html#exercise-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>We will start from <strong>gtf</strong> object that we already used.</p>
-<p>Read it as follows, if it is no longer in your environment:</p>
+<p>In this short exercise, you will practice using the functions for data manipulation we just learned.</p>
+<p>We will start from <strong>gtf</strong>.</p>
+<p>If <strong>gtf</strong> it is no longer in your environment, load it with:</p>
 <div class="sourceCode" id="cb133"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb133-1"><a href="exercise-4.html#cb133-1" tabindex="-1"></a>gtf <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;DataViz_source_files-main/files/gencode.v44.annotation.csv&quot;</span>)</span></code></pre></div>
 <ol style="list-style-type: decimal">
-<li>Rename column <strong>chr</strong> to <strong>Chromosome</strong>. Assign to a new object.</li>
+<li>Rename column <strong>chr</strong> as <strong>Chromosome</strong>. Assign to a new object.</li>
 </ol>
 <details>
 <summary>
@@ -300,7 +301,7 @@ correction
 <div class="sourceCode" id="cb134"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb134-1"><a href="exercise-4.html#cb134-1" tabindex="-1"></a>gtf2 <span class="ot">&lt;-</span> <span class="fu">rename</span>(gtf, <span class="at">chromosome=</span>chr)</span></code></pre></div>
 </details>
 <p><br>
-2. Keep/filter rows matching <strong>“+”</strong> as strand, and <strong>“chr4”</strong> as chromosome <strong>chr4</strong>. Assign this filtered data to a new object.</p>
+2. Keep rows with <strong>“+”</strong> strand on chromosome <strong>“chr4”</strong>. Assign this filtered data to a new object.</p>
 <details>
 <summary>
 correction
@@ -309,13 +310,13 @@ correction
 </details>
 <p><br></p>
 <ol start="3" style="list-style-type: decimal">
-<li>Select only columns <strong>gene_symbol</strong> and <strong>gene_type</strong>.</li>
+<li>Remove columns <strong>strand</strong> and <strong>gene_type</strong>.</li>
 </ol>
 <details>
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb136"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb136-1"><a href="exercise-4.html#cb136-1" tabindex="-1"></a>gtf4 <span class="ot">&lt;-</span> <span class="fu">select</span>(gtf3, gene_symbol, gene_type)</span></code></pre></div>
+<div class="sourceCode" id="cb136"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb136-1"><a href="exercise-4.html#cb136-1" tabindex="-1"></a>gtf4 <span class="ot">&lt;-</span> <span class="fu">select</span>(gtf3, <span class="sc">-</span>strand, <span class="sc">-</span>gene_type)</span></code></pre></div>
 </details>
 <p><br></p>
 
