@@ -97,3 +97,11 @@ To create a project:
 
 <img src="images/RStudioProject5.png" alt="rstudio logo" width="900"/>
 
+### Leave the project
+
+When you close the RStudio project, make sure you save .RData file (environment):
+
+<img src="images/Rproject_saveRData.png" alt="rstudio logo" width="600"/>
+
+We will see it in practice as we finish day 1.
+

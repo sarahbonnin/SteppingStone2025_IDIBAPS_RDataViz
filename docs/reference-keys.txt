@@ -18,6 +18,7 @@ path-and-home-directory
 rstudio-projects
 advantages
 project-for-the-course
+leave-the-project
 r-basics
 arithmetic-operators
 objects-in-r

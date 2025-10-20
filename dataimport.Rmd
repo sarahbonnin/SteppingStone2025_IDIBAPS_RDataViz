@@ -35,7 +35,7 @@ e.g.
 
 From RStudio interface, in the **bottom-right panel** and **Packages** tab, search for the package name and **tick the box**:
 
-<img src="images/load_readr.png" alt="load readr" width="450"/>
+<img src="images/load_readr.png" alt="load readr" width="600"/>
 
 From the R console:
 
