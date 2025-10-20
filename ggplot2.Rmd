@@ -220,7 +220,7 @@ From that windows, you can:
   * Setting the Width and Height of the figure (in pixels)
   * Moving the graph manually (bottom-right corner of the plot) until you obtain the size and proportions that you want.
 
-<img src="images/ggplot_save_parameters.png" alt="import zip" width="700"/>
+<img src="images/ggplot_save_parameters2.png" alt="import zip" width="700"/>
 
 ### From the console
 

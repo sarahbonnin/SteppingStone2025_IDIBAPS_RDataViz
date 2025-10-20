@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="fetch-workshop-files.html"/>
-<link rel="next" href="from-excel.html"/>
+<link rel="next" href="scripts.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -186,9 +186,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="7.2.1" data-path="import-read-in-data.html"><a href="import-read-in-data.html#load-package-into-environment"><i class="fa fa-check"></i><b>7.2.1</b> Load package into environment</a></li>
 <li class="chapter" data-level="7.2.2" data-path="import-read-in-data.html"><a href="import-read-in-data.html#from-csv"><i class="fa fa-check"></i><b>7.2.2</b> from CSV</a></li>
+<li class="chapter" data-level="7.2.3" data-path="import-read-in-data.html"><a href="import-read-in-data.html#from-excel"><i class="fa fa-check"></i><b>7.2.3</b> from Excel</a></li>
 </ul></li>
-<li class="chapter" data-level="7.3" data-path="from-excel.html"><a href="from-excel.html"><i class="fa fa-check"></i><b>7.3</b> from Excel</a></li>
-<li class="chapter" data-level="7.4" data-path="scripts.html"><a href="scripts.html"><i class="fa fa-check"></i><b>7.4</b> Scripts</a></li>
+<li class="chapter" data-level="7.3" data-path="scripts.html"><a href="scripts.html"><i class="fa fa-check"></i><b>7.3</b> Scripts</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="ggplot2.html"><a href="ggplot2.html"><i class="fa fa-check"></i><b>8</b> ggplot2</a>
 <ul>
@@ -290,7 +290,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="load-package-into-environment" class="section level3 hasAnchor" number="7.2.1">
 <h3><span class="header-section-number">7.2.1</span> Load package into environment<a href="import-read-in-data.html#load-package-into-environment" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>From RStudio interface, in the <strong>bottom-right panel</strong> and <strong>Packages</strong> tab, search for the package name and <strong>tick the box</strong>:</p>
-<p><img src="images/load_readr.png" alt="load readr" width="600"/></p>
+<p><img src="images/load_readr.png" alt="load readr" width="800"/></p>
 <p>From the R console:</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="import-read-in-data.html#cb12-1" tabindex="-1"></a><span class="fu">library</span>(readr)</span></code></pre></div>
 </div>
@@ -302,16 +302,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Using the “absolute path”:</li>
 </ul>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="import-read-in-data.html#cb13-1" tabindex="-1"></a><span class="co"># absolute path</span></span>
-<span id="cb13-2"><a href="import-read-in-data.html#cb13-2" tabindex="-1"></a>geneexp <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;~/Documents/DataViz_R/DataViz_source_files-main/files/expression_20genes.csv&quot;</span>)</span></code></pre></div>
+<span id="cb13-2"><a href="import-read-in-data.html#cb13-2" tabindex="-1"></a>geneexp <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="at">file=</span><span class="st">&quot;~/Documents/DataViz_R/DataViz_source_files-main/files/expression_20genes.csv&quot;</span>)</span></code></pre></div>
 <ul>
 <li>Using the “relative path” (i.e. relative to where the session and R project are currently located), e.g.:</li>
 </ul>
 <div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="import-read-in-data.html#cb14-1" tabindex="-1"></a><span class="co"># relative path (this assumes you are in the course folder)</span></span>
-<span id="cb14-2"><a href="import-read-in-data.html#cb14-2" tabindex="-1"></a>geneexp <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;DataViz_source_files-main/files/expression_20genes.csv&quot;</span>)</span></code></pre></div>
+<span id="cb14-2"><a href="import-read-in-data.html#cb14-2" tabindex="-1"></a>geneexp <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="at">file=</span><span class="st">&quot;DataViz_source_files-main/files/expression_20genes.csv&quot;</span>)</span></code></pre></div>
 <p>Because your <strong>working directory</strong> is <strong>DataViz_R</strong>, R can find the <strong>DataViz_source_files-main</strong> without needing the full path (<strong>relative vs absolute path</strong>).</p>
 <p>The content of file <strong>expression_20genes.csv</strong> is now stored in the object named <strong>geneexp</strong>.</p>
 <p>The function also outputs some information about the data you are importing:</p>
-<p><img src="images/import_readr_console2.png" alt="import zip" width="600"/></p>
+<p><img src="images/import_readr_console2.png" alt="import zip" width="800"/></p>
 <p>Such as that:</p>
 <ul>
 <li>The data contains 20 rows (observations), and 4 columns (variables).</li>
@@ -328,6 +328,69 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p><img src="images/import_click_env.png" alt="import env" width="800"/></p>
 </div>
+<div id="from-excel" class="section level3 hasAnchor" number="7.2.3">
+<h3><span class="header-section-number">7.2.3</span> from Excel<a href="import-read-in-data.html#from-excel" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>{tidyverse} provides the {readxl} package with functions to read in Excel files.</p>
+<p>Although working with text files (.txt, .csv, .tsv etc.) is a better practice, you can import Excel files using the <strong>read_excel()</strong> function.</p>
+<p>First, load the {readxl} package (bottom-right panel -&gt; Packages -&gt; search and tick readxl, or from the console, as shown below).</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="import-read-in-data.html#cb15-1" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb15-2"><a href="import-read-in-data.html#cb15-2" tabindex="-1"></a><span class="co"># Relative path:</span></span>
+<span id="cb15-3"><a href="import-read-in-data.html#cb15-3" tabindex="-1"></a><span class="fu">read_excel</span>(<span class="at">path=</span><span class="st">&quot;DataViz_source_files-main/files/expression_20genes.xlsx&quot;</span>)</span></code></pre></div>
+<pre><code>## # A tibble: 20 × 4
+##    Gene   DE    sample1 sample2
+##    &lt;chr&gt;  &lt;chr&gt;   &lt;dbl&gt;   &lt;dbl&gt;
+##  1 DKK1   No     9.06      5.27
+##  2 TP53   No     3.57      8.55
+##  3 BRCA1  No     7.39      8.24
+##  4 AKT3   Down  15.1       1.57
+##  5 CCND1  No     6.74     10.1 
+##  6 AXL    No    13.5      16.6 
+##  7 STAT3  Down  15.2       5.46
+##  8 CCL1   No     5.28      7.09
+##  9 TRAF2  No     8.93     12.9 
+## 10 IL1R   No     8.46     15.3 
+## 11 TAB2   No     9.76     14.6 
+## 12 HPK1   Down  14.1       7.34
+## 13 TLR8   Up     2.69     16.3 
+## 14 TGFB   No     7.83     12.5 
+## 15 STAT5  Down  18.6       9.21
+## 16 ADAM17 Down  16.1      10.3 
+## 17 PTEN   Up     0.0210   11.2 
+## 18 SMRT   No    11.7      16.9 
+## 19 DVL    No     4.33      6.84
+## 20 MAPK2  Up     0.998     9.56</code></pre>
+<p>If your Excel file contains multiple sheets, you can specify the sheet name using the <strong>sheet=</strong> parameter:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="import-read-in-data.html#cb17-1" tabindex="-1"></a><span class="fu">read_excel</span>(<span class="at">path=</span><span class="st">&quot;DataViz_source_files-main/files/expression_20genes.xlsx&quot;</span>,</span>
+<span id="cb17-2"><a href="import-read-in-data.html#cb17-2" tabindex="-1"></a>           <span class="at">sheet=</span><span class="st">&quot;tab1&quot;</span>)</span></code></pre></div>
+<pre><code>## # A tibble: 20 × 4
+##    Gene   DE    sample1 sample2
+##    &lt;chr&gt;  &lt;chr&gt;   &lt;dbl&gt;   &lt;dbl&gt;
+##  1 DKK1   No     9.06      5.27
+##  2 TP53   No     3.57      8.55
+##  3 BRCA1  No     7.39      8.24
+##  4 AKT3   Down  15.1       1.57
+##  5 CCND1  No     6.74     10.1 
+##  6 AXL    No    13.5      16.6 
+##  7 STAT3  Down  15.2       5.46
+##  8 CCL1   No     5.28      7.09
+##  9 TRAF2  No     8.93     12.9 
+## 10 IL1R   No     8.46     15.3 
+## 11 TAB2   No     9.76     14.6 
+## 12 HPK1   Down  14.1       7.34
+## 13 TLR8   Up     2.69     16.3 
+## 14 TGFB   No     7.83     12.5 
+## 15 STAT5  Down  18.6       9.21
+## 16 ADAM17 Down  16.1      10.3 
+## 17 PTEN   Up     0.0210   11.2 
+## 18 SMRT   No    11.7      16.9 
+## 19 DVL    No     4.33      6.84
+## 20 MAPK2  Up     0.998     9.56</code></pre>
+<p><strong>Note: parameters in a function are comma-separated</strong>:</p>
+<ul>
+<li><em>path</em> is a first parameter</li>
+<li><em>sheet</em> is a second parameter</li>
+</ul>
+</div>
 </div>
             </section>
 
@@ -335,7 +398,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 <a href="fetch-workshop-files.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="from-excel.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="scripts.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

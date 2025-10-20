@@ -35,7 +35,7 @@ e.g.
 
 From RStudio interface, in the **bottom-right panel** and **Packages** tab, search for the package name and **tick the box**:
 
-<img src="images/load_readr.png" alt="load readr" width="600"/>
+<img src="images/load_readr.png" alt="load readr" width="800"/>
 
 From the R console:
 
@@ -53,14 +53,14 @@ There are several ways we can specify the path / location of a file:
 
 ```{r, echo=T, eval=F, message=F, warning=F}
 # absolute path
-geneexp <- read_csv("~/Documents/DataViz_R/DataViz_source_files-main/files/expression_20genes.csv")
+geneexp <- read_csv(file="~/Documents/DataViz_R/DataViz_source_files-main/files/expression_20genes.csv")
 ```
 
 * Using the "relative path" (i.e. relative to where the session and R project are currently located), e.g.:
 
 ```{r, echo=T, eval=T, message=F, warning=F}
 # relative path (this assumes you are in the course folder)
-geneexp <- read_csv("DataViz_source_files-main/files/expression_20genes.csv")
+geneexp <- read_csv(file="DataViz_source_files-main/files/expression_20genes.csv")
 ```
 
 Because your **working directory** is **DataViz_R**, R can find the **DataViz_source_files-main** without needing the full path (**relative vs absolute path**).
@@ -69,7 +69,7 @@ The content of file **expression_20genes.csv** is now stored in the object named
 
 The function also outputs some information about the data you are importing:
 
-<img src="images/import_readr_console2.png" alt="import zip" width="600"/>
+<img src="images/import_readr_console2.png" alt="import zip" width="800"/>
 
 Such as that:
 
@@ -85,7 +85,7 @@ Notes:
 
 <img src="images/import_click_env.png" alt="import env" width="800"/>
 
-## from Excel
+### from Excel
 
 {tidyverse} provides the {readxl} package with functions to read in Excel files.
 
@@ -96,17 +96,20 @@ First, load the {readxl} package (bottom-right panel -> Packages -> search and t
 ```{r}
 library(readxl)
 # Relative path:
-read_excel("DataViz_source_files-main/files/expression_20genes.xlsx")
+read_excel(path="DataViz_source_files-main/files/expression_20genes.xlsx")
 ```
 
 If your Excel file contains multiple sheets, you can specify the sheet name using the **sheet=** parameter:
 
 ```{r}
-read_excel("DataViz_source_files-main/files/expression_20genes.xlsx",
+read_excel(path="DataViz_source_files-main/files/expression_20genes.xlsx",
            sheet="tab1")
 ```
 
-Note: parameters in a function are **comma-separated**
+**Note: parameters in a function are comma-separated**:
+
+* *path* is a first parameter
+* *sheet* is a second parameter
 
 ## Scripts
 
