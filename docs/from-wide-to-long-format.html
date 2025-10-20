@@ -305,7 +305,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>One column that contains the sample names</li>
 <li>One column that contains the expression values</li>
 </ul>
-<div class="sourceCode" id="cb191"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb191-1"><a href="from-wide-to-long-format.html#cb191-1" tabindex="-1"></a><span class="fu">pivot_longer</span>(geneexp, <span class="at">cols=</span><span class="fu">c</span>(<span class="st">&quot;sample1&quot;</span>, <span class="st">&quot;sample2&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb190"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb190-1"><a href="from-wide-to-long-format.html#cb190-1" tabindex="-1"></a><span class="fu">pivot_longer</span>(geneexp, <span class="at">cols=</span><span class="fu">c</span>(<span class="st">&quot;sample1&quot;</span>, <span class="st">&quot;sample2&quot;</span>))</span></code></pre></div>
 <pre><code>## # A tibble: 40 × 4
 ##    Gene  DE    name    value
 ##    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt;
@@ -321,7 +321,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 10 CCND1 No    sample2 10.1 
 ## # ℹ 30 more rows</code></pre>
 <p>We can specify the names of the new columns as we create them:</p>
-<div class="sourceCode" id="cb193"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb193-1"><a href="from-wide-to-long-format.html#cb193-1" tabindex="-1"></a><span class="fu">pivot_longer</span>(geneexp, <span class="at">cols=</span><span class="fu">c</span>(<span class="st">&quot;sample1&quot;</span>, <span class="st">&quot;sample2&quot;</span>), <span class="at">names_to =</span> <span class="st">&quot;samples&quot;</span>, <span class="at">values_to =</span> <span class="st">&quot;expression&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb192"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb192-1"><a href="from-wide-to-long-format.html#cb192-1" tabindex="-1"></a><span class="fu">pivot_longer</span>(geneexp, <span class="at">cols=</span><span class="fu">c</span>(<span class="st">&quot;sample1&quot;</span>, <span class="st">&quot;sample2&quot;</span>), <span class="at">names_to =</span> <span class="st">&quot;samples&quot;</span>, <span class="at">values_to =</span> <span class="st">&quot;expression&quot;</span>)</span></code></pre></div>
 <pre><code>## # A tibble: 40 × 4
 ##    Gene  DE    samples expression
 ##    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;        &lt;dbl&gt;

@@ -290,11 +290,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>A barplot (or barchart) is a graph that represents categorical data with rectangular bars, which heights are proportional to the values they represent.</p>
 <p>The first layer of the <strong>ggplot()</strong> function is similar.
 However, note that only <strong>x=</strong> is set in <strong>aes()</strong> function (the basic way to plot a barplot):</p>
-<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="barplots.html#cb60-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>dataframe, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>column1)) <span class="sc">+</span></span>
-<span id="cb60-2"><a href="barplots.html#cb60-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="barplots.html#cb59-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>dataframe, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>column1)) <span class="sc">+</span></span>
+<span id="cb59-2"><a href="barplots.html#cb59-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div>
 <p>Using our previous <strong>geneexp</strong> data, we can produce a bar plot out of the <strong>DE</strong> column, such as:</p>
-<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="barplots.html#cb61-1" tabindex="-1"></a><span class="fu">ggplot</span>(geneexp, <span class="fu">aes</span>(<span class="at">x=</span>DE)) <span class="sc">+</span> </span>
-<span id="cb61-2"><a href="barplots.html#cb61-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="barplots.html#cb60-1" tabindex="-1"></a><span class="fu">ggplot</span>(geneexp, <span class="fu">aes</span>(<span class="at">x=</span>DE)) <span class="sc">+</span> </span>
+<span id="cb60-2"><a href="barplots.html#cb60-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div>
 <p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-60-1.png" width="480" /></p>
 <p>This produces a barplots containing 3 bars: <strong>Down</strong>, <strong>No</strong> and <strong>Up</strong>: their height represents the number of genes found in each category.</p>
 </div>

@@ -103,7 +103,7 @@ While documentation/help pages can be quite technical it is a good practice to t
 
 You can access the help page of a function in the **Help** tab in the bottom-right panel. Give it a try with "geom_point":
 
-<img src="images/ggplot_help.png" alt="rstudio help" width="500"/>
+<img src="images/ggplot_help.png" alt="rstudio help" width="800"/>
 
 
 Back to our customization: we can change the point shape by setting the **shape** parameter in **geom_point()**.
@@ -277,7 +277,7 @@ Time for our first exercise!
 
 Starting from the same object **geneexp**:
 
-1. Create a scatter plot that shows sample2 on the x-axis and sample1 on the y-axis.
+1. Create a scatter plot of sample2 (x-axis) versus sample1 (y-axis).
 
 <details>
 <summary>
@@ -292,7 +292,7 @@ ggplot(data=geneexp, mapping=aes(x=sample2, y=sample1)) +
 </details>
 
 <br>
-2. Change the point color to blue, and the point size to 2.
+2. Change the point color (blue) and size (2).
 
 <details>
 <summary>
@@ -307,7 +307,7 @@ ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) +
 </details>
 
 <br>
-3. Change the point shape to "square cross"
+3. Change the point shape ("square cross")
 
 <details>
 <summary>
@@ -322,7 +322,7 @@ ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) +
 </details>
 
 <br>
-4. Add the title of your choice.
+4. Add a title (of your choice).
 
 <details>
 <summary>
@@ -338,7 +338,7 @@ ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) +
 </details>
 
 <br>
-5. Add a subtitle (wait: that's new! Check **ggtitle** help page and/or Google "ggtitle subtitle" and see if you can find!)
+5. Add a subtitle (wait: that's new! Check **ggtitle** help page and/or search the internet for "ggtitle subtitle" and see if you can find!)
 
 <details>
 <summary>
@@ -354,7 +354,7 @@ ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) +
 </details>
 
 <br>
-6. Save your plot as a JPEG file, in the workshop folder, with dimensions 600X600 pixels.
+6. Save your plot as a JPEG file, in the workshop folder, with dimensions 600X600 **pixels**.
 
 <details>
 <summary>
@@ -383,16 +383,16 @@ ggsave(filename="myblueplot.jpg", plot=mybluescatterplot,
 
 ## Scatter plots: more features
 
-We can customize our scatter plot a bit more.
+We will learn how to add extra levels of customizations to the plot.
 
 ### Labels
 
-We may want to show the gene names that the points represent.
+Let's label points with the genes they represent.
 
-This is done by:
+Two steps:
 
-* setting the **label** parameter, in the ggplot **aes()** function
-* adding the **geom_text()** layer
+* set the **label** parameter, in the ggplot **aes()** function, pointing to the column that contains the labels
+* add the **geom_text()** layer, to display the labels
 
 ```{r}
 ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2, label=Gene)) + 
@@ -400,33 +400,39 @@ ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2, label=Gene)) +
   geom_text()
 ```
 
-We can adjust the position of the labels relative to the points, so they do not overlap: this is done with **nudge_x** (moves the labels horizontally / on the **x** axis).
+We can decrease or increase label size:
 
 ```{r}
 ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2, label=Gene)) + 
   geom_point() +
-  geom_text(nudge_x=1.5)
+  geom_text(size=3)
 ```
 
-We can also decrease or increase the label size:
+
+We can adjust the position of the labels relative to the points, so they do not overlap, with **nudge_x** (moves the labels horizontally / on the **x** axis).
 
 ```{r}
 ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2, label=Gene)) + 
   geom_point() +
-  geom_text(nudge_x=1.5, size=3)
+  geom_text(size=3, nudge_x=1.5)
 ```
 
-You can also overrule the mapping of colors to labels and keep all labels black, for example:
+
+<!---
+
+You can overrule the mapping of colors to labels and keep all labels black, for example:
 
 ```{r}
 ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2, label=Gene)) + 
   geom_point() +
   geom_text(nudge_x=1.5, size=3, color="black")
 ```
+--->
 
-Note that the automatic organization of labels, so that they do not overlap, can be done using the {ggrepel} package. 
+Note that {ggrepel} package can automate the automatic organization of labels, so they do not overlap:
 
-You only need to load the package and change **geom_text()** with **geom_repel_text()**:
+* Load {ggrepel} to your R session
+* Change **geom_text()** with **geom_repel_text()**
 
 ```{r, eval=T, echo=F}
 library(ggrepel)
@@ -440,11 +446,13 @@ ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2, label=Gene)) +
 
 ### Color and shape mapping
 
-Point color and shape can be **dependent on another column / variable of the data**. This is called **mapping an aesthetic to a variable**.
+Point color and shape can be **modified conditionally, i.e. depend on another column / variable of the data**. 
+
+This is called **mapping an aesthetic to a variable**.
 
 Columns used to **conditionally color or shape the points** are set inside the **aes()** function.
 
-For **shape**:
+Conditional **shape**:
 
 ```{r, fig.width=7}
 ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2, label=Gene, shape=DE)) + 
@@ -452,7 +460,7 @@ ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2, label=Gene, shape=DE)) +
   geom_text(nudge_x=1.2, size=3)
 ```
 
-For **color**:
+Conditional **color**:
 
 ```{r, fig.width=7}
 ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2, label=Gene, color=DE)) + 
@@ -468,7 +476,7 @@ ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2, label=Gene, color=DE)) +
   geom_text(nudge_x=1.2, size=3, show.legend=FALSE)
 ```
 
-You can change the legend title the following way:
+You can change the legend title with layer **scale_color_discrete**:
 
 ```{r, fig.width=7}
 ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2, label=Gene, color=DE)) + 
@@ -509,7 +517,7 @@ ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2)) +
 As usual, you can customize several parameters, such as:
 
 * *sides*: sides where to draw the lines (**t**op, **b**ottom, **r**ight, **l**eft)
-* *alpha*: opacity Ranges from 0 (transparent) to 1 (opaque).
+* *alpha*: opacity, ranges from 0 (transparent) to 1 (opaque).
 * *linewidth*, *linetype*
 
 ```{r}

@@ -131,3 +131,4 @@ Save the file in the course folder (you can name it, for example, *workshop.R*)
 
 **TIP**: you can send a line or selected lines from the script to the console without copy-pasting: press CTRL+ENTER when highlighting the row.
 
+**Note that, when you re-open an RStudio projects, scripts/files that were left open will open automatically**

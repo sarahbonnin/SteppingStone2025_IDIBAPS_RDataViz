@@ -291,7 +291,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>For this exercise, we will use the <a href="https://ggplot2.tidyverse.org/reference/diamonds.html"><em>diamonds</em> dataset</a> that is automatically loaded with ggplot2.</p>
 <p>The dataset containing the prices and other attributes of almost 54,000 diamonds.</p>
 <p>You can readily use it in your current session:</p>
-<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="exercise-3.html#cb112-1" tabindex="-1"></a>diamonds</span></code></pre></div>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="exercise-3.html#cb111-1" tabindex="-1"></a>diamonds</span></code></pre></div>
 <pre><code>## # A tibble: 53,940 × 10
 ##    carat cut       color clarity depth table price     x     y     z
 ##    &lt;dbl&gt; &lt;ord&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
@@ -313,8 +313,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="exercise-3.html#cb114-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>diamonds, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>carat, <span class="at">y=</span>price, <span class="at">color=</span>cut)) <span class="sc">+</span></span>
-<span id="cb114-2"><a href="exercise-3.html#cb114-2" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="exercise-3.html#cb113-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>diamonds, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>carat, <span class="at">y=</span>price, <span class="at">color=</span>cut)) <span class="sc">+</span></span>
+<span id="cb113-2"><a href="exercise-3.html#cb113-2" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
 <p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-108-1.png" width="480" /></p>
 </details>
 <p><br></p>
@@ -325,9 +325,9 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb115-1"><a href="exercise-3.html#cb115-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>diamonds, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>carat, <span class="at">y=</span>price, <span class="at">color=</span>cut)) <span class="sc">+</span></span>
-<span id="cb115-2"><a href="exercise-3.html#cb115-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb115-3"><a href="exercise-3.html#cb115-3" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>color)</span></code></pre></div>
+<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="exercise-3.html#cb114-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>diamonds, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>carat, <span class="at">y=</span>price, <span class="at">color=</span>cut)) <span class="sc">+</span></span>
+<span id="cb114-2"><a href="exercise-3.html#cb114-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb114-3"><a href="exercise-3.html#cb114-3" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>color)</span></code></pre></div>
 <p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-109-1.png" width="480" /></p>
 </details>
 <p><br></p>
@@ -338,11 +338,11 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="exercise-3.html#cb116-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>diamonds, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>carat, <span class="at">y=</span>price, <span class="at">color=</span>cut)) <span class="sc">+</span></span>
-<span id="cb116-2"><a href="exercise-3.html#cb116-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb116-3"><a href="exercise-3.html#cb116-3" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>color) <span class="sc">+</span></span>
-<span id="cb116-4"><a href="exercise-3.html#cb116-4" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">15</span>) <span class="sc">+</span></span>
-<span id="cb116-5"><a href="exercise-3.html#cb116-5" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Diamonds carat, price and cut&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb115-1"><a href="exercise-3.html#cb115-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>diamonds, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>carat, <span class="at">y=</span>price, <span class="at">color=</span>cut)) <span class="sc">+</span></span>
+<span id="cb115-2"><a href="exercise-3.html#cb115-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb115-3"><a href="exercise-3.html#cb115-3" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>color) <span class="sc">+</span></span>
+<span id="cb115-4"><a href="exercise-3.html#cb115-4" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">15</span>) <span class="sc">+</span></span>
+<span id="cb115-5"><a href="exercise-3.html#cb115-5" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Diamonds carat, price and cut&quot;</span>)</span></code></pre></div>
 <p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-110-1.png" width="480" /></p>
 </details>
 <p><br></p>
@@ -353,12 +353,12 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb117"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb117-1"><a href="exercise-3.html#cb117-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>diamonds, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>carat, <span class="at">y=</span>price, <span class="at">color=</span>cut)) <span class="sc">+</span></span>
-<span id="cb117-2"><a href="exercise-3.html#cb117-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb117-3"><a href="exercise-3.html#cb117-3" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>color) <span class="sc">+</span></span>
-<span id="cb117-4"><a href="exercise-3.html#cb117-4" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">15</span>) <span class="sc">+</span></span>
-<span id="cb117-5"><a href="exercise-3.html#cb117-5" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Diamonds carat, price and cut&quot;</span>) <span class="sc">+</span></span>
-<span id="cb117-6"><a href="exercise-3.html#cb117-6" tabindex="-1"></a>  <span class="fu">scale_color_brewer</span>(<span class="at">palette=</span><span class="st">&quot;Dark2&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="exercise-3.html#cb116-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>diamonds, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>carat, <span class="at">y=</span>price, <span class="at">color=</span>cut)) <span class="sc">+</span></span>
+<span id="cb116-2"><a href="exercise-3.html#cb116-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb116-3"><a href="exercise-3.html#cb116-3" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>color) <span class="sc">+</span></span>
+<span id="cb116-4"><a href="exercise-3.html#cb116-4" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">15</span>) <span class="sc">+</span></span>
+<span id="cb116-5"><a href="exercise-3.html#cb116-5" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Diamonds carat, price and cut&quot;</span>) <span class="sc">+</span></span>
+<span id="cb116-6"><a href="exercise-3.html#cb116-6" tabindex="-1"></a>  <span class="fu">scale_color_brewer</span>(<span class="at">palette=</span><span class="st">&quot;Dark2&quot;</span>)</span></code></pre></div>
 <p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-111-1.png" width="480" /></p>
 </details>
 <p><br></p>
@@ -373,13 +373,13 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="exercise-3.html#cb118-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>diamonds, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>carat, <span class="at">y=</span>price, <span class="at">color=</span>cut)) <span class="sc">+</span></span>
-<span id="cb118-2"><a href="exercise-3.html#cb118-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb118-3"><a href="exercise-3.html#cb118-3" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>color) <span class="sc">+</span></span>
-<span id="cb118-4"><a href="exercise-3.html#cb118-4" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">15</span>, <span class="at">base_family =</span> <span class="st">&quot;Padauk&quot;</span>) <span class="sc">+</span></span>
-<span id="cb118-5"><a href="exercise-3.html#cb118-5" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Diamonds carat, price and cut&quot;</span>) <span class="sc">+</span></span>
-<span id="cb118-6"><a href="exercise-3.html#cb118-6" tabindex="-1"></a>  <span class="fu">scale_color_brewer</span>(<span class="at">palette=</span><span class="st">&quot;Dark2&quot;</span>) <span class="sc">+</span></span>
-<span id="cb118-7"><a href="exercise-3.html#cb118-7" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle=</span><span class="dv">90</span>), <span class="at">strip.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb117"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb117-1"><a href="exercise-3.html#cb117-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>diamonds, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>carat, <span class="at">y=</span>price, <span class="at">color=</span>cut)) <span class="sc">+</span></span>
+<span id="cb117-2"><a href="exercise-3.html#cb117-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb117-3"><a href="exercise-3.html#cb117-3" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>color) <span class="sc">+</span></span>
+<span id="cb117-4"><a href="exercise-3.html#cb117-4" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">15</span>, <span class="at">base_family =</span> <span class="st">&quot;Padauk&quot;</span>) <span class="sc">+</span></span>
+<span id="cb117-5"><a href="exercise-3.html#cb117-5" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Diamonds carat, price and cut&quot;</span>) <span class="sc">+</span></span>
+<span id="cb117-6"><a href="exercise-3.html#cb117-6" tabindex="-1"></a>  <span class="fu">scale_color_brewer</span>(<span class="at">palette=</span><span class="st">&quot;Dark2&quot;</span>) <span class="sc">+</span></span>
+<span id="cb117-7"><a href="exercise-3.html#cb117-7" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle=</span><span class="dv">90</span>), <span class="at">strip.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>))</span></code></pre></div>
 <p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-112-1.png" width="960" /></p>
 </details>
 <p><br></p>
