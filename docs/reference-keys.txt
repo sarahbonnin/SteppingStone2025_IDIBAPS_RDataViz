@@ -54,7 +54,7 @@ exercise-2
 barplots-bars-position
 statidentity-parameter
 boxplots
-fine-tuning-text
+text-fine-tuning
 colors
 all-r-colors
 base-r-palettes

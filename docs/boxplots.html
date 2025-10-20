@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="barplots-bars-position.html"/>
-<link rel="next" href="fine-tuning-text.html"/>
+<link rel="next" href="text-fine-tuning.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -220,7 +220,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.8.1" data-path="barplots-bars-position.html"><a href="barplots-bars-position.html#statidentity-parameter"><i class="fa fa-check"></i><b>8.8.1</b> stat=“identity” parameter</a></li>
 </ul></li>
 <li class="chapter" data-level="8.9" data-path="boxplots.html"><a href="boxplots.html"><i class="fa fa-check"></i><b>8.9</b> Boxplots</a></li>
-<li class="chapter" data-level="8.10" data-path="fine-tuning-text.html"><a href="fine-tuning-text.html"><i class="fa fa-check"></i><b>8.10</b> Fine-tuning text</a></li>
+<li class="chapter" data-level="8.10" data-path="text-fine-tuning.html"><a href="text-fine-tuning.html"><i class="fa fa-check"></i><b>8.10</b> Text fine-tuning</a></li>
 <li class="chapter" data-level="8.11" data-path="colors.html"><a href="colors.html"><i class="fa fa-check"></i><b>8.11</b> Colors</a>
 <ul>
 <li class="chapter" data-level="8.11.1" data-path="colors.html"><a href="colors.html#all-r-colors"><i class="fa fa-check"></i><b>8.11.1</b> All R colors</a></li>
@@ -291,19 +291,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="images/ggplot_boxplot_definition.jpg" alt="import zip" width="600"/></p>
 <p><em><a href="https://i.ytimg.com/vi/BE8CVGJuftI/maxresdefault.jpg">Source</a></em></p>
 <p>We will import data from a file that contains the same information as <strong>geneexp</strong> but in a slightly different format (that we will explain in more details in a next section):</p>
-<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="boxplots.html#cb78-1" tabindex="-1"></a>geneexp2 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;DataViz_source_files-main/files/expression_20genes_long.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="boxplots.html#cb80-1" tabindex="-1"></a>geneexp2 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;DataViz_source_files-main/files/expression_20genes_long.csv&quot;</span>)</span></code></pre></div>
 <p>In our first boxplot, one box corresponds to one sample:</p>
-<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="boxplots.html#cb79-1" tabindex="-1"></a><span class="fu">ggplot</span>(geneexp2, <span class="fu">aes</span>(<span class="at">x=</span>sample, <span class="at">y=</span>expression)) <span class="sc">+</span> </span>
-<span id="cb79-2"><a href="boxplots.html#cb79-2" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-79-1.png" width="480" /></p>
-<p>We can split boxes by <strong>DE</strong>, the same way as is done for barplots, by mapping <strong>fill</strong> or <strong>color</strong> to the variable:</p>
-<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="boxplots.html#cb80-1" tabindex="-1"></a><span class="fu">ggplot</span>(geneexp2, <span class="fu">aes</span>(<span class="at">x=</span>sample, <span class="at">y=</span>expression, <span class="at">fill=</span>DE)) <span class="sc">+</span> </span>
-<span id="cb80-2"><a href="boxplots.html#cb80-2" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="boxplots.html#cb81-1" tabindex="-1"></a><span class="fu">ggplot</span>(geneexp2, <span class="fu">aes</span>(<span class="at">x=</span>sample, <span class="at">y=</span>expression)) <span class="sc">+</span> </span>
+<span id="cb81-2"><a href="boxplots.html#cb81-2" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
 <p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-80-1.png" width="480" /></p>
-<p>It is easy to change the box to a violin plot:</p>
-<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="boxplots.html#cb81-1" tabindex="-1"></a><span class="fu">ggplot</span>(geneexp2, <span class="fu">aes</span>(<span class="at">x=</span>sample, <span class="at">y=</span>expression, <span class="at">fill=</span>DE)) <span class="sc">+</span> </span>
-<span id="cb81-2"><a href="boxplots.html#cb81-2" tabindex="-1"></a>  <span class="fu">geom_violin</span>()</span></code></pre></div>
+<p>We can split boxes by <strong>DE</strong>, the same way as is done for barplots, by mapping <strong>fill</strong> or <strong>color</strong> to the variable:</p>
+<div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb82-1"><a href="boxplots.html#cb82-1" tabindex="-1"></a><span class="fu">ggplot</span>(geneexp2, <span class="fu">aes</span>(<span class="at">x=</span>sample, <span class="at">y=</span>expression, <span class="at">fill=</span>DE)) <span class="sc">+</span> </span>
+<span id="cb82-2"><a href="boxplots.html#cb82-2" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
 <p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-81-1.png" width="480" /></p>
+<p>It is easy to change the box to a violin plot:</p>
+<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="boxplots.html#cb83-1" tabindex="-1"></a><span class="fu">ggplot</span>(geneexp2, <span class="fu">aes</span>(<span class="at">x=</span>sample, <span class="at">y=</span>expression, <span class="at">fill=</span>DE)) <span class="sc">+</span> </span>
+<span id="cb83-2"><a href="boxplots.html#cb83-2" tabindex="-1"></a>  <span class="fu">geom_violin</span>()</span></code></pre></div>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-82-1.png" width="480" /></p>
 <p>Violin plots also aim to visualize data distribution. While boxplots can only show summary statistics / quantiles, violin plots also show the density of each variable.</p>
 </div>
             </section>
@@ -312,7 +312,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 <a href="barplots-bars-position.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="fine-tuning-text.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="text-fine-tuning.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

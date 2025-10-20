@@ -220,7 +220,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.8.1" data-path="barplots-bars-position.html"><a href="barplots-bars-position.html#statidentity-parameter"><i class="fa fa-check"></i><b>8.8.1</b> stat=“identity” parameter</a></li>
 </ul></li>
 <li class="chapter" data-level="8.9" data-path="boxplots.html"><a href="boxplots.html"><i class="fa fa-check"></i><b>8.9</b> Boxplots</a></li>
-<li class="chapter" data-level="8.10" data-path="fine-tuning-text.html"><a href="fine-tuning-text.html"><i class="fa fa-check"></i><b>8.10</b> Fine-tuning text</a></li>
+<li class="chapter" data-level="8.10" data-path="text-fine-tuning.html"><a href="text-fine-tuning.html"><i class="fa fa-check"></i><b>8.10</b> Text fine-tuning</a></li>
 <li class="chapter" data-level="8.11" data-path="colors.html"><a href="colors.html"><i class="fa fa-check"></i><b>8.11</b> Colors</a>
 <ul>
 <li class="chapter" data-level="8.11.1" data-path="colors.html"><a href="colors.html#all-r-colors"><i class="fa fa-check"></i><b>8.11.1</b> All R colors</a></li>
@@ -288,7 +288,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="exercise-2" class="section level2 hasAnchor" number="8.7">
 <h2><span class="header-section-number">8.7</span> Exercise 2<a href="exercise-2.html#exercise-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
-<li>Import <strong>DataViz_source_files-main/files/gencode.v44.annotation.csv</strong> in an object that you will call <strong>gtf</strong>.</li>
+<li>Import <strong>DataViz_source_files-main/files/gencode.v44.annotation.csv</strong> in an object that you will call <strong>gtf</strong>.
+You can check the first 20 rows of <strong>gtf</strong> using the <strong>head()</strong> function: check the help page to see how it works.</li>
 </ol>
 <details>
 <summary>
@@ -300,29 +301,55 @@ correction
 <li>Selection of protein coding genes, long non-coding genes, miRNAs, snRNAs and snoRNAs.</li>
 <li>Selection of chromosomes 1 to 10 only.</li>
 <li>Creation of a random subset of 1000 genes.</li>
-<li>Convertion to a friendly csv format.</li>
+<li>Conversion to a friendly csv format.</li>
 </ul>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="exercise-2.html#cb62-1" tabindex="-1"></a><span class="fu">head</span>(gtf, <span class="dv">20</span>)</span></code></pre></div>
+<pre><code>## # A tibble: 20 × 5
+##    chr   strand gencode_id         gene_type      gene_symbol    
+##    &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;              &lt;chr&gt;          &lt;chr&gt;          
+##  1 chr4  +      ENSG00000250938.8  lncRNA         MAD2L1-DT      
+##  2 chr4  +      ENSG00000286320.2  lncRNA         ENSG00000286320
+##  3 chr1  +      ENSG00000215717.7  protein_coding TMEM167B       
+##  4 chr3  -      ENSG00000265028.1  miRNA          ENSG00000265028
+##  5 chr9  -      ENSG00000242375.1  lncRNA         ENSG00000242375
+##  6 chr1  -      ENSG00000143199.18 protein_coding ADCY10         
+##  7 chr5  +      ENSG00000181751.10 protein_coding MACIR          
+##  8 chr3  -      ENSG00000290763.1  lncRNA         SDHAP1         
+##  9 chr8  +      ENSG00000157168.22 protein_coding NRG1           
+## 10 chr9  +      ENSG00000130956.14 protein_coding HABP4          
+## 11 chr5  -      ENSG00000250360.1  lncRNA         ENSG00000250360
+## 12 chr4  -      ENSG00000250532.1  lncRNA         ENSG00000250532
+## 13 chr1  +      ENSG00000067704.10 protein_coding IARS2          
+## 14 chr10 -      ENSG00000226083.5  lncRNA         SLC39A12-AS1   
+## 15 chr8  -      ENSG00000136960.13 protein_coding ENPP2          
+## 16 chr8  +      ENSG00000253263.1  lncRNA         ENSG00000253263
+## 17 chr10 +      ENSG00000272381.2  lncRNA         LINC02664      
+## 18 chr2  +      ENSG00000236854.2  lncRNA         ENSG00000236854
+## 19 chr10 -      ENSG00000188716.6  protein_coding DUSP29         
+## 20 chr7  -      ENSG00000284707.2  lncRNA         ENSG00000284707</code></pre>
 </details>
-<p><br>
-2. Create a simple barplot representing the count of genes per chromosome:</p>
+<p><br></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Create a simple barplot displaying the number of genes per chromosome:</li>
+</ol>
 <details>
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="exercise-2.html#cb62-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>chr)) <span class="sc">+</span> </span>
-<span id="cb62-2"><a href="exercise-2.html#cb62-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-62-1.png" width="480" /></p>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="exercise-2.html#cb64-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>chr)) <span class="sc">+</span> </span>
+<span id="cb64-2"><a href="exercise-2.html#cb64-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-63-1.png" width="480" /></p>
 </details>
 <p><br>
-3. Keep the chromosome represented on the x axis, and split the barplot <strong>per gene type</strong>.</p>
+3. Keep chromosomes on the x axis, and split the barplot <strong>per gene type</strong>.</p>
 <p>TIP: remember how we set <strong>color=</strong> in <strong>mapping=aes()</strong> function in the scatter plot section? Give it a try here!</p>
 <details>
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="exercise-2.html#cb63-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>chr, <span class="at">color=</span>gene_type)) <span class="sc">+</span> </span>
-<span id="cb63-2"><a href="exercise-2.html#cb63-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-63-1.png" width="480" /></p>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="exercise-2.html#cb65-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>chr, <span class="at">color=</span>gene_type)) <span class="sc">+</span> </span>
+<span id="cb65-2"><a href="exercise-2.html#cb65-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-64-1.png" width="480" /></p>
 </details>
 <p><br>
 4. Change <strong>color=</strong> with <strong>fill=</strong> in <strong>aes()</strong>. What changes?</p>
@@ -330,9 +357,9 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="exercise-2.html#cb64-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>chr, <span class="at">fill=</span>gene_type)) <span class="sc">+</span> </span>
-<span id="cb64-2"><a href="exercise-2.html#cb64-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-64-1.png" width="480" /></p>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="exercise-2.html#cb66-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>chr, <span class="at">fill=</span>gene_type)) <span class="sc">+</span> </span>
+<span id="cb66-2"><a href="exercise-2.html#cb66-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-65-1.png" width="480" /></p>
 </details>
 <p><br>
 5. Add a title to the graph:</p>
@@ -340,10 +367,10 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="exercise-2.html#cb65-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>chr, <span class="at">fill=</span>gene_type)) <span class="sc">+</span> </span>
-<span id="cb65-2"><a href="exercise-2.html#cb65-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
-<span id="cb65-3"><a href="exercise-2.html#cb65-3" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="at">label =</span> <span class="st">&quot;Number of genes per chromosome, split by gene type&quot;</span>)</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-65-1.png" width="480" /></p>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="exercise-2.html#cb67-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>chr, <span class="at">fill=</span>gene_type)) <span class="sc">+</span> </span>
+<span id="cb67-2"><a href="exercise-2.html#cb67-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
+<span id="cb67-3"><a href="exercise-2.html#cb67-3" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="at">label =</span> <span class="st">&quot;Number of genes per chromosome, split by gene type&quot;</span>)</span></code></pre></div>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-66-1.png" width="480" /></p>
 </details>
 <p><br>
 6. Change the default <a href="https://ggplot2-book.org/themes"><strong>theme</strong></a>:</p>
@@ -351,11 +378,11 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="exercise-2.html#cb66-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>chr, <span class="at">fill=</span>gene_type)) <span class="sc">+</span> </span>
-<span id="cb66-2"><a href="exercise-2.html#cb66-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
-<span id="cb66-3"><a href="exercise-2.html#cb66-3" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="at">label =</span> <span class="st">&quot;Number of genes per chromosome, split by gene type&quot;</span>) <span class="sc">+</span></span>
-<span id="cb66-4"><a href="exercise-2.html#cb66-4" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-66-1.png" width="480" /></p>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="exercise-2.html#cb68-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>chr, <span class="at">fill=</span>gene_type)) <span class="sc">+</span> </span>
+<span id="cb68-2"><a href="exercise-2.html#cb68-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
+<span id="cb68-3"><a href="exercise-2.html#cb68-3" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="at">label =</span> <span class="st">&quot;Number of genes per chromosome, split by gene type&quot;</span>) <span class="sc">+</span></span>
+<span id="cb68-4"><a href="exercise-2.html#cb68-4" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-67-1.png" width="480" /></p>
 </details>
 <p><br>
 7. Save the graph in PNG format in the workshop’s directory.</p>
@@ -363,15 +390,15 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="exercise-2.html#cb67-1" tabindex="-1"></a><span class="co"># save plot in an object</span></span>
-<span id="cb67-2"><a href="exercise-2.html#cb67-2" tabindex="-1"></a>gtfbars <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>gtf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>chr, <span class="at">fill=</span>gene_type)) <span class="sc">+</span> </span>
-<span id="cb67-3"><a href="exercise-2.html#cb67-3" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
-<span id="cb67-4"><a href="exercise-2.html#cb67-4" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="at">label =</span> <span class="st">&quot;Number of genes per chromosome, split by gene type&quot;</span>) <span class="sc">+</span></span>
-<span id="cb67-5"><a href="exercise-2.html#cb67-5" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span>
-<span id="cb67-6"><a href="exercise-2.html#cb67-6" tabindex="-1"></a></span>
-<span id="cb67-7"><a href="exercise-2.html#cb67-7" tabindex="-1"></a><span class="co"># save as PNG file</span></span>
-<span id="cb67-8"><a href="exercise-2.html#cb67-8" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">filename=</span><span class="st">&quot;gtfbarplot.png&quot;</span>, <span class="at">plot=</span>gtfbars, </span>
-<span id="cb67-9"><a href="exercise-2.html#cb67-9" tabindex="-1"></a>       <span class="at">device=</span><span class="st">&quot;png&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="exercise-2.html#cb69-1" tabindex="-1"></a><span class="co"># save plot in an object</span></span>
+<span id="cb69-2"><a href="exercise-2.html#cb69-2" tabindex="-1"></a>gtfbars <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>gtf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>chr, <span class="at">fill=</span>gene_type)) <span class="sc">+</span> </span>
+<span id="cb69-3"><a href="exercise-2.html#cb69-3" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
+<span id="cb69-4"><a href="exercise-2.html#cb69-4" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="at">label =</span> <span class="st">&quot;Number of genes per chromosome, split by gene type&quot;</span>) <span class="sc">+</span></span>
+<span id="cb69-5"><a href="exercise-2.html#cb69-5" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span>
+<span id="cb69-6"><a href="exercise-2.html#cb69-6" tabindex="-1"></a></span>
+<span id="cb69-7"><a href="exercise-2.html#cb69-7" tabindex="-1"></a><span class="co"># save as PNG file</span></span>
+<span id="cb69-8"><a href="exercise-2.html#cb69-8" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">filename=</span><span class="st">&quot;gtfbarplot.png&quot;</span>, <span class="at">plot=</span>gtfbars, </span>
+<span id="cb69-9"><a href="exercise-2.html#cb69-9" tabindex="-1"></a>       <span class="at">device=</span><span class="st">&quot;png&quot;</span>)</span></code></pre></div>
 </div>
             </section>
 

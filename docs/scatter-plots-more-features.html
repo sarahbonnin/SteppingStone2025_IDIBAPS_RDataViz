@@ -220,7 +220,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.8.1" data-path="barplots-bars-position.html"><a href="barplots-bars-position.html#statidentity-parameter"><i class="fa fa-check"></i><b>8.8.1</b> stat=“identity” parameter</a></li>
 </ul></li>
 <li class="chapter" data-level="8.9" data-path="boxplots.html"><a href="boxplots.html"><i class="fa fa-check"></i><b>8.9</b> Boxplots</a></li>
-<li class="chapter" data-level="8.10" data-path="fine-tuning-text.html"><a href="fine-tuning-text.html"><i class="fa fa-check"></i><b>8.10</b> Fine-tuning text</a></li>
+<li class="chapter" data-level="8.10" data-path="text-fine-tuning.html"><a href="text-fine-tuning.html"><i class="fa fa-check"></i><b>8.10</b> Text fine-tuning</a></li>
 <li class="chapter" data-level="8.11" data-path="colors.html"><a href="colors.html"><i class="fa fa-check"></i><b>8.11</b> Colors</a>
 <ul>
 <li class="chapter" data-level="8.11.1" data-path="colors.html"><a href="colors.html#all-r-colors"><i class="fa fa-check"></i><b>8.11.1</b> All R colors</a></li>
@@ -335,14 +335,15 @@ ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2, label=Gene)) +
 </div>
 <div id="color-and-shape-mapping" class="section level3 hasAnchor" number="8.5.2">
 <h3><span class="header-section-number">8.5.2</span> Color and shape mapping<a href="scatter-plots-more-features.html#color-and-shape-mapping" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Point color and shape can be <strong>dependent on another column / variable of the data</strong>. This is called <strong>mapping an aesthetic to a variable</strong>.</p>
+<p>Point color and shape can be <strong>modified conditionally, i.e. depend on another column / variable of the data</strong>.</p>
+<p>This is called <strong>mapping an aesthetic to a variable</strong>.</p>
 <p>Columns used to <strong>conditionally color or shape the points</strong> are set inside the <strong>aes()</strong> function.</p>
-<p>For <strong>shape</strong>:</p>
+<p>Conditional <strong>shape</strong>:</p>
 <div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="scatter-plots-more-features.html#cb46-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>geneexp, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1, <span class="at">y=</span>sample2, <span class="at">label=</span>Gene, <span class="at">shape=</span>DE)) <span class="sc">+</span> </span>
 <span id="cb46-2"><a href="scatter-plots-more-features.html#cb46-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb46-3"><a href="scatter-plots-more-features.html#cb46-3" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">nudge_x=</span><span class="fl">1.2</span>, <span class="at">size=</span><span class="dv">3</span>)</span></code></pre></div>
 <p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-46-1.png" width="672" /></p>
-<p>For <strong>color</strong>:</p>
+<p>Conditional <strong>color</strong>:</p>
 <div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="scatter-plots-more-features.html#cb47-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>geneexp, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1, <span class="at">y=</span>sample2, <span class="at">label=</span>Gene, <span class="at">color=</span>DE)) <span class="sc">+</span> </span>
 <span id="cb47-2"><a href="scatter-plots-more-features.html#cb47-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb47-3"><a href="scatter-plots-more-features.html#cb47-3" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">nudge_x=</span><span class="fl">1.2</span>, <span class="at">size=</span><span class="dv">3</span>)</span></code></pre></div>
@@ -352,7 +353,7 @@ ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2, label=Gene)) +
 <span id="cb48-2"><a href="scatter-plots-more-features.html#cb48-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb48-3"><a href="scatter-plots-more-features.html#cb48-3" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">nudge_x=</span><span class="fl">1.2</span>, <span class="at">size=</span><span class="dv">3</span>, <span class="at">show.legend=</span><span class="cn">FALSE</span>)</span></code></pre></div>
 <p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-48-1.png" width="672" /></p>
-<p>You can change the legend title the following way:</p>
+<p>You can change the legend title with layer <strong>scale_color_discrete</strong>:</p>
 <div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="scatter-plots-more-features.html#cb49-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>geneexp, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1, <span class="at">y=</span>sample2, <span class="at">label=</span>Gene, <span class="at">color=</span>DE)) <span class="sc">+</span> </span>
 <span id="cb49-2"><a href="scatter-plots-more-features.html#cb49-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb49-3"><a href="scatter-plots-more-features.html#cb49-3" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">nudge_x=</span><span class="fl">1.2</span>, <span class="at">size=</span><span class="dv">3</span>, <span class="at">show.legend=</span><span class="cn">FALSE</span>) <span class="sc">+</span></span>
@@ -382,7 +383,7 @@ ggplot(data=geneexp, mapping=aes(x=sample1, y=sample2, label=Gene)) +
 <p>As usual, you can customize several parameters, such as:</p>
 <ul>
 <li><em>sides</em>: sides where to draw the lines (<strong>t</strong>op, <strong>b</strong>ottom, <strong>r</strong>ight, <strong>l</strong>eft)</li>
-<li><em>alpha</em>: opacity Ranges from 0 (transparent) to 1 (opaque).</li>
+<li><em>alpha</em>: opacity, ranges from 0 (transparent) to 1 (opaque).</li>
 <li><em>linewidth</em>, <em>linetype</em></li>
 </ul>
 <div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="scatter-plots-more-features.html#cb52-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>geneexp, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>sample1, <span class="at">y=</span>sample2)) <span class="sc">+</span> </span>

@@ -220,7 +220,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.8.1" data-path="barplots-bars-position.html"><a href="barplots-bars-position.html#statidentity-parameter"><i class="fa fa-check"></i><b>8.8.1</b> stat=“identity” parameter</a></li>
 </ul></li>
 <li class="chapter" data-level="8.9" data-path="boxplots.html"><a href="boxplots.html"><i class="fa fa-check"></i><b>8.9</b> Boxplots</a></li>
-<li class="chapter" data-level="8.10" data-path="fine-tuning-text.html"><a href="fine-tuning-text.html"><i class="fa fa-check"></i><b>8.10</b> Fine-tuning text</a></li>
+<li class="chapter" data-level="8.10" data-path="text-fine-tuning.html"><a href="text-fine-tuning.html"><i class="fa fa-check"></i><b>8.10</b> Text fine-tuning</a></li>
 <li class="chapter" data-level="8.11" data-path="colors.html"><a href="colors.html"><i class="fa fa-check"></i><b>8.11</b> Colors</a>
 <ul>
 <li class="chapter" data-level="8.11.1" data-path="colors.html"><a href="colors.html#all-r-colors"><i class="fa fa-check"></i><b>8.11.1</b> All R colors</a></li>
@@ -295,7 +295,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb194"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb194-1"><a href="exercise-8.html#cb194-1" tabindex="-1"></a>stats_countries <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;DataViz_source_files-main/files/stats_countries_barcelona_2013-2023.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb196"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb196-1"><a href="exercise-8.html#cb196-1" tabindex="-1"></a>stats_countries <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;DataViz_source_files-main/files/stats_countries_barcelona_2013-2023.csv&quot;</span>)</span></code></pre></div>
 </details>
 <p><br>
 2. Columns 2013 to 2022 contain <strong>observations</strong>. Convert this wide format into a long format. Save into a new object.</p>
@@ -303,23 +303,23 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb195"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb195-1"><a href="exercise-8.html#cb195-1" tabindex="-1"></a><span class="co"># Option 1: list all columns</span></span>
-<span id="cb195-2"><a href="exercise-8.html#cb195-2" tabindex="-1"></a>stats_countries_long <span class="ot">&lt;-</span> <span class="fu">pivot_longer</span>(stats_countries, </span>
-<span id="cb195-3"><a href="exercise-8.html#cb195-3" tabindex="-1"></a>                                     <span class="at">cols=</span><span class="fu">c</span>(<span class="st">&quot;2013&quot;</span>, <span class="st">&quot;2014&quot;</span>, <span class="st">&quot;2015&quot;</span>, <span class="st">&quot;2016&quot;</span>, <span class="st">&quot;2017&quot;</span>, <span class="st">&quot;2018&quot;</span>, <span class="st">&quot;2019&quot;</span>, <span class="st">&quot;2020&quot;</span>, <span class="st">&quot;2021&quot;</span>, <span class="st">&quot;2022&quot;</span>, <span class="st">&quot;2023&quot;</span>),</span>
-<span id="cb195-4"><a href="exercise-8.html#cb195-4" tabindex="-1"></a>                                     <span class="at">values_to =</span> <span class="st">&quot;Population&quot;</span>,</span>
-<span id="cb195-5"><a href="exercise-8.html#cb195-5" tabindex="-1"></a>                                     <span class="at">names_to =</span> <span class="st">&quot;Years&quot;</span>)</span>
-<span id="cb195-6"><a href="exercise-8.html#cb195-6" tabindex="-1"></a></span>
-<span id="cb195-7"><a href="exercise-8.html#cb195-7" tabindex="-1"></a><span class="co"># Option 2: select columns that start with &quot;20&quot;</span></span>
-<span id="cb195-8"><a href="exercise-8.html#cb195-8" tabindex="-1"></a>stats_countries_long <span class="ot">&lt;-</span> <span class="fu">pivot_longer</span>(stats_countries, </span>
-<span id="cb195-9"><a href="exercise-8.html#cb195-9" tabindex="-1"></a>                                     <span class="at">cols=</span><span class="fu">starts_with</span>(<span class="st">&quot;20&quot;</span>),</span>
-<span id="cb195-10"><a href="exercise-8.html#cb195-10" tabindex="-1"></a>                                     <span class="at">values_to =</span> <span class="st">&quot;Population&quot;</span>,</span>
-<span id="cb195-11"><a href="exercise-8.html#cb195-11" tabindex="-1"></a>                                     <span class="at">names_to =</span> <span class="st">&quot;Years&quot;</span>)</span>
-<span id="cb195-12"><a href="exercise-8.html#cb195-12" tabindex="-1"></a></span>
-<span id="cb195-13"><a href="exercise-8.html#cb195-13" tabindex="-1"></a><span class="co"># Option 3: select all numeric columns</span></span>
-<span id="cb195-14"><a href="exercise-8.html#cb195-14" tabindex="-1"></a>stats_countries_long <span class="ot">&lt;-</span> <span class="fu">pivot_longer</span>(stats_countries, </span>
-<span id="cb195-15"><a href="exercise-8.html#cb195-15" tabindex="-1"></a>                                     <span class="at">cols=</span><span class="fu">where</span>(is.numeric),</span>
-<span id="cb195-16"><a href="exercise-8.html#cb195-16" tabindex="-1"></a>                                     <span class="at">values_to =</span> <span class="st">&quot;Population&quot;</span>,</span>
-<span id="cb195-17"><a href="exercise-8.html#cb195-17" tabindex="-1"></a>                                     <span class="at">names_to =</span> <span class="st">&quot;Years&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb197-1"><a href="exercise-8.html#cb197-1" tabindex="-1"></a><span class="co"># Option 1: list all columns</span></span>
+<span id="cb197-2"><a href="exercise-8.html#cb197-2" tabindex="-1"></a>stats_countries_long <span class="ot">&lt;-</span> <span class="fu">pivot_longer</span>(stats_countries, </span>
+<span id="cb197-3"><a href="exercise-8.html#cb197-3" tabindex="-1"></a>                                     <span class="at">cols=</span><span class="fu">c</span>(<span class="st">&quot;2013&quot;</span>, <span class="st">&quot;2014&quot;</span>, <span class="st">&quot;2015&quot;</span>, <span class="st">&quot;2016&quot;</span>, <span class="st">&quot;2017&quot;</span>, <span class="st">&quot;2018&quot;</span>, <span class="st">&quot;2019&quot;</span>, <span class="st">&quot;2020&quot;</span>, <span class="st">&quot;2021&quot;</span>, <span class="st">&quot;2022&quot;</span>, <span class="st">&quot;2023&quot;</span>),</span>
+<span id="cb197-4"><a href="exercise-8.html#cb197-4" tabindex="-1"></a>                                     <span class="at">values_to =</span> <span class="st">&quot;Population&quot;</span>,</span>
+<span id="cb197-5"><a href="exercise-8.html#cb197-5" tabindex="-1"></a>                                     <span class="at">names_to =</span> <span class="st">&quot;Years&quot;</span>)</span>
+<span id="cb197-6"><a href="exercise-8.html#cb197-6" tabindex="-1"></a></span>
+<span id="cb197-7"><a href="exercise-8.html#cb197-7" tabindex="-1"></a><span class="co"># Option 2: select columns that start with &quot;20&quot;</span></span>
+<span id="cb197-8"><a href="exercise-8.html#cb197-8" tabindex="-1"></a>stats_countries_long <span class="ot">&lt;-</span> <span class="fu">pivot_longer</span>(stats_countries, </span>
+<span id="cb197-9"><a href="exercise-8.html#cb197-9" tabindex="-1"></a>                                     <span class="at">cols=</span><span class="fu">starts_with</span>(<span class="st">&quot;20&quot;</span>),</span>
+<span id="cb197-10"><a href="exercise-8.html#cb197-10" tabindex="-1"></a>                                     <span class="at">values_to =</span> <span class="st">&quot;Population&quot;</span>,</span>
+<span id="cb197-11"><a href="exercise-8.html#cb197-11" tabindex="-1"></a>                                     <span class="at">names_to =</span> <span class="st">&quot;Years&quot;</span>)</span>
+<span id="cb197-12"><a href="exercise-8.html#cb197-12" tabindex="-1"></a></span>
+<span id="cb197-13"><a href="exercise-8.html#cb197-13" tabindex="-1"></a><span class="co"># Option 3: select all numeric columns</span></span>
+<span id="cb197-14"><a href="exercise-8.html#cb197-14" tabindex="-1"></a>stats_countries_long <span class="ot">&lt;-</span> <span class="fu">pivot_longer</span>(stats_countries, </span>
+<span id="cb197-15"><a href="exercise-8.html#cb197-15" tabindex="-1"></a>                                     <span class="at">cols=</span><span class="fu">where</span>(is.numeric),</span>
+<span id="cb197-16"><a href="exercise-8.html#cb197-16" tabindex="-1"></a>                                     <span class="at">values_to =</span> <span class="st">&quot;Population&quot;</span>,</span>
+<span id="cb197-17"><a href="exercise-8.html#cb197-17" tabindex="-1"></a>                                     <span class="at">names_to =</span> <span class="st">&quot;Years&quot;</span>)</span></code></pre></div>
 </details>
 <p><br>
 3. Do the 3 following tasks linked by a <strong>%&gt;%</strong> (pipe):</p>
@@ -336,12 +336,12 @@ correction
 <summary>
 correction
 </summary>
-<div class="sourceCode" id="cb196"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb196-1"><a href="exercise-8.html#cb196-1" tabindex="-1"></a>stats_countries_long_filtered <span class="ot">&lt;-</span> <span class="fu">filter</span>(stats_countries_long, Continent<span class="sc">==</span><span class="st">&quot;America&quot;</span> <span class="sc">&amp;</span> Population <span class="sc">&gt;=</span> <span class="dv">50</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb196-2"><a href="exercise-8.html#cb196-2" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>Continent)</span>
-<span id="cb196-3"><a href="exercise-8.html#cb196-3" tabindex="-1"></a></span>
-<span id="cb196-4"><a href="exercise-8.html#cb196-4" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>stats_countries_long_filtered, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>Years, <span class="at">y=</span>Population, <span class="at">fill=</span>Country)) <span class="sc">+</span></span>
-<span id="cb196-5"><a href="exercise-8.html#cb196-5" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="at">position =</span> <span class="st">&quot;dodge&quot;</span>)</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-183-1.png" width="1440" /></p>
+<div class="sourceCode" id="cb198"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb198-1"><a href="exercise-8.html#cb198-1" tabindex="-1"></a>stats_countries_long_filtered <span class="ot">&lt;-</span> <span class="fu">filter</span>(stats_countries_long, Continent<span class="sc">==</span><span class="st">&quot;America&quot;</span> <span class="sc">&amp;</span> Population <span class="sc">&gt;=</span> <span class="dv">50</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb198-2"><a href="exercise-8.html#cb198-2" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>Continent)</span>
+<span id="cb198-3"><a href="exercise-8.html#cb198-3" tabindex="-1"></a></span>
+<span id="cb198-4"><a href="exercise-8.html#cb198-4" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>stats_countries_long_filtered, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>Years, <span class="at">y=</span>Population, <span class="at">fill=</span>Country)) <span class="sc">+</span></span>
+<span id="cb198-5"><a href="exercise-8.html#cb198-5" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="at">position =</span> <span class="st">&quot;dodge&quot;</span>)</span></code></pre></div>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-184-1.png" width="1440" /></p>
 </details>
 <ol start="4" style="list-style-type: decimal">
 <li>Customize your plot! Remember what we have done so far… You can, for example:</li>
@@ -356,26 +356,26 @@ correction
 <summary>
 One way out of hundreds of ways to show your data!
 </summary>
-<div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb197-1"><a href="exercise-8.html#cb197-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>stats_countries_long_filtered, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>Years, <span class="at">y=</span>Population, <span class="at">fill=</span>Country)) <span class="sc">+</span></span>
-<span id="cb197-2"><a href="exercise-8.html#cb197-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="at">position =</span> <span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb197-3"><a href="exercise-8.html#cb197-3" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">14</span>) <span class="sc">+</span> </span>
-<span id="cb197-4"><a href="exercise-8.html#cb197-4" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;American population in Barcelona from 2013 to 2023&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb197-5"><a href="exercise-8.html#cb197-5" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle=</span><span class="dv">90</span>), <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>)) <span class="sc">+</span></span>
-<span id="cb197-6"><a href="exercise-8.html#cb197-6" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Country)</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-184-1.png" width="1440" /></p>
-<p>If you have tried to change the color scale, you may have noticed that none are large enough for this data (we need 22 colors). One way to tackle this problem is to combine color palettes (e.g. from RColorBrewer) prior to plotting.</p>
-<div class="sourceCode" id="cb198"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb198-1"><a href="exercise-8.html#cb198-1" tabindex="-1"></a><span class="co"># create a vector of 22 colors from RColorBrewer</span></span>
-<span id="cb198-2"><a href="exercise-8.html#cb198-2" tabindex="-1"></a>my22colors <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">brewer.pal</span>(<span class="at">n=</span><span class="dv">11</span>, <span class="at">name=</span><span class="st">&quot;Paired&quot;</span>), <span class="fu">brewer.pal</span>(<span class="at">n=</span><span class="dv">11</span>, <span class="at">name=</span><span class="st">&quot;Set3&quot;</span>))</span>
-<span id="cb198-3"><a href="exercise-8.html#cb198-3" tabindex="-1"></a></span>
-<span id="cb198-4"><a href="exercise-8.html#cb198-4" tabindex="-1"></a><span class="co"># feed the colors to &quot;scale_fill_manual&quot;</span></span>
-<span id="cb198-5"><a href="exercise-8.html#cb198-5" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>stats_countries_long_filtered, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>Years, <span class="at">y=</span>Population, <span class="at">fill=</span>Country)) <span class="sc">+</span></span>
-<span id="cb198-6"><a href="exercise-8.html#cb198-6" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="at">position =</span> <span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb198-7"><a href="exercise-8.html#cb198-7" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">14</span>) <span class="sc">+</span> </span>
-<span id="cb198-8"><a href="exercise-8.html#cb198-8" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values=</span>my22colors) <span class="sc">+</span></span>
-<span id="cb198-9"><a href="exercise-8.html#cb198-9" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;American population in Barcelona from 2013 to 2023&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb198-10"><a href="exercise-8.html#cb198-10" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle=</span><span class="dv">90</span>), <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>)) <span class="sc">+</span></span>
-<span id="cb198-11"><a href="exercise-8.html#cb198-11" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Country)</span></code></pre></div>
+<div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="exercise-8.html#cb199-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>stats_countries_long_filtered, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>Years, <span class="at">y=</span>Population, <span class="at">fill=</span>Country)) <span class="sc">+</span></span>
+<span id="cb199-2"><a href="exercise-8.html#cb199-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="at">position =</span> <span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb199-3"><a href="exercise-8.html#cb199-3" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">14</span>) <span class="sc">+</span> </span>
+<span id="cb199-4"><a href="exercise-8.html#cb199-4" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;American population in Barcelona from 2013 to 2023&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb199-5"><a href="exercise-8.html#cb199-5" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle=</span><span class="dv">90</span>), <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb199-6"><a href="exercise-8.html#cb199-6" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Country)</span></code></pre></div>
 <p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-185-1.png" width="1440" /></p>
+<p>If you have tried to change the color scale, you may have noticed that none are large enough for this data (we need 22 colors). One way to tackle this problem is to combine color palettes (e.g. from RColorBrewer) prior to plotting.</p>
+<div class="sourceCode" id="cb200"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb200-1"><a href="exercise-8.html#cb200-1" tabindex="-1"></a><span class="co"># create a vector of 22 colors from RColorBrewer</span></span>
+<span id="cb200-2"><a href="exercise-8.html#cb200-2" tabindex="-1"></a>my22colors <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">brewer.pal</span>(<span class="at">n=</span><span class="dv">11</span>, <span class="at">name=</span><span class="st">&quot;Paired&quot;</span>), <span class="fu">brewer.pal</span>(<span class="at">n=</span><span class="dv">11</span>, <span class="at">name=</span><span class="st">&quot;Set3&quot;</span>))</span>
+<span id="cb200-3"><a href="exercise-8.html#cb200-3" tabindex="-1"></a></span>
+<span id="cb200-4"><a href="exercise-8.html#cb200-4" tabindex="-1"></a><span class="co"># feed the colors to &quot;scale_fill_manual&quot;</span></span>
+<span id="cb200-5"><a href="exercise-8.html#cb200-5" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>stats_countries_long_filtered, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>Years, <span class="at">y=</span>Population, <span class="at">fill=</span>Country)) <span class="sc">+</span></span>
+<span id="cb200-6"><a href="exercise-8.html#cb200-6" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="at">position =</span> <span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb200-7"><a href="exercise-8.html#cb200-7" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">14</span>) <span class="sc">+</span> </span>
+<span id="cb200-8"><a href="exercise-8.html#cb200-8" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values=</span>my22colors) <span class="sc">+</span></span>
+<span id="cb200-9"><a href="exercise-8.html#cb200-9" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;American population in Barcelona from 2013 to 2023&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb200-10"><a href="exercise-8.html#cb200-10" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle=</span><span class="dv">90</span>), <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb200-11"><a href="exercise-8.html#cb200-11" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Country)</span></code></pre></div>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-186-1.png" width="1440" /></p>
 </details>
 
 </div>
