@@ -294,11 +294,11 @@ By default, position is <strong>stack</strong>, i.e. categories are stacked on 
 <p>Position <strong>fill</strong> scales data so the upper bound is always 1, i.e. <strong>fill</strong> shows <strong>proportions</strong>, instead of absolute values:</p>
 <div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="barplots-bars-position.html#cb81-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>chr, <span class="at">fill=</span>gene_type)) <span class="sc">+</span> </span>
 <span id="cb81-2"><a href="barplots-bars-position.html#cb81-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position=</span><span class="st">&quot;fill&quot;</span>)</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-81-1.png" width="480" /></p>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-74-1.png" width="480" /></p>
 <p>Position <strong>dodge</strong> organizes each category (here, gene types) side-by-side:</p>
 <div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb82-1"><a href="barplots-bars-position.html#cb82-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>chr, <span class="at">fill=</span>gene_type)) <span class="sc">+</span> </span>
 <span id="cb82-2"><a href="barplots-bars-position.html#cb82-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position=</span><span class="st">&quot;dodge&quot;</span>)</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-82-1.png" width="480" /></p>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-75-1.png" width="480" /></p>
 <details>
 <summary>
 <em>More advanced (as reference, or if someone asks): how to reorder x-axis labels:</em>
@@ -307,7 +307,7 @@ By default, position is <strong>stack</strong>, i.e. categories are stacked on 
 <div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="barplots-bars-position.html#cb83-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>gtf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span><span class="fu">factor</span>(chr, <span class="at">levels=</span><span class="fu">c</span>(<span class="st">&quot;chr1&quot;</span>, <span class="st">&quot;chr2&quot;</span>, <span class="st">&quot;chr3&quot;</span>, <span class="st">&quot;chr4&quot;</span>, <span class="st">&quot;chr5&quot;</span>, <span class="st">&quot;chr6&quot;</span>, <span class="st">&quot;chr7&quot;</span>, <span class="st">&quot;chr8&quot;</span>, <span class="st">&quot;chr9&quot;</span>, <span class="st">&quot;chr10&quot;</span>), <span class="at">ordered=</span><span class="cn">TRUE</span>), <span class="at">fill=</span>gene_type)) <span class="sc">+</span> </span>
 <span id="cb83-2"><a href="barplots-bars-position.html#cb83-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position=</span><span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span></span>
 <span id="cb83-3"><a href="barplots-bars-position.html#cb83-3" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;chromosome&quot;</span>)</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-83-1.png" width="480" /></p>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-76-1.png" width="480" /></p>
 </details>
 <div id="statidentity-parameter" class="section level3 hasAnchor" number="8.9.1">
 <h3><span class="header-section-number">8.9.1</span> stat=“identity” parameter<a href="barplots-bars-position.html#statidentity-parameter" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -338,28 +338,28 @@ By default, position is <strong>stack</strong>, i.e. categories are stacked on 
 <p>In the following example, we plot the sum of foreign residents in Barcelona (Population/number provided in <strong>y</strong>) per year (Year/category provided in <strong>x</strong>):</p>
 <div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="barplots-bars-position.html#cb85-1" tabindex="-1"></a><span class="fu">ggplot</span>(statsbcn, <span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>Population)) <span class="sc">+</span> </span>
 <span id="cb85-2"><a href="barplots-bars-position.html#cb85-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>)</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-85-1.png" width="480" /></p>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-78-1.png" width="480" /></p>
 <p>We can then map, for example, <strong>fill</strong> to <strong>Continent</strong>: this allows us to give more granularity to the visualization:</p>
 <div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="barplots-bars-position.html#cb86-1" tabindex="-1"></a><span class="fu">ggplot</span>(statsbcn, <span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>Population, <span class="at">fill=</span>Continent)) <span class="sc">+</span> </span>
 <span id="cb86-2"><a href="barplots-bars-position.html#cb86-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>)</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-86-1.png" width="480" /></p>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-79-1.png" width="480" /></p>
 <p>We can further play with the <strong>position</strong>, as previously done.</p>
 <ul>
 <li>Position <strong>fill</strong> :</li>
 </ul>
 <div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="barplots-bars-position.html#cb87-1" tabindex="-1"></a><span class="fu">ggplot</span>(statsbcn, <span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>Population, <span class="at">fill=</span>Continent)) <span class="sc">+</span> </span>
 <span id="cb87-2"><a href="barplots-bars-position.html#cb87-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="at">position=</span><span class="st">&quot;fill&quot;</span>)</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-87-1.png" width="480" /></p>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-80-1.png" width="480" /></p>
 <ul>
 <li>Position <strong>dodge</strong> :</li>
 </ul>
 <div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="barplots-bars-position.html#cb88-1" tabindex="-1"></a><span class="fu">ggplot</span>(statsbcn, <span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>Population, <span class="at">fill=</span>Continent)) <span class="sc">+</span> </span>
 <span id="cb88-2"><a href="barplots-bars-position.html#cb88-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="at">position=</span><span class="st">&quot;dodge&quot;</span>)</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-88-1.png" width="480" /></p>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-81-1.png" width="480" /></p>
 <p>We can control the bars width (hence, the spacing between 2 bars) using the <strong>width</strong> parameter of geom_bar():</p>
 <div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="barplots-bars-position.html#cb89-1" tabindex="-1"></a><span class="fu">ggplot</span>(statsbcn, <span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>Population, <span class="at">fill=</span>Continent)) <span class="sc">+</span> </span>
 <span id="cb89-2"><a href="barplots-bars-position.html#cb89-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="at">position=</span><span class="st">&quot;dodge&quot;</span>, <span class="at">width =</span> <span class="fl">0.8</span>)</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-89-1.png" width="480" /></p>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-82-1.png" width="480" /></p>
 <details>
 <summary>
 <em>More advanced (as reference, or if someone asks): display all labels:</em>
@@ -368,7 +368,7 @@ By default, position is <strong>stack</strong>, i.e. categories are stacked on 
 <div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="barplots-bars-position.html#cb90-1" tabindex="-1"></a><span class="co"># convert the x-axis from a continuous to a discrete variable (as.character)</span></span>
 <span id="cb90-2"><a href="barplots-bars-position.html#cb90-2" tabindex="-1"></a><span class="fu">ggplot</span>(statsbcn, <span class="fu">aes</span>(<span class="at">x=</span><span class="fu">as.character</span>(Year), <span class="at">y=</span>Population, <span class="at">fill=</span>Continent)) <span class="sc">+</span> </span>
 <span id="cb90-3"><a href="barplots-bars-position.html#cb90-3" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="at">position=</span><span class="st">&quot;dodge&quot;</span>)</span></code></pre></div>
-<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-90-1.png" width="480" /></p>
+<p><img src="stepping-stone-idibaps-dataviz-2025_files/figure-html/unnamed-chunk-83-1.png" width="480" /></p>
 </details>
 </div>
 </div>
