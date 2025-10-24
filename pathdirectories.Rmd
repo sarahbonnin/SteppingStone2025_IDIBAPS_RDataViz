@@ -101,7 +101,7 @@ To create a project:
 
 When you close the RStudio project, make sure you save .RData file (environment):
 
-<img src="images/Rproject_saveRData.png" alt="rstudio logo" width="600"/>
+<img src="images/Rproject_saveRData.png" alt="rstudio logo" width="500"/>
 
 We will see it in practice as we finish day 1.
 
@@ -109,7 +109,7 @@ We will see it in practice as we finish day 1.
 
 In the project folder, double-click on the **.Rproj** file, e.g. DataViz_R.Rproj:
 
-<img src="images/RStudio_Rproj.png" alt="rstudio logo" width="500"/>
+<img src="images/RStudio_Rproj.png" alt="rstudio logo" width="400"/>
 
 Note that, when re-opening a project, all environment is restored but you will **need to reload packages**.
 
