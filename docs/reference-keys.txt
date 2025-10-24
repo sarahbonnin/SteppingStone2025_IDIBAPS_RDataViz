@@ -19,6 +19,7 @@ rstudio-projects
 advantages
 project-for-the-course
 leave-the-project
+re-open-the-project
 r-basics
 arithmetic-operators
 objects-in-r
@@ -51,6 +52,7 @@ density-estimates
 regression-line
 barplots
 exercise-2
+exercise-2b---review-scatter-plots-before-the-second-day
 barplots-bars-position
 statidentity-parameter
 boxplots

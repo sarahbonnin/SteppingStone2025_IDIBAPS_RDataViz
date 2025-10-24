@@ -105,3 +105,11 @@ When you close the RStudio project, make sure you save .RData file (environment)
 
 We will see it in practice as we finish day 1.
 
+### Re-open the project
+
+In the project folder, double-click on the **.Rproj** file, e.g. DataViz_R.Rproj:
+
+<img src="images/RStudio_Rproj.png" alt="rstudio logo" width="500"/>
+
+Note that, when re-opening a project, all environment is restored but you will **need to reload packages**.
+

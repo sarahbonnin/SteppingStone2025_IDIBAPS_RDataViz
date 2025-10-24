@@ -760,6 +760,102 @@ ggsave(filename="gtfbarplot.png", plot=gtfbars,
        device="png")
 ```
 
+## Exercise 2B - review scatter plots before the second day
+
+For this exercise, we will use a built-in dataset **iris**: this dataset shows data from several flower species.
+
+1. Explore dataset: check dim(iris); head(iris); tail(iris)
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+dim(iris)
+head(iris)
+tail(iris)
+```
+
+</details>
+
+<br>
+
+2. Create a scatter plot of sepal length (x-axis) versus petal length (y-axis)
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+ggplot(data=iris, mapping=aes(x=Sepal.Length, y=Petal.Length)) +
+  geom_point()
+```
+
+</details>
+
+<br>
+
+3. Conditionally color points per species
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+ggplot(data=iris, mapping=aes(x=Sepal.Length, y=Petal.Length, color=Species)) +
+  geom_point()
+```
+
+</details>
+
+<br>
+
+<br>
+
+4. Add a regression line (or regression lines) to the plot
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+ggplot(data=iris, mapping=aes(x=Sepal.Length, y=Petal.Length, color=Species)) +
+  geom_point() +
+  geom_smooth()
+```
+
+</details>
+
+<br>
+
+5. Change the plot's default background, add a title, and save plot to a file (either using RStudio interface, or with ggsave() function)
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+psepal <- ggplot(data=iris, mapping=aes(x=Sepal.Length, y=Petal.Length, color=Species)) +
+  geom_point() +
+  geom_smooth() +
+  theme_minimal(base_size = 16) +
+  ggtitle("Sepal length versus Petal length")
+
+plot(psepal)
+
+# save as PNG file
+ggsave(filename="sepal_scatter.png", plot=psepal, 
+       device="png")
+```
+
+</details>
+
+<br>
 
 ## Barplots: bars position
 
